@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="max-w-3xl h-[150vh] mx-auto mt-1 pt-16">
-      <section className="flex flex-col gap-5 px-5 items-center bg-white shadow-md h-fit py-5">
+    <main className="max-w-3xl h-[150vh] mx-auto mt-1 pt-20 flex flex-col gap-10">
+      <section className="flex flex-col gap-5 items-center h-fit">
         <div className="flex flex-row gap-4">
           <div className="flex flex-col space-y-2">
             <h1 className="text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-sky-400 text-transparent bg-clip-text">
@@ -28,8 +28,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="techstack">
+      <section id="techstack">
         <TechStackMarquee />
+      </section>
+
+      <section id="projects" className="">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-2xl font-extrabold bg-gradient-to-r from-blue-500 to-sky-400 text-transparent bg-clip-text">
+            Featured Project
+          </h2>
+        </div>
       </section>
     </main>
   );
