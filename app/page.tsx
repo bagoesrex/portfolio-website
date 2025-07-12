@@ -1,10 +1,11 @@
+import TechStackMarquee from "@/components/home/techstack-marquee";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <main className="max-w-3xl h-[150vh] mx-auto mt-1 pt-16">
-      <section className="flex flex-col gap-5 px-5 items-center rounded-2xl border-1 border-black bg-white shadow-md h-full">
-        <div className="flex flex-row pt-15 gap-4">
+      <section className="flex flex-col gap-5 px-5 items-center bg-white shadow-md h-fit py-5">
+        <div className="flex flex-row gap-4">
           <div className="flex flex-col space-y-2">
             <h1 className="text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-sky-400 text-transparent bg-clip-text">
               Hi, I'm Bagus
@@ -25,6 +26,10 @@ export default function Home() {
             />
           </div>
         </div>
+      </section>
+
+      <section className="techstack">
+        <TechStackMarquee />
       </section>
     </main>
   );
