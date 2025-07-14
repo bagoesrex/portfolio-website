@@ -1,3 +1,4 @@
+import BlogsSection from "@/components/home/blogs-section";
 import HeroSection from "@/components/home/hero-section";
 import ProjectsSection from "@/components/home/projects-section";
 import TechStackSection from "@/components/home/tech-stack-section";
@@ -10,6 +11,8 @@ export default function Home() {
       <TechStackSection />
 
       <ProjectsSection />
+
+      <BlogsSection />
     </main>
   );
 }
