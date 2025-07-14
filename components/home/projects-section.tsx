@@ -1,3 +1,4 @@
+import CustomButton from "../shared/custom-button";
 import ProjectCard from "./project-card";
 
 export default function ProjectsSection() {
@@ -22,6 +23,7 @@ export default function ProjectsSection() {
                     description="Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine."
                     techStack={["Nextjs", "TailwindCSS", "ShadcnUI"]}
                 />
+                <CustomButton>See All</CustomButton>
             </div>
         </section>
     )
