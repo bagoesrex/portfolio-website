@@ -1,22 +1,5 @@
 import ProjectCard from "@/components/projects/project-card";
-import { Project } from "@/types/project";
-
-const projects: Project[] = [
-    {
-        id: "1",
-        title: "Website Portfolio",
-        description: "Situs pribadi untuk menampilkan karya dan profil.",
-        slug: "website-portfolio",
-        date: "2025-06-01",
-    },
-    {
-        id: "2",
-        title: "Absensi Online",
-        description: "Aplikasi absensi berbasis lokasi untuk perusahaan.",
-        slug: "absensi-online",
-        date: "2025-05-15",
-    },
-];
+import { dummyProjects } from "@/data/dummyProjects";
 
 export default function ProjectsPage() {
     return (
@@ -29,7 +12,7 @@ export default function ProjectsPage() {
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {projects.map((project) => (
+                {dummyProjects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </div>

@@ -2,11 +2,11 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import { IoMdArrowBack } from "react-icons/io";
 
-interface Props {
+interface ProjectSlugLayoutProps {
     children: ReactNode;
 }
 
-export default function ProjectSlugLayout({ children }: Props) {
+export default function ProjectSlugLayout({ children }: ProjectSlugLayoutProps) {
     return (
         <div className="max-w-3xl mx-auto pt-20">
             <div className="mb-4">

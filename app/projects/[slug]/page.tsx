@@ -1,31 +1,14 @@
 import { notFound } from "next/navigation";
-import { Project } from "@/types/project";
+import { dummyProjects } from "@/data/dummyProjects";
 
-const projects: Project[] = [
-    {
-        id: "1",
-        title: "Website Portfolio",
-        description: "Situs pribadi untuk menampilkan karya dan profil.",
-        slug: "website-portfolio",
-        date: "2025-06-01",
-    },
-    {
-        id: "2",
-        title: "Absensi Online",
-        description: "Aplikasi absensi berbasis lokasi untuk perusahaan.",
-        slug: "absensi-online",
-        date: "2025-05-15",
-    },
-];
-
-interface Props {
+interface ProjectDetailPageProps {
     params: {
         slug: string;
     };
 }
 
-export default function ProjectDetailPage({ params }: Props) {
-    const project = projects.find((p) => p.slug === params.slug);
+export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+    const project = dummyProjects.find((p) => p.slug === params.slug);
 
     if (!project) return notFound();
 

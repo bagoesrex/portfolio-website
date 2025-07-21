@@ -1,22 +1,5 @@
 import BlogCard from "@/components/blog/blog-card";
-import { BlogPost } from "@/types/blog";
-
-const posts: BlogPost[] = [
-    {
-        id: "1",
-        title: "Mengenal AI Lebih Dalam",
-        description: "Penjelasan dasar tentang AI untuk pemula.",
-        slug: "mengenal-ai-lebih-dalam",
-        date: "2025-07-10",
-    },
-    {
-        id: "2",
-        title: "React vs Next.js",
-        description: "Kapan kamu harus memilih framework tertentu.",
-        slug: "react-vs-nextjs",
-        date: "2025-07-08",
-    },
-];
+import { dummyBlogs } from "@/data/dummyBlog";
 
 export default function BlogPage() {
     return (
@@ -29,7 +12,7 @@ export default function BlogPage() {
             </h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {posts.map((post) => (
+                {dummyBlogs.map((post) => (
                     <BlogCard key={post.id} post={post} />
                 ))}
             </div>

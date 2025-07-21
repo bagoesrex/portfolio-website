@@ -1,22 +1,5 @@
-import { BlogPost } from "@/types/blog";
+import { dummyBlogs } from "@/data/dummyBlog";
 import { notFound } from "next/navigation";
-
-const posts: BlogPost[] = [
-    {
-        id: "1",
-        title: "Mengenal AI Lebih Dalam",
-        description: "Penjelasan dasar tentang AI untuk pemula.",
-        slug: "mengenal-ai-lebih-dalam",
-        date: "2025-07-10",
-    },
-    {
-        id: "2",
-        title: "React vs Next.js",
-        description: "Kapan kamu harus memilih framework tertentu.",
-        slug: "react-vs-nextjs",
-        date: "2025-07-08",
-    },
-];
 
 interface BlogDetailPageProps {
     params: {
@@ -25,7 +8,7 @@ interface BlogDetailPageProps {
 }
 
 export default function BlogDetailPage({ params }: BlogDetailPageProps) {
-    const post = posts.find((p) => p.slug === params.slug);
+    const post = dummyBlogs.find((p) => p.slug === params.slug);
 
     if (!post) return notFound();
 
