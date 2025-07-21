@@ -2,11 +2,11 @@ import { ChevronRight } from "lucide-react";
 import GlareHover from "../blocks/Animations/GlareHover/GlareHover";
 import Link from "next/link";
 
-type Props = {
+interface CustomButtonProps {
     children: React.ReactNode;
 }
 
-export default function CustomButton({ children }: Props) {
+export default function CustomButton({ children }: CustomButtonProps) {
     return (
         <div className="relative">
             <GlareHover

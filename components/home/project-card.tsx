@@ -1,12 +1,12 @@
 import { ChevronRight } from "lucide-react";
 
-type Props = {
+interface ProjectCardProps {
     title: string;
     description: string;
     techStack: string[];
 };
 
-export default function ProjectCard({ title, description, techStack }: Props) {
+export default function ProjectCard({ title, description, techStack }: ProjectCardProps) {
     return (
         <div className="flex flex-col gap-2 border-b-2 border-gray-500 pb-5">
             <div className="flex flex-row justify-between">

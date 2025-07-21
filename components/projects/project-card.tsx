@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Project } from "@/types/project";
 import { Card, CardContent } from "../ui/card";
 
-interface Props {
+interface ProjectCardProps {
     project: Project;
 }
 
-export default function ProjectCard({ project }: Props) {
+export default function ProjectCard({ project }: ProjectCardProps) {
     return (
         <Link href={`/projects/${project.slug}`}>
             <Card className="hover:shadow-md transition rounded-none bg-white/70">

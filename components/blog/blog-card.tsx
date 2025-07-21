@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Blog } from "@/types/blog";
 import Link from "next/link";
-import { BlogPost } from "@/types/blog";
 
 interface BlogCardProps {
-    post: BlogPost;
+    post: Blog;
 }
 
 export default function BlogCard({ post }: BlogCardProps) {

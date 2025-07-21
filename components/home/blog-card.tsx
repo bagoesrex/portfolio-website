@@ -1,14 +1,14 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-type Props = {
+interface BlogCardProps {
     title: string;
     date: string;
     href: string;
     borderColor: string;
 };
 
-export default function BlogCard({ title, date, href, borderColor }: Props) {
+export default function BlogCard({ title, date, href, borderColor }: BlogCardProps) {
     return (
         <Link href={href} key={title} className="group">
             <div className={`border-2 ${borderColor} flex flex-col w-full h-full justify-between gap-5 rounded-xl p-5 hover:shadow-lg transition`}>
