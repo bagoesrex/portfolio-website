@@ -1,3 +1,4 @@
+import { dummyProjects } from "@/data/dummyProjects";
 import CustomButton from "../shared/custom-button";
 import ProjectCard from "./project-card";
 
@@ -8,21 +9,9 @@ export default function ProjectsSection() {
                 <h2 className="text-2xl font-extrabold bg-gradient-to-r from-blue-500 to-sky-400 text-transparent bg-clip-text">
                     Featured Project
                 </h2>
-                <ProjectCard
-                    title="Megumin"
-                    description="Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine."
-                    techStack={["Nextjs", "TailwindCSS", "ShadcnUI"]}
-                />
-                <ProjectCard
-                    title="Megumin"
-                    description="Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine."
-                    techStack={["Nextjs", "TailwindCSS", "ShadcnUI"]}
-                />
-                <ProjectCard
-                    title="Megumin"
-                    description="Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine. Megumin is my Mine."
-                    techStack={["Nextjs", "TailwindCSS", "ShadcnUI"]}
-                />
+                {dummyProjects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
                 <CustomButton>See All</CustomButton>
             </div>
         </section>
