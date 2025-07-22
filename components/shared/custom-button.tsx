@@ -3,10 +3,11 @@ import GlareHover from "../blocks/Animations/GlareHover/GlareHover";
 import Link from "next/link";
 
 interface CustomButtonProps {
+    link: string;
     children: React.ReactNode;
 }
 
-export default function CustomButton({ children }: CustomButtonProps) {
+export default function CustomButton({ link, children }: CustomButtonProps) {
     return (
         <div className="relative">
             <GlareHover
@@ -21,7 +22,7 @@ export default function CustomButton({ children }: CustomButtonProps) {
                 transitionDuration={500}
                 playOnce={false}
             >
-                <Link href={"/"} >
+                <Link href={link} >
                     <div className="flex flex-row justify-center items-center gap-3">
                         <h2 className="text-black text-sm">
                             {children}

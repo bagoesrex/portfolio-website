@@ -28,7 +28,7 @@ export default function BlogsSection() {
                         borderColor="border-blue-200"
                     />
                 </div>
-                <CustomButton>See All</CustomButton>
+                <CustomButton link="/blog">See All</CustomButton>
             </div>
         </section>
     )

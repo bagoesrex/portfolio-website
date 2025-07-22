@@ -12,7 +12,7 @@ export default function ProjectsSection() {
                 {dummyProjects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
-                <CustomButton>See All</CustomButton>
+                <CustomButton link="/projects">See All</CustomButton>
             </div>
         </section>
     )
