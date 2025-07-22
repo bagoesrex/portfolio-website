@@ -5,11 +5,11 @@ export default function HeroSection() {
         <section id="hero" className="flex flex-col gap-5 items-center">
             <div className="flex flex-row gap-4">
                 <div className="flex flex-col space-y-2">
-                    <h1 className="text-3xl font-extrabold bg-gradient-to-r from-blue-500 to-sky-400 text-transparent bg-clip-text">
+                    <h1 className="text-3xl font-extrabold text-primary">
                         Hi, I'm Bagus
                     </h1>
-                    <h2 className="text-xl font-semibold text-blue-600">Fullstack Developer</h2>
-                    <p className="text-gray-700 leading-relaxed">
+                    <h2 className="text-xl font-semibold text-primary">Fullstack Developer</h2>
+                    <p className="leading-relaxed">
                         I'm a tech enthusiast with a strong interest in building responsive and interactive web applications.
                         I enjoy experimenting with new technologies and creating clean user interfaces.
                     </p>

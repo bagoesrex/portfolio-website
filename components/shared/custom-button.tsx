@@ -9,9 +9,8 @@ interface CustomButtonProps {
 
 export default function CustomButton({ link, children }: CustomButtonProps) {
     return (
-        <div className="relative">
+        <div className="relative bg-primary overflow-hidden size-fit rounded-sm border-2 border-secondary">
             <GlareHover
-                borderRadius="5px"
                 width="90px"
                 height="35px"
                 background="transparent"
@@ -23,10 +22,10 @@ export default function CustomButton({ link, children }: CustomButtonProps) {
                 playOnce={false}
             >
                 <Link href={link} >
-                    <div className="flex flex-row justify-center items-center gap-3">
-                        <h2 className="text-black text-sm">
+                    <div className="flex flex-row justify-center items-center gap-3 text-background">
+                        <h4 className="text-sm">
                             {children}
-                        </h2>
+                        </h4>
                         <ChevronRight size={15} />
                     </div>
                 </Link>

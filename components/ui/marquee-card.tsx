@@ -26,7 +26,7 @@ export default function MarqueeCard({
     direction = "left",
 }: MarqueeCardProps) {
     return (
-        <div className="rounded-xs py-2 overflow-hidden">
+        <div className="rounded-xs py-1 overflow-hidden">
             <Marquee
                 speed={speed}
                 pauseOnHover={pauseOnHover}
@@ -36,9 +36,9 @@ export default function MarqueeCard({
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className="mx-1 flex items-center gap-1.5 justify-center bg-gray-200/40 rounded-md px-4 py-2"
+                        className="mx-1 flex items-center gap-1.5 justify-center bg-gray-200/40 rounded-md px-4 py-2 my-1 hover:ring-2 hover:ring-primary"
                     >
-                        <div className="w-7 text-sky-500">{item.icon}</div>
+                        <div className="w-7 text-secondary">{item.icon}</div>
                         <div>
                             <h3 className="text-sm font-semibold text-black">{item.title}</h3>
                             <p className="text-xs text-gray-500">{item.description}</p>

@@ -6,7 +6,7 @@ export default function BlogsSection() {
     return (
         <section id="projects">
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold bg-gradient-to-r from-blue-500 to-sky-400 text-transparent bg-clip-text">
+                <h2 className="text-2xl font-extrabold text-primary">
                     Featured Blogs
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
