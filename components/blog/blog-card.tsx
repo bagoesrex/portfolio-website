@@ -1,21 +1,27 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Blog } from "@/types/blog";
+import { Clock } from "lucide-react";
 import Link from "next/link";
 
 interface BlogCardProps {
-    post: Blog;
+    blog: Blog;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ blog }: BlogCardProps) {
     return (
-        <Link href={`/blog/${post.slug}`}>
-            <Card className="hover:shadow-md transition rounded-none bg-white/70">
-                <CardContent className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-800">{post.title}</h3>
-                    <p className="text-sm text-gray-500 mt-1">{post.description}</p>
-                    <p className="text-xs text-gray-400 mt-2">{post.date}</p>
+        <Card className="hover:shadow-md transition rounded-none bg-white/70 p-0">
+            <Link href={`/blog/${blog.slug}`}>
+                <CardContent className="flex flex-col py-3 gap-3">
+                    <div className="flex flex-col gap-1">
+                        <h3 className="text-lg font-semibold text-secondary">{blog.title}</h3>
+                        <div className="flex flex-row items-center gap-2 text-foreground/70">
+                            <Clock size={12} />
+                            <p className="text-xs">{blog.date}</p>
+                        </div>
+                    </div>
+                    <p className="text-sm mt-1 line-clamp-3">{blog.description}</p>
                 </CardContent>
-            </Card>
-        </Link>
+            </Link>
+        </Card>
     );
 }
