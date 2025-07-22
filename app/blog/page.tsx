@@ -1,7 +1,18 @@
 import BlogCard from "@/components/blog/blog-card";
-import { dummyBlogs } from "@/data/dummyBlog";
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/client";
 
-export default function BlogPage() {
+const POSTS_QUERY = `*[
+  _type == "blog"
+  && defined(slug.current)
+]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, body}`;
+
+const options = { next: { revalidate: 30 } };
+
+export default async function BlogPage() {
+    const blogs = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+    console.log(blogs)
+
     return (
         <section className="max-w-3xl mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">
 
@@ -13,8 +24,14 @@ export default function BlogPage() {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {dummyBlogs.map((blog) => (
-                    <BlogCard key={blog.id} blog={blog} />
+                {blogs.map((blog) => (
+                    <BlogCard
+                        key={blog._id}
+                        title={blog.title}
+                        slug={blog.slug.current}
+                        date={blog.publishedAt}
+                        body={blog.body}
+                    />
                 ))}
             </div>
 

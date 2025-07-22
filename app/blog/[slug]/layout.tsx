@@ -8,12 +8,16 @@ interface BlogSlugLayoutProps {
 
 export default function BlogSlugLayout({ children }: BlogSlugLayoutProps) {
     return (
-        <div className="max-w-3xl mx-auto pt-20">
-            <div className="mb-4">
+        <section className="max-w-3xl mx-auto mt-1 pt-20 flex flex-col gap-1 pb-10 px-5 text-foreground">
+
+            <div className="mb-0">
                 <Link href="/blog" className="text-sm flex flex-row items-center gap-2">
-                    <IoMdArrowBack /> Back to Blog</Link>
+                    <IoMdArrowBack /> Back to Blogs
+                </Link>
             </div>
+
             <article>{children}</article>
-        </div>
+
+        </section>
     );
 }
