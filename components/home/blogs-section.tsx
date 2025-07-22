@@ -1,3 +1,4 @@
+import { dummyBlogs } from "@/data/dummyBlog";
 import CustomButton from "../shared/custom-button";
 import BlogCard from "./blog-card";
 
@@ -9,24 +10,10 @@ export default function BlogsSection() {
                     Featured Blogs
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <BlogCard
-                        title="Megumin Megumin Megumin Megumin Megumin Megumin Megumin Megumin Megumin Megumin Megumin Megumin"
-                        date="March 13 2025"
-                        href="/"
-                        borderColor="border-blue-200"
-                    />
-                    <BlogCard
-                        title=" Megumin Megumin Megumin Megumin Megumin Megumin"
-                        date="March 13 2025"
-                        href="/"
-                        borderColor="border-blue-200"
-                    />
-                    <BlogCard
-                        title="Megumin"
-                        date="March 13 2025"
-                        href="/"
-                        borderColor="border-blue-200"
-                    />
+                    {dummyBlogs.map((blog) => (
+                        <BlogCard key={blog.id} blog={blog} />
+                    ))}
+
                 </div>
                 <CustomButton link="/blog">See All</CustomButton>
             </div>
