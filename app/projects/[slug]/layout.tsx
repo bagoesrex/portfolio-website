@@ -8,12 +8,16 @@ interface ProjectSlugLayoutProps {
 
 export default function ProjectSlugLayout({ children }: ProjectSlugLayoutProps) {
     return (
-        <div className="max-w-3xl mx-auto pt-20">
-            <div className="mb-4">
+        <section className="max-w-3xl mx-auto mt-1 pt-20 flex flex-col gap-1 pb-10 px-5 text-foreground">
+
+            <div className="mb-0">
                 <Link href="/projects" className="text-sm flex flex-row items-center gap-2">
-                    <IoMdArrowBack /> Back to Projects</Link>
+                    <IoMdArrowBack /> Back to Projects
+                </Link>
             </div>
+
             <article>{children}</article>
-        </div>
+
+        </section>
     );
 }
