@@ -1,12 +1,15 @@
+import Link from "next/link";
 import Navbar from "./navbar";
 
 export default function Header() {
     return (
         <header className="fixed top-0 w-full z-50 h-14 mt-1 px-2">
             <div className="flex flex-row justify-between border-b-1 border-gray-500 items-center max-w-3xl mx-auto px-5 h-full">
-                <div>
-                    <h1>{`< Header Icon />`}</h1>
-                </div>
+                <Link href={"/"}>
+                    <div>
+                        <h1>{`< Header Icon />`}</h1>
+                    </div>
+                </Link>
                 <Navbar />
             </div>
         </header>
