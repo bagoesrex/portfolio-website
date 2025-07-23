@@ -1,8 +1,19 @@
-import { dummyBlogs } from "@/data/dummyBlog";
 import CustomButton from "../shared/custom-button";
 import BlogCard from "./blog-card";
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/client";
 
-export default function BlogsSection() {
+const BLOGS_QUERY = `*[
+    _type == "blog"
+    && defined(slug.current)
+  ]|order(publishedAt desc)[0...3]{_id, title, slug, publishedAt, body}`;
+
+const options = { next: { revalidate: 30 } };
+
+export default async function BlogsSection() {
+    const blogs = await client.fetch<SanityDocument[]>(BLOGS_QUERY, {}, options);
+    console.log(blogs)
+
     return (
         <section id="projects">
             <div className="flex flex-col gap-4">
@@ -10,8 +21,14 @@ export default function BlogsSection() {
                     Featured Blogs
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {dummyBlogs.map((blog) => (
-                        <BlogCard key={blog.id} blog={blog} />
+                    {blogs.map((blog) => (
+                        <BlogCard
+                            key={blog._id}
+                            title={blog.title}
+                            slug={blog.slug.current}
+                            date={blog.publishedAt}
+                            body={blog.body}
+                        />
                     ))}
 
                 </div>

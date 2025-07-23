@@ -2,7 +2,7 @@ import BlogCard from "@/components/blog/blog-card";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 
-const POSTS_QUERY = `*[
+const BLOGS_QUERY = `*[
   _type == "blog"
   && defined(slug.current)
 ]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt, body}`;
@@ -10,7 +10,7 @@ const POSTS_QUERY = `*[
 const options = { next: { revalidate: 30 } };
 
 export default async function BlogPage() {
-    const blogs = await client.fetch<SanityDocument[]>(POSTS_QUERY, {}, options);
+    const blogs = await client.fetch<SanityDocument[]>(BLOGS_QUERY, {}, options);
     console.log(blogs)
 
     return (
