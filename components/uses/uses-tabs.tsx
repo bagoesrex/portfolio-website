@@ -4,8 +4,9 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SoftwareTab from "./software-tab";
 import CodingTab from "./coding-tab";
 import EverydayTab from "./everyday-tab";
+import WebsiteTab from "./website-tab";
 
-const categories = ["All", "Everyday", "Software", "Browser", "Coding", "Website"];
+const categories = ["All", "Everyday", "Software", "Coding", "Website"];
 
 export default function UsesTabs() {
     return (
@@ -19,7 +20,12 @@ export default function UsesTabs() {
             </TabsList>
 
             <TabsContent value="All">
-                <p>Semua kategori</p>
+                <div className="flex flex-col gap-8">
+                    <EverydayTab />
+                    <SoftwareTab />
+                    <CodingTab />
+                    <WebsiteTab />
+                </div>
             </TabsContent>
 
             <TabsContent value="Everyday">
@@ -30,16 +36,12 @@ export default function UsesTabs() {
                 <SoftwareTab />
             </TabsContent>
 
-            <TabsContent value="Browser">
-                <p>Browser</p>
-            </TabsContent>
-
             <TabsContent value="Coding">
                 <CodingTab />
             </TabsContent>
 
             <TabsContent value="Website">
-                <p>Usefull website</p>
+                <WebsiteTab />
             </TabsContent>
         </Tabs>
     );
