@@ -1,3 +1,4 @@
+import HobbiesSection from "@/components/about/hobbies-section";
 import IntroSection from "@/components/about/intro-section";
 
 export default function AboutPage() {
@@ -6,6 +7,8 @@ export default function AboutPage() {
 
             <IntroSection />
 
+            <HobbiesSection />
+            
         </main>
     )
 }
