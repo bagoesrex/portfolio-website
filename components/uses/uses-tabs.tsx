@@ -1,6 +1,7 @@
 "use client";
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import SoftwareTab from "./software-tab";
 
 const categories = ["All", "Everyday", "Software", "Browser", "Coding", "Website"];
 
@@ -15,11 +16,29 @@ export default function UsesTabs() {
                 ))}
             </TabsList>
 
-            {categories.map((category) => (
-                <TabsContent key={category} value={category}>
-                    <p>{category}</p>
-                </TabsContent>
-            ))}
+            <TabsContent value="All">
+                <p>Semua kategori</p>
+            </TabsContent>
+
+            <TabsContent value="Everyday">
+                <p>Tools</p>
+            </TabsContent>
+
+            <TabsContent value="Software">
+                <SoftwareTab />
+            </TabsContent>
+
+            <TabsContent value="Browser">
+                <p>Browser</p>
+            </TabsContent>
+
+            <TabsContent value="Coding">
+                <p>Alat coding</p>
+            </TabsContent>
+
+            <TabsContent value="Website">
+                <p>Usefull website</p>
+            </TabsContent>
         </Tabs>
     );
 }
