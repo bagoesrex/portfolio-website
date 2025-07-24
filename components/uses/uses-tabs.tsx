@@ -2,6 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import SoftwareTab from "./software-tab";
+import CodingTab from "./coding-tab";
 
 const categories = ["All", "Everyday", "Software", "Browser", "Coding", "Website"];
 
@@ -33,7 +34,7 @@ export default function UsesTabs() {
             </TabsContent>
 
             <TabsContent value="Coding">
-                <p>Alat coding</p>
+                <CodingTab />
             </TabsContent>
 
             <TabsContent value="Website">
