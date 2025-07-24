@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import localFont from 'next/font/local'
+import Footer from "@/components/layout/footer";
 
 const nunitoSans = localFont({
   src: '../public/fonts/NunitoSans.ttf',
@@ -36,6 +37,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
