@@ -18,7 +18,7 @@ const navItems = [
     { href: "/uses", label: "Uses" },
 ]
 
-export default function Navbar() {
+export default function HeaderNavbar() {
     const pathname = usePathname()
 
     return (
