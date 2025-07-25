@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PortableText } from "next-sanity";
+import { PortableText, PortableTextBlock } from "next-sanity";
 import { Card, CardContent } from "../ui/card";
 import { Clock } from "lucide-react";
 
@@ -7,7 +7,7 @@ interface ProjectCardProps {
     slug: string;
     title: string;
     date: string;
-    body: Array<any>;
+    body: PortableTextBlock[];
     techStack: Array<string>;
 }
 

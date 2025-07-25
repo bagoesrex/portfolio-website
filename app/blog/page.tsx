@@ -20,7 +20,7 @@ export default async function BlogPage() {
                 Blogs
             </h1>
             <p className="leading-relaxed">
-                I write about the things I learn and love — from debugging headaches to UI experiments. Hopefully, you'll find something useful or inspiring here.
+                I write about the things I learn and love - from debugging headaches to UI experiments. Hopefully, you&apos;ll find something useful or inspiring here.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

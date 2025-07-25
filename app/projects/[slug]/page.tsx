@@ -3,6 +3,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
 import { Clock } from "lucide-react";
+import Image from "next/image";
 
 const PROJECT_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
 
@@ -43,12 +44,12 @@ export default async function ProjectDetailPage({
                         ))}
                 </div>
                 {projectImageUrl && (
-                    <img
+                    <Image
                         src={projectImageUrl}
                         alt={project.title}
                         className="aspect-video rounded-xl"
-                        width="550"
-                        height="310"
+                        width={550}
+                        height={310}
                     />
                 )}
             </div>

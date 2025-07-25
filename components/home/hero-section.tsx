@@ -7,7 +7,7 @@ export default function HeroSection() {
             <div className="flex flex-col-reverse md:flex-row items-start md:items-center gap-6 max-w-4xl w-full">
                 <div className="flex-1 text-left">
                     <h1 className="text-3xl md:text-4xl font-extrabold text-primary">
-                        Hi, I'm Bagus
+                        Hi, I&apos;m Bagus
                     </h1>
                     <h2 className="text-xl font-semibold text-primary">
                         Fullstack Developer

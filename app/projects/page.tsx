@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
                 Projects
             </h1>
             <p className="leading-relaxed">
-                Here are some of the projects I've built - from fun experiments to fully functional apps. Each one taught me something new.
+                Here are some of the projects I&#39;ve built – from fun experiments to fully functional apps. Each one taught me something new.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

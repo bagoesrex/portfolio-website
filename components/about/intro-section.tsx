@@ -9,10 +9,11 @@ export default function IntroSection() {
             <div className="flex flex-col md:flex-row gap-10">
                 <div className="flex flex-col flex-4/6 gap-3">
                     <h1 className="text-3xl font-semibold font-sans text-primary">
-                        Hey there! I’m Bagus Rahmawan, a tech enthusiast from Semarang.
+                        Hey there! I&rsquo;m Bagus Rahmawan, a tech enthusiast from Semarang.
                     </h1>
-                    <p className="leading-relaxed">I'm a passionate developer who enjoys exploring new technologies, writing clean and efficient code, and learning something new every day.
-                        When I’m not coding, you’ll likely find me tinkering with design, reading documentation, or debugging something I accidentally broke.
+                    <p className="leading-relaxed">
+                        I&apos;m a passionate developer who enjoys exploring new technologies, writing clean and efficient code, and learning something new every day.
+                        When I&rsquo;m not coding, you&rsquo;ll likely find me tinkering with design, reading documentation, or debugging something I accidentally broke.
                     </p>
                 </div>
                 <div className="flex flex-col flex-2/6 justify-center items-center">
@@ -42,7 +43,7 @@ export default function IntroSection() {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <h2 className="text-xl font-semibold text-primary">"Reach Me On"</h2>
+                <h2 className="text-xl font-semibold text-primary">&quot;Reach Me On&quot;</h2>
                 <SocialMedia />
             </div>
         </section>

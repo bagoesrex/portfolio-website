@@ -1,13 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock } from "lucide-react";
-import { PortableText } from "next-sanity";
+import { PortableText, PortableTextBlock } from "next-sanity";
 import Link from "next/link";
 
 interface BlogCardProps {
     slug: string;
     title: string;
     date: string;
-    body: Array<any>;
+    body: PortableTextBlock[];
 }
 
 export default function BlogCard({ slug, title, date, body }: BlogCardProps) {

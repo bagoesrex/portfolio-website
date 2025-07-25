@@ -1,4 +1,4 @@
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextBlock } from "@portabletext/react";
 import { Calendar, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
@@ -6,7 +6,7 @@ interface BlogCardProps {
     slug: string;
     title: string;
     date: string;
-    body: Array<any>;
+    body: PortableTextBlock[];
 }
 
 export default function BlogCard({ slug, title, date, body }: BlogCardProps) {

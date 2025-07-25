@@ -3,6 +3,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { client } from "@/sanity/client";
 import { Clock } from "lucide-react";
+import Image from "next/image";
 
 const POST_QUERY = `*[_type == "blog" && slug.current == $slug][0]`;
 
@@ -33,12 +34,12 @@ export default async function BlogDetailPage({
                     <p className="text-sm">{new Date(blog.publishedAt).toLocaleDateString()}</p>
                 </div>
                 {blogImageUrl && (
-                    <img
+                    <Image
                         src={blogImageUrl}
                         alt={blog.title}
                         className="aspect-video rounded-xl"
-                        width="550"
-                        height="310"
+                        width={550}
+                        height={310}
                     />
                 )}
             </div>

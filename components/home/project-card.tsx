@@ -1,11 +1,11 @@
 import { ChevronRight } from "lucide-react";
-import { PortableText } from "next-sanity";
+import { PortableText, PortableTextBlock } from "next-sanity";
 import Link from "next/link";
 
 interface ProjectCardProps {
     slug: string;
     title: string;
-    body: Array<any>;
+    body: PortableTextBlock[];
     techStack: Array<string>;
 }
 
