@@ -11,9 +11,9 @@ const categories = ["All", "Everyday", "Software", "Coding", "Website"];
 export default function UsesTabs() {
     return (
         <Tabs defaultValue="All" className="w-full">
-            <TabsList className="grid grid-cols-6 w-full mb-4 bg-transparent">
+            <TabsList className="flex flex-row w-full mb-4 bg-transparent">
                 {categories.map((category) => (
-                    <TabsTrigger key={category} value={category}>
+                    <TabsTrigger key={category} value={category} className="text-xs">
                         {category}
                     </TabsTrigger>
                 ))}

@@ -16,7 +16,7 @@ export default function WebsiteCard({ title, href, label, description }: Website
                         <h3 className="font-semibold">{title}</h3>
                         <h4 className="text-muted-foreground italic">{label}</h4>
                     </div>
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex items-center">
                         <ExternalLink size={18} className="-mt-3" />
                     </div>
                 </div>

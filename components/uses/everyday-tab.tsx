@@ -43,10 +43,10 @@ export default function EverydayTab() {
     return (
         <section>
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
+                <h2 className="text-xl md:text-2xl font-extrabold text-primary">
                     Everyday
                 </h2>
-                <div className="grid grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {gearItems.map((item, index) => (
                         <GearCard key={index} icon={item.icon} title={item.title} description={item.description} tags={item.tags} />
                     ))}

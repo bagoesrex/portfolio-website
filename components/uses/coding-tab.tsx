@@ -90,30 +90,30 @@ export default function CodingTab() {
     return (
         <section className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
+                <h2 className="text-xl md:text-2xl font-extrabold text-primary">
                     Coding Languages
                 </h2>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     {languagesItems.map((item, index) => (
                         <UsesCard key={index} icon={item.icon} title={item.title} />
                     ))}
                 </div>
             </div>
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
+                <h2 className="text-xl md:text-2xl font-extrabold text-primary">
                     Coding Frameworks / Libraries / Databases
                 </h2>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     {frameworksItems.map((item, index) => (
                         <UsesCard key={index} icon={item.icon} title={item.title} />
                     ))}
                 </div>
             </div>
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
+                <h2 className="text-xl md:text-2xl font-extrabold text-primary">
                     Coding Tools / Utilities
                 </h2>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     {toolsItems.map((item, index) => (
                         <UsesCard key={index} icon={item.icon} title={item.title} />
                     ))}

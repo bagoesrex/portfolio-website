@@ -25,10 +25,10 @@ export default function WebsiteTab() {
     return (
         <section>
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
+                <h2 className="text-xl md:text-2xl font-extrabold text-primary">
                     Usefull Website
                 </h2>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     {websiteItems.map((item, index) => (
                         <WebsiteCard key={index} title={item.title} href={item.href} label={item.label} description={item.description} />
                     ))}

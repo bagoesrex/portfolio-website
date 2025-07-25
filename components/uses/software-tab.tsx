@@ -51,10 +51,10 @@ export default function SoftwareTab() {
     return (
         <section>
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
+                <h2 className="text-xl md:text-2xl font-extrabold text-primary">
                     Software
                 </h2>
-                <div className="grid grid-cols-3 gap-5">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                     {softwareItems.map((item, index) => (
                         <UsesCard key={index} icon={item.icon} title={item.title} />
                     ))}
