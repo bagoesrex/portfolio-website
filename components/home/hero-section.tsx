@@ -17,7 +17,7 @@ export default function HeroSection() {
                     </p>
                 </div>
 
-                <div className="flex justify-start md:justify-center items-center w-60 py-6">
+                <div className="flex justify-start md:justify-center items-center w-60 py-1">
                     <div className="w-50">
                         <AspectRatio ratio={1}>
                             <Image

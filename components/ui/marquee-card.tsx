@@ -40,8 +40,8 @@ export default function MarqueeCard({
                     >
                         <div className="w-7 text-secondary">{item.icon}</div>
                         <div>
-                            <h3 className="text-sm font-semibold text-black">{item.title}</h3>
-                            <p className="text-xs text-gray-500">{item.description}</p>
+                            <h3 className="text-xs md:text-sm font-semibold text-black">{item.title}</h3>
+                            <p className="text-xs text-muted-foreground">{item.description}</p>
                         </div>
                     </div>
                 ))}

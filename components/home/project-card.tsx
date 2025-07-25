@@ -5,30 +5,29 @@ import Link from "next/link";
 interface ProjectCardProps {
     slug: string;
     title: string;
-    date: string;
     body: Array<any>;
     techStack: Array<string>;
 }
 
-export default function ProjectCard({ slug, title, date, body, techStack }: ProjectCardProps) {
+export default function ProjectCard({ slug, title, body, techStack }: ProjectCardProps) {
     return (
-        <div className="flex flex-col gap-2 border-b-2 border-primary/80 pb-3">
-            <div className="flex flex-row justify-between">
-                <h3 className="font-bold text-secondary">{title}</h3>
-                <Link href={`/projects/${slug}`}>
+        <Link href={`/projects/${slug}`}>
+            <div className="flex flex-col gap-1 border-b-2 border-primary/80 pt-3 pb-3 px-1 md:px-2 rounded-t-xs hover:bg-primary/20">
+                <div className="flex flex-row justify-between">
+                    <h3 className="font-bold text-secondary">{title}</h3>
                     <ChevronRight className="cursor-pointer hover:opacity-70 text-secondary" />
-                </Link>
+                </div>
+                <div className="text-sm mt-1 line-clamp-3">
+                    {Array.isArray(body) && <PortableText value={body} />}
+                </div>
+                <div className="flex flex-wrap gap-2 mt-1">
+                    {techStack.map((tech) => (
+                        <span key={tech} className="bg-primary/40 text-xs text-primary rounded px-2 py-1">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
             </div>
-            <div className="text-sm mt-1 line-clamp-3">
-                {Array.isArray(body) && <PortableText value={body} />}
-            </div>
-            <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
-                    <span key={tech} className="bg-gray-200/40 text-xs rounded px-2 py-1">
-                        {tech}
-                    </span>
-                ))}
-            </div>
-        </div>
+        </Link>
     );
 }

@@ -26,8 +26,8 @@ const BottomMarqueeItems = [
 export default function TechStackMarquee() {
     return (
         <>
-            <MarqueeCard items={TopMarqueeItems} speed={40} />
-            <MarqueeCard items={BottomMarqueeItems} speed={40} direction="right" />
+            <MarqueeCard items={TopMarqueeItems} speed={30} />
+            <MarqueeCard items={BottomMarqueeItems} speed={30} direction="right" />
         </>
     )
 }

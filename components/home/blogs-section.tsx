@@ -17,9 +17,12 @@ export default async function BlogsSection() {
     return (
         <section id="projects">
             <div className="flex flex-col gap-4">
-                <h2 className="text-2xl font-extrabold text-primary">
-                    Featured Blogs
-                </h2>
+                <div className="flex flex-col">
+                    <h2 className="text-2xl font-extrabold text-primary">
+                        Featured Blogs
+                    </h2>
+                    <p className="italic text-muted-foreground text-xs md:text-sm">Temporary content for testing!</p>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {blogs.map((blog) => (
                         <BlogCard
