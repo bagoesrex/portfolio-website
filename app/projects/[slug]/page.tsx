@@ -25,7 +25,6 @@ export default async function ProjectDetailPage({
     const projectImageUrl = project.image
         ? urlFor(project.image)?.width(550).height(310).url()
         : null;
-    console.log(project)
 
     return (
         <div className="flex flex-col gap-5">

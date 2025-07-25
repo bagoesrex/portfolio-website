@@ -11,7 +11,6 @@ const options = { next: { revalidate: 30 } };
 
 export default async function BlogPage() {
     const blogs = await client.fetch<SanityDocument[]>(BLOGS_QUERY, {}, options);
-    console.log(blogs)
 
     return (
         <section className="max-w-3xl min-w-sw mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">

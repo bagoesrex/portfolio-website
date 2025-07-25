@@ -11,7 +11,6 @@ const options = { next: { revalidate: 30 } };
 
 export default async function ProjectsPage() {
     const projects = await client.fetch<SanityDocument[]>(PROJECTS_QUERY, {}, options);
-    console.log(projects)
 
     return (
         <section className="max-w-3xl min-w-sw mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">

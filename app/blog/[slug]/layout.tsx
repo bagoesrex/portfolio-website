@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-import { IoMdArrowBack } from "react-icons/io";
 
 interface BlogSlugLayoutProps {
     children: ReactNode;

@@ -12,7 +12,6 @@ const options = { next: { revalidate: 30 } };
 
 export default async function BlogsSection() {
     const blogs = await client.fetch<SanityDocument[]>(BLOGS_QUERY, {}, options);
-    console.log(blogs)
 
     return (
         <section id="projects">
