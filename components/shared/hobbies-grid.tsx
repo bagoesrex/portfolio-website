@@ -26,13 +26,13 @@ const hobbies = [
 
 export default function HobbiesGrid() {
     return (
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {hobbies.map((hobby, i) => (
                 <div key={i} className="flex items-center gap-8 py-4 px-8 bg-muted/20 rounded-xl">
                     <div className="text-2xl text-primary">{hobby.icon}</div>
                     <div>
                         <h3 className="font-semibold">{hobby.title}</h3>
-                        <p className="text-sm text-muted-foreground">{hobby.description}</p>
+                        <p className="text-sm">{hobby.description}</p>
                     </div>
                 </div>
             ))}
