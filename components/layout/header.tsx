@@ -19,7 +19,7 @@ export default function Header() {
                         <Link href={"/"} onClick={() => setIsOpen(false)}>
                             <div className="flex flex-row gap-1 justify-center items-center text-primary">
                                 <Image src="/icons/logo.svg" alt="Logo" width={38} height={38} priority />
-                                <h1 className="font-extrabold">Bagoes Rex</h1>
+                                <h1 className="text-md font-extrabold">Bagoes Rex</h1>
                             </div>
                         </Link>
 
