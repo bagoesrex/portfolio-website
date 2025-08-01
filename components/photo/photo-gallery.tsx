@@ -1,3 +1,8 @@
+"use client";
+
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import BlurImage from "./blur-image";
 
 const photoItems = [
@@ -157,16 +162,42 @@ const photoItems = [
     }
 ];
 
-
 export default function PhotoGallery() {
+    const [index, setIndex] = useState(-1);
+
     return (
-        <div className="columns-1 sm:columns-2 lg:columns-4 gap-2 space-y-2">
-            {photoItems.map((photo, index) => (
-                <div key={index} className="overflow-hidden rounded-lg">
-                    <BlurImage src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} />
-                </div>
-            ))}
-        </div>
+        <>
+            <div className="columns-1 sm:columns-2 lg:columns-4 gap-2 space-y-2">
+                {photoItems.map((photo, i) => (
+                    <div
+                        key={photo.id}
+                        className="overflow-hidden rounded-lg cursor-zoom-in"
+                        onClick={() => setIndex(i)}
+                    >
+                        <BlurImage
+                            src={photo.src}
+                            alt={photo.alt}
+                            width={photo.width}
+                            height={photo.height}
+                        />
+                    </div>
+                ))}
+            </div>
+
+            <Lightbox
+                open={index >= 0}
+                close={() => setIndex(-1)}
+                index={index}
+                slides={photoItems.map((img) => ({
+                    src: img.src,
+                    alt: img.alt,
+                }))}
+                styles={{
+                    container: {
+                        backgroundColor: "rgba(0,0,0,0.85)",
+                    },
+                }}
+            />
+        </>
     );
 }
-
