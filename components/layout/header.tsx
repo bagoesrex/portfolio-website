@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header className="fixed top-0 w-full z-50 h-14 px-2 ">
             <div className={`flex border-b border-gray-500 bg-background/60 backdrop-blur-md max-w-3xl mx-auto pt-2 px-2 h-full
-                ${isOpen ? "min-h-[225px] md:min-h-14" : "h-14"}
+                ${isOpen ? "min-h-[265px] md:min-h-14" : "h-14"}
                 `}>
                 <div className="flex flex-col gap-1.5 w-full">
                     <div className="flex flex-row justify-between items-center w-full">

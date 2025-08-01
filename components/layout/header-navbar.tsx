@@ -20,6 +20,7 @@ const navItems = [
     { href: "/blog", label: "Blog" },
     { href: "/projects", label: "Projects" },
     { href: "/uses", label: "Uses" },
+    { href: "/photos", label: "Photos" }
 ]
 
 export default function HeaderNavbar({ onLinkClick }: HeaderNavbarProps) {
