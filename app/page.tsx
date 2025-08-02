@@ -1,5 +1,6 @@
 import BlogsSection from "@/components/home/blogs-section";
 import HeroSection from "@/components/home/hero-section";
+import PhotosSection from "@/components/home/photos-section";
 import ProjectsSection from "@/components/home/projects-section";
 import TechStackSection from "@/components/home/tech-stack-section";
 
@@ -13,6 +14,8 @@ export default function Home() {
       <ProjectsSection />
 
       <BlogsSection />
+
+      <PhotosSection />
     </main>
   );
 }
