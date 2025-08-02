@@ -4,14 +4,15 @@ import Link from "next/link";
 
 interface CustomButtonProps {
     link: string;
+    width?: string;
     children: React.ReactNode;
 }
 
-export default function CustomButton({ link, children }: CustomButtonProps) {
+export default function CustomButton({ link, children, width = "90px" }: CustomButtonProps) {
     return (
         <div className="relative bg-primary overflow-hidden size-fit rounded-sm border-2 border-secondary">
             <GlareHover
-                width="90px"
+                width={width}
                 height="35px"
                 background="transparent"
                 glareColor="#00bcfd"
