@@ -54,7 +54,7 @@ export default function PhotosSection() {
                         </div>
                     ))}
                 </div>
-                <CustomButton link="/photos">See All</CustomButton>
+                <CustomButton link="/photos" className="w-full md:w-[90px]">See All</CustomButton>
             </div>
         </section>
     )

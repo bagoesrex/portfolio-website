@@ -33,7 +33,7 @@ export default async function ProjectsSection() {
                         />
                     ))}
                 </div>
-                <CustomButton link="/projects">See All</CustomButton>
+                <CustomButton link="/projects" className="w-full md:w-[90px]">See All</CustomButton>
             </div>
         </section>
     )

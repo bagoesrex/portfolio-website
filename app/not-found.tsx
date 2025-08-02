@@ -22,7 +22,7 @@ export default function NotFoundPage() {
 
             <h1 className="text-2xl md:text-3xl font-extrabold">Page Not Found</h1>
             <p className="leading-relaxed">Oops! The page you&apos;re looking for doesn&apos;t exist.</p>
-            <CustomButton link="/" width="150px">Back To Home</CustomButton>
+            <CustomButton link="/" className="w-[60%] md:w-[150px]">Back To Home</CustomButton>
         </section>
     );
 }

@@ -34,7 +34,7 @@ export default async function BlogsSection() {
                     ))}
 
                 </div>
-                <CustomButton link="/blog">See All</CustomButton>
+                <CustomButton link="/blog" className="w-full md:w-[90px]">See All</CustomButton>
             </div>
         </section>
     )

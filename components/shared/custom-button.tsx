@@ -4,15 +4,15 @@ import Link from "next/link";
 
 interface CustomButtonProps {
     link: string;
-    width?: string;
     children: React.ReactNode;
+    className?: string;
 }
 
-export default function CustomButton({ link, children, width = "90px" }: CustomButtonProps) {
+export default function CustomButton({ link, children, className = "" }: CustomButtonProps) {
     return (
-        <div className="relative bg-primary overflow-hidden size-fit rounded-sm border-2 border-secondary">
+        <Link href={link} className={`relative bg-primary overflow-hidden rounded-sm border-2 border-secondary ${className}`} >
             <GlareHover
-                width={width}
+                width="100%"
                 height="35px"
                 background="transparent"
                 glareColor="#00bcfd"
@@ -22,15 +22,13 @@ export default function CustomButton({ link, children, width = "90px" }: CustomB
                 transitionDuration={500}
                 playOnce={false}
             >
-                <Link href={link} >
-                    <div className="flex flex-row justify-center items-center gap-3 text-background">
-                        <h4 className="text-sm">
-                            {children}
-                        </h4>
-                        <ChevronRight size={15} />
-                    </div>
-                </Link>
+                <div className="flex flex-row justify-center items-center gap-3 text-background">
+                    <h4 className="text-sm">
+                        {children}
+                    </h4>
+                    <ChevronRight size={15} />
+                </div>
             </GlareHover>
-        </div>
+        </Link >
     )
 }
