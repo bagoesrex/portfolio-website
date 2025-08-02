@@ -1,11 +1,15 @@
 import SocialMedia from "../shared/social-media";
 import Image from "next/image";
 import FooterNavbar from "./footer-navbar";
+import NowPlaying from "../shared/now-playing";
 
 export default function Footer() {
     return (
         <footer className="px-2 min-w-sw w-full">
             <div className="flex flex-col max-w-3xl mx-auto px-3 pt-5 py-8 h-full border-t-1 border-gray-500">
+                <div className="flex flex-row justify-start items-center">
+                    <NowPlaying />
+                </div>
                 <div className="flex flex-col md:flex-row gap-4">
                     <div className="flex flex-col gap-3 max-w-sm">
                         <div className="flex flex-row gap-1 items-center">
