@@ -9,11 +9,9 @@ if (!refresh_token) throw new Error("Missing SPOTIFY_REFRESH_TOKEN in .env.local
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 
 export const getAccessToken = async () => {
-    console.log("Get Token...")
-    console.log(refresh_token)
-
     const response = await fetch(TOKEN_ENDPOINT, {
         method: "POST",
         headers: {
@@ -27,12 +25,20 @@ export const getAccessToken = async () => {
     });
 
     if (!response.ok) {
-        const errorText = await response.text();
-        console.error("Failed Get Token", errorText);
         throw new Error("Failed to refresh Spotify token");
     }
 
     const data = await response.json();
-    console.log(data)
     return data.access_token;
+};
+
+export const getNowPlaying = async () => {
+    const access_token = await getAccessToken();
+    console.log("access Token: ", access_token)
+
+    return fetch(NOW_PLAYING_ENDPOINT, {
+        headers: {
+            Authorization: `Bearer ${access_token}`
+        }
+    });
 };
