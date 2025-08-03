@@ -25,9 +25,9 @@ const BottomMarqueeItems = [
 
 export default function TechStackMarquee() {
     return (
-        <>
+        <div className="relative h-35">
             <MarqueeCard items={TopMarqueeItems} speed={30} />
             <MarqueeCard items={BottomMarqueeItems} speed={30} direction="right" />
-        </>
+        </div>
     )
 }
