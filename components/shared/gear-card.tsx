@@ -11,7 +11,9 @@ interface GearProps {
 export default function GearCard({ icon, title, description, tags }: GearProps) {
     return (
         <div className="flex flex-row gap-5 items-center justify-start py-3 px-6 bg-muted/15 rounded-xl hover:ring-1 hover:ring-primary">
-            <Image src={icon} alt={"Gear Image"} width={100} height={100}/>
+            <div className="max-w-[30%] w-full h-[100px] relative">
+                <Image src={icon} alt="Gear Image" fill objectFit="contain" priority />
+            </div>
             <div className="flex flex-col gap-1 h-full">
                 <h3 className="text-md font-semibold">{title}</h3>
                 <p className="text-xs">{description}</p>
