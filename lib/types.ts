@@ -6,3 +6,12 @@ export interface NowPlayingSong {
     albumImageUrl: string;
     songUrl: string;
 }
+
+export interface LastPlayedSong {
+    title: string;
+    artist: string;
+    album: string;
+    albumImageUrl: string;
+    songUrl: string;
+    playedAt: string;
+}
