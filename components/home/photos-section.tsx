@@ -40,7 +40,7 @@ export default function PhotosSection() {
                     <h2 className="text-2xl font-extrabold text-primary">
                         Photos
                     </h2>
-                    <p className="leading-relaxed">These photos aren&apos;t curated or perfect - just small glimpses of me during the rare times I&apos;m on the other side of the lens!</p>
+                    <p className="italic text-muted-foreground text-xs md:text-sm">Just little glimpses of me behind the lens!</p>
                 </div>
                 <div className="columns-4 gap-2">
                     {photoItems.map((photo) => (
