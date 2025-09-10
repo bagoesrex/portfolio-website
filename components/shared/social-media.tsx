@@ -32,12 +32,12 @@ const mediaLinks = [
 
 export default function SocialMedia() {
     return (
-        <div className="flex flex-row gap-2">
+        <div className="flex flex-row gap-2 cursor-pointer">
             {mediaLinks.map(({ href, label, icon: Icon }) => (
                 <Tooltip key={href}>
                     <TooltipTrigger asChild>
                         <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
-                            <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent">
+                            <Button variant="ghost" size="icon" className="text-primary hover:bg-transparent cursor-pointer">
                                 <Icon />
                             </Button>
                         </a>
