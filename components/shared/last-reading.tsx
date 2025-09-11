@@ -2,7 +2,7 @@ import { dummyReading } from "@/data/dummyReading";
 import Image from "next/image";
 
 export default function LastReading() {
-    const percentage = (dummyReading.currentPage / dummyReading.totalPages) * 100
+    const percentage = ((dummyReading.currentPage / dummyReading.totalPages) * 100).toFixed(2);
 
     return (
         <div className="flex flex-col rounded-xl pt-2 pb-4 px-8 gap-4 group">
