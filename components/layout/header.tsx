@@ -11,9 +11,10 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 w-full z-50 h-14 px-2 ">
-            <div className={`flex border-b border-gray-500 bg-background/60 backdrop-blur-md max-w-3xl mx-auto pt-2 px-2 h-full
-                ${isOpen ? "min-h-[265px] md:min-h-14" : "h-14"}
-                `}>
+            <div
+                className={`flex border-b border-gray-500 bg-background/60 backdrop-blur-md max-w-3xl mx-auto pt-2 px-2 transition-[height] duration-170 overflow-hidden
+                            ${isOpen ? "h-[265px] md:h-14" : "h-14"}`}
+            >
                 <div className="flex flex-col gap-1.5 w-full">
                     <div className="flex flex-row justify-between items-center w-full">
                         <Link href={"/"} onClick={() => setIsOpen(false)}>
@@ -35,11 +36,11 @@ export default function Header() {
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
                         </button>
                     </div>
-                    {isOpen && (
-                        <div className="md:hidden px-5 pb-4 w-full">
-                            <Navbar onLinkClick={() => setIsOpen(false)} />
-                        </div>
-                    )}
+                    <div
+                        className={`md:hidden px-5 pb-4 w-full transition-opacity duration-500
+                                    ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
+                        <Navbar onLinkClick={() => setIsOpen(false)} />
+                    </div>
                 </div>
             </div>
 
