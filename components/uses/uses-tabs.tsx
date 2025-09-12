@@ -13,7 +13,14 @@ export default function UsesTabs() {
         <Tabs defaultValue="All" className="w-full">
             <TabsList className="flex flex-row w-full mb-4 bg-transparent">
                 {categories.map((category) => (
-                    <TabsTrigger key={category} value={category} className="text-xs">
+                    <TabsTrigger
+                        key={category}
+                        value={category}
+                        className="text-xs 
+                        transition-all duration-200 ease-out transform translate-x-[-2.5px] translate-y-[-2.5px]      
+                        data-[state=active]:translate-x-0 data-[state=active]:translate-y-0
+                        data-[state=active]:#0F4C75 data-[state=active]:text-white"
+                    >
                         {category}
                     </TabsTrigger>
                 ))}
