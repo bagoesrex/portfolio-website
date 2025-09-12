@@ -12,7 +12,7 @@ export default function GearCard({ icon, title, description, tags }: GearProps) 
     return (
         <div className="flex flex-row gap-5 items-center justify-start py-3 px-6 border border-gray-200 shadow-xs rounded-md transition-transform duration-300 hover:scale-105">
             <div className="max-w-[30%] w-full h-[100px] relative">
-                <Image src={icon} alt="Gear Image" fill objectFit="contain" priority />
+                <Image src={icon} alt="Gear Image" fill objectFit="contain" priority className="drop-shadow-md" />
             </div>
             <div className="flex flex-col gap-1 h-full">
                 <h3 className="text-md font-semibold">{title}</h3>
