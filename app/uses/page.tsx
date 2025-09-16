@@ -2,7 +2,7 @@ import UsesTabs from "@/components/uses/uses-tabs";
 
 export default function UsesPage() {
     return (
-        <section className="max-w-3xl min-w-sm mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">
+        <section className="max-w-3xl flex-1 min-w-sm mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">
 
             <h1 className="text-3xl font-extrabold text-primary">
                 What do I use?

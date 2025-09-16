@@ -13,7 +13,7 @@ export default async function BlogPage() {
     const blogs = await client.fetch<SanityDocument[]>(BLOGS_QUERY, {}, options);
 
     return (
-        <section className="max-w-3xl min-w-sw mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">
+        <section className="max-w-3xl flex-1 min-w-sw mx-auto mt-1 pt-20 flex flex-col gap-5 pb-10 px-5 text-foreground">
 
             <h1 className="text-3xl font-extrabold text-primary">
                 Blogs
