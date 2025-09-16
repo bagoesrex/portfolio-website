@@ -33,8 +33,11 @@ export default function HeaderNavbar({ onLinkClick }: HeaderNavbarProps) {
                     <NavigationMenuItem key={item.href}>
                         <NavigationMenuLink
                             asChild
-                            className={`"w-full text-center" ${navigationMenuTriggerStyle()} ${pathname === item.href ? "text-primary font-bold" : "font-bold"
-                                }`}
+                            className={`
+                                w-full text-center hover:bg-gray-200/50 focus:bg-gray-200/50 active:bg-gray-300/50
+                                ${navigationMenuTriggerStyle()} 
+                                ${pathname === item.href ? "text-primary font-bold" : "font-bold"}
+                              `}
                         >
                             <Link href={item.href} onClick={onLinkClick}>{item.label}</Link>
                         </NavigationMenuLink>
