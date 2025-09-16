@@ -1,5 +1,5 @@
 import UsesCard from "../shared/uses-card";
-import { SiDart, SiExpress, SiFigma, SiFlutter, SiGit, SiGradle, SiJavascript, SiKotlin, SiMysql, SiNextdotjs, SiNpm, SiPostgresql, SiPrettier, SiPrisma, SiRailway, SiReact, SiTypescript, SiVercel, SiVite } from "react-icons/si";
+import { SiDart, SiExpress, SiFigma, SiFlutter, SiGit, SiGradle, SiJavascript, SiKotlin, SiMongodb, SiMysql, SiNextdotjs, SiNpm, SiPostgresql, SiPrettier, SiPrisma, SiRailway, SiReact, SiTailwindcss, SiTypescript, SiVercel, SiVite } from "react-icons/si";
 
 const languagesItems = [
     {
@@ -21,6 +21,10 @@ const languagesItems = [
 ];
 
 const frameworksItems = [
+    {
+        icon: <SiTailwindcss size={35} />,
+        title: "Tailwind CSS",
+    },
     {
         icon: <SiReact size={35} />,
         title: "React.js",
@@ -48,6 +52,10 @@ const frameworksItems = [
     {
         icon: <SiPostgresql size={35} />,
         title: "PostgreSQL",
+    },
+    {
+        icon: <SiMongodb size={35} />,
+        title: "MongoDB",
     },
 ]
 
