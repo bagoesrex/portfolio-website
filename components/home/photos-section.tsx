@@ -4,7 +4,7 @@ import CustomButton from "../shared/custom-button";
 const photoItems = [
     {
         id: 1,
-        src: "/images/photos/1.webp",
+        src: "/images/photos/7.webp",
         width: 500,
         height: 500,
         alt: "temp alt"
