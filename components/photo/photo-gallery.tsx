@@ -159,13 +159,6 @@ const photoItems = [
         width: 800,
         height: 600,
         alt: "temp alt"
-    },
-    {
-        id: 23,
-        src: "/images/photos/23.webp",
-        width: 800,
-        height: 600,
-        alt: "temp alt"
     }
 ];
 
