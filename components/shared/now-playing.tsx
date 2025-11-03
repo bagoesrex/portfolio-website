@@ -1,6 +1,6 @@
 "use client"
 
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import Image from "next/image";
 import fetcher from "@/lib/fetcher";
 import { NowPlayingSong } from "@/lib/types";
@@ -12,7 +12,7 @@ import {
 import { SiSpotify } from "react-icons/si";
 
 export default function NowPlaying() {
-    const { data } = useSWR<NowPlayingSong>("/api/spotify/now-playing", fetcher);
+    const { data } = useSWR<NowPlayingSong>("/api/spotify/now-playing", fetcher, { refreshInterval: 1000 * 30 });
     const isPlaying = data?.isPlaying;
 
     return (
