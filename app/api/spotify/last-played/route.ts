@@ -23,7 +23,6 @@ export async function GET() {
 
         const trackData = data.items[0];
         const { track, played_at } = trackData;
-        console.log(track)
 
         const { name: title, artists, album, external_urls } = track;
         const artist = artists.map((a: { name: string }) => a.name).join(", ");
@@ -43,7 +42,7 @@ export async function GET() {
             {
                 status: 200,
                 headers: {
-                    "cache-control": "public, s-maxage=60, stale-while-revalidate=30",
+                    "cache-control": "public, s-maxage=20, stale-while-revalidate=30",
                 },
             }
         );
