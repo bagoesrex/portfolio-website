@@ -1,6 +1,6 @@
 "use client"
 
-import useSWR, { mutate } from "swr";
+import useSWR from "swr";
 import Image from "next/image";
 import fetcher from "@/lib/fetcher";
 import { NowPlayingSong } from "@/lib/types";
