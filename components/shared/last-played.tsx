@@ -6,11 +6,18 @@ import dayjs from "dayjs";
 import Image from "next/image";
 import useSWR from "swr";
 import relativeTime from "dayjs/plugin/relativeTime";
+import { useEffect, useState } from "react";
 
 dayjs.extend(relativeTime);
 
 export default function LastPlayed() {
     const { data } = useSWR<LastPlayedSong>("/api/spotify/last-played", fetcher);
+    const [now, setNow] = useState(Date.now())
+
+    useEffect(() => {
+        const timer = setInterval(() => setNow(Date.now()), 1000 * 60);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <div className="flex flex-col rounded-xl pt-2 pb-4 px-8 gap-4 group">
@@ -35,7 +42,7 @@ export default function LastPlayed() {
                             <h4 className="font-semibold group-hover:underline">{data.title}</h4>
                             <p className="text-sm">{data.artist}</p>
                         </div>
-                        <p className="font-semibold text-xs italic self-end">{dayjs(data.playedAt).fromNow()}</p>
+                        <p className="font-semibold text-xs italic self-end">{dayjs(data.playedAt).from(now)}</p>
                     </div>
                 </a>
             ) : (
