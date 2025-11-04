@@ -1,4 +1,4 @@
-import BlogCard from "@/components/blog/blog-card";
+import BlogCard from "@/app/blog/_components/blog-card";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
 
