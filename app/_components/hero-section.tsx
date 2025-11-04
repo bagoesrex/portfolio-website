@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { AspectRatio } from "../ui/aspect-ratio";
-import { Button } from "../ui/button";
+import { AspectRatio } from "../../components/ui/aspect-ratio";
+import { Button } from "../../components/ui/button";
 import { User } from "lucide-react";
-import SocialMedia from "../shared/social-media";
+import SocialMedia from "../../components/shared/social-media";
 import Link from "next/link";
 
 export default function HeroSection() {

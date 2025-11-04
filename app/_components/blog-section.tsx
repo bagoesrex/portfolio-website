@@ -1,7 +1,7 @@
-import CustomButton from "../shared/custom-button";
 import BlogCard from "./blog-card";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
+import CustomButton from "@/components/shared/custom-button";
 
 const BLOGS_QUERY = `*[
     _type == "blog"
@@ -10,15 +10,15 @@ const BLOGS_QUERY = `*[
 
 const options = { next: { revalidate: 30 } };
 
-export default async function BlogsSection() {
+export default async function BlogSection() {
     const blogs = await client.fetch<SanityDocument[]>(BLOGS_QUERY, {}, options);
 
     return (
-        <section id="projects">
+        <section id="blog">
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col">
                     <h2 className="text-2xl font-extrabold text-primary">
-                        Featured Blogs
+                        Featured Blog Posts
                     </h2>
                     <p className="italic text-muted-foreground text-xs md:text-sm">Temporary content for testing!</p>
                 </div>

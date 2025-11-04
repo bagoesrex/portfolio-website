@@ -1,4 +1,4 @@
-import CustomButton from "../shared/custom-button";
+import CustomButton from "../../components/shared/custom-button";
 import ProjectCard from "./project-card";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
@@ -18,7 +18,7 @@ export default async function ProjectsSection() {
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col">
                     <h2 className="text-2xl font-extrabold text-primary">
-                        Featured Project
+                        Featured Projects
                     </h2>
                     <p className="italic text-muted-foreground text-xs md:text-sm">Temporary content for testing!</p>
                 </div>

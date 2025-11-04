@@ -1,5 +1,5 @@
-import BlurImage from "../photo/blur-image";
-import CustomButton from "../shared/custom-button";
+import BlurImage from "../../components/photo/blur-image";
+import CustomButton from "../../components/shared/custom-button";
 
 const photoItems = [
     {

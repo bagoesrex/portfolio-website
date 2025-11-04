@@ -1,4 +1,4 @@
-import TechStackMarquee from "./techstack-marquee";
+import TechStackMarquee from "./tech-stack-marquee";
 
 export default function TechStackSection() {
     return (
