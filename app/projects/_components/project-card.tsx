@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PortableText, PortableTextBlock } from "next-sanity";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent } from "../../../components/ui/card";
 import { Calendar } from "lucide-react";
 import dayjs from "dayjs";
 

@@ -1,6 +1,6 @@
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/client";
-import ProjectCard from "@/components/projects/project-card";
+import ProjectCard from "@/app/projects/_components/project-card";
 
 const PROJECTS_QUERY = `*[
   _type == "project"
