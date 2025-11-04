@@ -1,4 +1,4 @@
-import HobbiesGrid from "../shared/hobbies-grid";
+import HobbiesGrid from "./hobbies-grid";
 
 export default function HobbiesSection() {
     return (

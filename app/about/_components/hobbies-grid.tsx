@@ -21,7 +21,6 @@ const hobbies = [
         title: "Android Modding",
         description: "Tinkering with custom ROMs, root tools, and system tweaks just for fun."
     }
-
 ];
 
 export default function HobbiesGrid() {

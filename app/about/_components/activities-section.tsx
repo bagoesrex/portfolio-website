@@ -1,4 +1,4 @@
-import ActivitiesGrid from "../shared/activities-grid";
+import ActivitiesGrid from "./activities-grid";
 
 export default function ActivitiesSection() {
     return (

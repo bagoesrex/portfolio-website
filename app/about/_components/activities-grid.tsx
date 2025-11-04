@@ -1,5 +1,5 @@
-import LastPlayed from "./last-played"
-import LastReading from "./last-reading"
+import LastPlayed from "../../../components/shared/last-played"
+import LastReading from "../../../components/shared/last-reading"
 
 export default function ActivitiesGrid() {
     return (

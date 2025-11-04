@@ -1,6 +1,6 @@
 import { Calendar, MapPinned } from "lucide-react";
-import SocialMedia from "../shared/social-media";
-import { AspectRatio } from "../ui/aspect-ratio";
+import SocialMedia from "../../../components/shared/social-media";
+import { AspectRatio } from "../../../components/ui/aspect-ratio";
 import Image from "next/image";
 
 export default function IntroSection() {
