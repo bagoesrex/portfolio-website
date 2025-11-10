@@ -21,8 +21,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bagus Rahmawan",
-  description: "Just a tech anthusiast",
+  metadataBase: new URL("https://bagoes.dev"),
+  title: "Bagus Rahmawan | Tech Enthusiast",
+  description: "a passionate technology enthusiast and developer.",
+  keywords: ["Bagus Rahmawan", "bagoesrex", "bagoes rex", "web developer", "portfolio", "next.js", "frontend", "software engineer"],
+  authors: [{ name: "Bagus Rahmawan" }],
 };
 
 export default function RootLayout({
