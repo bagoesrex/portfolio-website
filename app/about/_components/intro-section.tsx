@@ -1,9 +1,15 @@
+"use client"
+
 import { Calendar, MapPinned } from "lucide-react";
 import SocialMedia from "../../../components/shared/social-media";
 import { AspectRatio } from "../../../components/ui/aspect-ratio";
 import Image from "next/image";
+import { useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function IntroSection() {
+    const [imgLoaded, setImgLoaded] = useState(false)
+
     return (
         <section id="intro" className="flex flex-col gap-5">
             <div className="flex flex-col md:flex-row gap-10">
@@ -20,12 +26,16 @@ export default function IntroSection() {
                     <div className="flex flex-col justify-center items-center">
                         <div className="w-55 rounded-xl rounded-b-none overflow-hidden relative">
                             <AspectRatio ratio={1}>
+                                {!imgLoaded && (
+                                    <Skeleton className="w-full h-full rounded-none" />
+                                )}
                                 <Image
                                     src="/images/about/me.webp"
                                     alt="Elric"
                                     fill
-                                    className="object-cover"
+                                    className={`object-cover transition-opacity duration-300 ${imgLoaded ? "opacity-100" : "opacity-0"}`}
                                     priority
+                                    onLoadingComplete={() => setImgLoaded(true)}
                                 />
                             </AspectRatio>
                         </div>
