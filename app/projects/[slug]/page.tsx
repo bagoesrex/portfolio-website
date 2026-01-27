@@ -1,6 +1,5 @@
 import { PortableText, type SanityDocument } from "next-sanity";
-import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
+import imageUrlBuilder, { SanityImageSource } from "@sanity/image-url";
 import { client } from "@/sanity/client";
 import { Clock } from "lucide-react";
 import Image from "next/image";
