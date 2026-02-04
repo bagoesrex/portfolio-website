@@ -1,7 +1,11 @@
+import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
+
 export default function HomePage() {
   return (
-    <main>
-      <h1>Hello World</h1>
+    <main className="flex min-h-screen w-full items-center justify-center bg-red-200">
+      <MaxWidthWrapper className="bg-blue-500">
+        <h1>Hello World</h1>
+      </MaxWidthWrapper>
     </main>
   );
 }
