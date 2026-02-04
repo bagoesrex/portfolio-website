@@ -2,8 +2,8 @@ import Image from "next/image";
 import MaxWidthWrapper from "../layout/max-width-wrapper";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { User } from "lucide-react";
 import SocialLinks from "../shared/social-links";
+import { FaUser } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
@@ -16,10 +16,12 @@ export default function HeroSection() {
             technologies and creating clean user interfaces.
           </p>
           <div className="flex gap-5">
-            <Button asChild className="w-fit">
+            <Button asChild className="px-4 py-5">
               <Link href="/about">
-                <User />
-                <span>More About Me</span>
+                <div className="flex items-center gap-3">
+                  <FaUser />
+                  <span>More About Me</span>
+                </div>
               </Link>
             </Button>
             <SocialLinks />
