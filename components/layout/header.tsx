@@ -10,7 +10,7 @@ export default function Header() {
       >
         <Link href={"/"} className="flex items-center gap-1">
           <Image src="/icons/logo.svg" alt="main icon" width={32} height={32} priority />
-          <h1 className="font-mono text-[15px] font-semibold text-[#004A7C]">BagoesRex</h1>
+          <span className="font-mono text-[15px] font-semibold text-[#004A7C]">BagoesRex</span>
         </Link>
       </div>
     </header>
