@@ -22,23 +22,23 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-4 rounded-[7px] px-3 py-3.5 transition hover:bg-gray-200/40"
+        className="flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition hover:bg-gray-200/40 md:items-center"
       >
         <div className="relative h-15 min-w-15 overflow-hidden rounded-[5px]">
           <Image src={coverImage} alt={`${title} Image`} fill priority className="object-cover transition-transform group-hover:scale-130" />
         </div>
         <div className="space-y-3">
-          <header>
-            <div className="flex items-center gap-2">
-              <h2 className="text-md leading-snug font-medium decoration-2 group-hover:underline">{title}</h2>
-              <span className={cn("flex items-center gap-2 px-2 text-xs", StatusClassName)}>
+          <header className="space-y-1">
+            <div className="flex justify-between gap-2 md:justify-start">
+              <h2 className="text-md -mt-1 line-clamp-2 leading-snug font-medium decoration-2 group-hover:underline">{title}</h2>
+              <p className={cn("flex size-fit min-w-fit items-center gap-2 px-2 py-0.75 text-xs", StatusClassName)}>
                 <StatusIcon className="size-3.5" />
                 {StatusLabel}
-              </span>
+              </p>
             </div>
             <p className="text-muted-foreground line-clamp-2 text-sm">{description}</p>
           </header>
-          <footer className="space-x-2 text-xs text-white">
+          <footer className="flex flex-wrap gap-2 text-xs text-white">
             {techStack.map((item, i) => (
               <span key={i} className="bg-primary/50 px-1.5 py-1">
                 {item}
