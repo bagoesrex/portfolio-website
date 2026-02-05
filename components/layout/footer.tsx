@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <footer className="px-3.5">
-      <MaxWidthWrapper className="grid grid-cols-2 gap-10 border-t border-gray-300 pt-9 pb-11">
+      <MaxWidthWrapper className="grid grid-cols-1 gap-10 border-t border-gray-300 pt-9 pb-11 md:grid-cols-2">
         <div className="space-y-2.5">
           <Link href={"/"} className="flex items-center gap-2">
             <div className="p-0.1 bg-primary/20 overflow-hidden rounded-tr-md">
