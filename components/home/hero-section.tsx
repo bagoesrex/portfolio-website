@@ -8,7 +8,7 @@ import { FaUser } from "react-icons/fa";
 export default function HeroSection() {
   return (
     <section id="hero">
-      <MaxWidthWrapper className="flex items-center gap-10 pt-30">
+      <MaxWidthWrapper className="flex items-center gap-10 pt-30 pb-20">
         <div className="flex flex-col gap-3.5">
           <h1 className="text-primary text-3xl font-extrabold">Hi, I&apos;m Bagus</h1>
           <p className="font-sans leading-7.5">

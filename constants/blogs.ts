@@ -33,4 +33,26 @@ export const DUMMY_BLOG_POSTS: BlogPost[] = [
     tags: ["React", "State Management"],
     coverImage: "/placeholder/main.svg",
   },
+  {
+    slug: "server-vs-client-components-nextjs",
+    title: "Server vs Client Components in Next.js",
+    excerpt: "Confused about Server and Client Components in Next.js App Router? This article explains when and why to use each.",
+    content:
+      "Next.js App Router introduces Server and Client Components. Understanding their differences is key to building scalable and performant apps...",
+    date: "2025-08-22",
+    readingTime: "7 min read",
+    tags: ["Next.js", "React", "Performance"],
+    coverImage: "/placeholder/main.svg",
+  },
+  {
+    slug: "designing-reusable-ui-components",
+    title: "Designing Reusable UI Components",
+    excerpt: "Learn how to design reusable, scalable UI components that are easy to maintain and extend.",
+    content:
+      "Reusable components are the backbone of modern frontend development. In this post, we’ll discuss component boundaries, props design, and composition...",
+    date: "2024-08-05",
+    readingTime: "5 min read",
+    tags: ["UI", "Design System", "React"],
+    coverImage: "/placeholder/main.svg",
+  },
 ];
