@@ -2,12 +2,13 @@ import Image from "next/image";
 import MaxWidthWrapper from "../layout/max-width-wrapper";
 import SocialLinks from "../shared/social-links";
 import { FaQuoteRight } from "react-icons/fa";
+import { CiCalendar } from "react-icons/ci";
 
 export default function IntroSection() {
   return (
     <section id="intro">
       <MaxWidthWrapper className="space-y-10 pt-30 pb-10">
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-4">
           <div className="space-y-4">
             <h1 className="text-primary text-2xl font-extrabold">About Me</h1>
             <p>Hey there! I&rsquo;m Bagus Rahmawan, a tech enthusiast from Semarang.</p>
@@ -19,6 +20,10 @@ export default function IntroSection() {
           </div>
           <div className="relative aspect-square size-55">
             <Image src="/images/about/me.webp" alt="Intro Image" fill priority className="rounded-full object-cover" />
+            <div className="absolute right-5 -bottom-2 flex animate-bounce items-center gap-2 rounded-xs border-[0.5px] border-gray-400 bg-gray-300/90 px-2 py-[0.5]">
+              <CiCalendar className="size-3.5" />
+              <p className="text-xs">Indomaret Fresh Pemuda</p>
+            </div>
           </div>
         </div>
         <div className="relative max-w-100 space-y-1.5 overflow-hidden rounded-[1.5px] border-[0.8px] border-gray-200 p-4">
