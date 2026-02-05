@@ -12,7 +12,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
   return (
     <article className="group">
-      <Link href={`/blog/${slug}`} className="flex items-center gap-4 rounded-[7px] px-3 py-3.5 transition hover:bg-gray-200/40">
+      <Link href={`/blog/${slug}`} className="flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition hover:bg-gray-200/40 md:items-center">
         <div className="relative h-18 min-w-28 overflow-hidden rounded-[5px]">
           <Image src={coverImage} alt={`${title} Image`} fill priority className="object-cover transition-transform group-hover:scale-130" />
         </div>
