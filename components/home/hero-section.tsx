@@ -10,9 +10,9 @@ export default function HeroSection() {
   return (
     <section id="hero">
       <MaxWidthWrapper className="space-y-6 pt-30 pb-20 md:space-y-1.5">
-        <div className="flex flex-col-reverse items-start gap-10 md:flex-row md:items-center">
+        <div className="flex flex-col-reverse items-start gap-13 md:flex-row md:items-center md:gap-7">
           <div className="flex flex-col gap-3.5">
-            <h1 className="text-primary group relative md:h-11 h-21 w-95 overflow-hidden text-3xl font-extrabold">
+            <h1 className="text-primary group relative h-21 w-95 overflow-hidden text-3xl font-extrabold md:h-11">
               <div className="absolute flex translate-y-0 items-start gap-13 transition-transform duration-300 ease-in-out group-hover:-translate-y-11">
                 <span>
                   Hi, I&apos;m <span className="border-b-3 border-dashed">Bagus</span>
@@ -56,8 +56,12 @@ export default function HeroSection() {
               technologies and creating clean user interfaces.
             </p>
           </div>
-          <div className="relative aspect-square size-45 md:size-55">
-            <Image src="/images/home/elric.webp" alt="Hero Image" fill priority className="scale-x-[-1] object-contain md:scale-x-100" />
+          <div className="relative h-50 min-w-60 self-center">
+            <Image src="/images/home/ranpo.webp" alt="Hero Image" fill priority className="scale-110 rotate-20 object-cover" />
+            <span className="absolute bottom-2 animate-bounce [animation-delay:0s]">^w^</span>
+            <span className="absolute -bottom-5 left-19 animate-bounce [animation-delay:0.2s]">^w^</span>
+            <span className="absolute -bottom-6 left-36 animate-bounce [animation-delay:0.4s]">^w^</span>
+            <span className="absolute -bottom-2 left-50 animate-bounce [animation-delay:0.6s]">^w^</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-5 md:flex-row md:items-start">
