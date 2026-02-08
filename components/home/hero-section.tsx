@@ -10,10 +10,10 @@ export default function HeroSection() {
   return (
     <section id="hero">
       <MaxWidthWrapper className="space-y-6 pt-30 pb-20 md:space-y-1.5">
-        <div className="flex flex-col-reverse items-start gap-13 md:flex-row md:items-center md:gap-7">
+        <div className="flex flex-col-reverse items-start gap-13 overflow-hidden md:flex-row md:items-center md:gap-7">
           <div className="flex flex-col gap-3.5">
-            <h1 className="text-primary group relative h-21 w-95 overflow-hidden text-3xl font-extrabold md:h-11">
-              <div className="absolute flex translate-y-0 items-start gap-13 transition-transform duration-300 ease-in-out group-hover:-translate-y-11">
+            <h1 className="text-primary group relative h-21 w-88 self-start overflow-hidden text-3xl font-extrabold sm:self-center md:h-11 md:w-95 md:self-start">
+              <div className="absolute flex translate-y-0 items-start gap-13 transition-transform duration-300 ease-in-out md:group-hover:-translate-y-11">
                 <span>
                   Hi, I&apos;m <span className="border-b-3 border-dashed">Bagus</span>
                 </span>
@@ -30,10 +30,10 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="absolute flex translate-y-10 items-start gap-3 transition-transform duration-300 ease-in-out group-hover:translate-y-0">
+              <div className="absolute flex translate-y-10 items-start gap-3 transition-transform duration-300 ease-in-out md:group-hover:translate-y-0">
                 <span className="border-b-3 border-dashed">Rahmawan</span>
                 <div className="relative">
-                  <div className="relative h-20 w-80 overflow-hidden">
+                  <div className="relative h-20 w-44 overflow-hidden">
                     <div className="absolute top-0 left-0">
                       <div className="relative size-15">
                         <Image src="/icons/hah-cat.webp" alt="Hah Cat Image" fill className="object-contain" />
