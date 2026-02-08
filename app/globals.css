@@ -119,7 +119,16 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  button:focus,
+  a:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    @apply outline-2 outline-offset-3 outline-black outline-dashed;
   }
 }
