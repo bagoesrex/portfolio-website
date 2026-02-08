@@ -2,13 +2,12 @@ import Image from "next/image";
 import MaxWidthWrapper from "../layout/max-width-wrapper";
 import SocialLinks from "../shared/social-links";
 import { FaQuoteRight } from "react-icons/fa";
-import { CiCalendar } from "react-icons/ci";
 
 export default function IntroSection() {
   return (
     <section id="intro">
-      <MaxWidthWrapper className="space-y-10 pt-30 pb-10">
-        <div className="flex flex-col items-center gap-8 md:flex-row md:gap-4">
+      <MaxWidthWrapper className="flex flex-col gap-6 pt-30 pb-10">
+        <div className="flex flex-col gap-8 md:flex-row md:gap-4">
           <div className="space-y-4">
             <h1 className="text-primary text-2xl font-extrabold">About Me</h1>
             <p>Hey there! I&rsquo;m Bagus Rahmawan, a tech enthusiast from Semarang.</p>
@@ -18,15 +17,20 @@ export default function IntroSection() {
               accidentally broke.
             </p>
           </div>
-          <div className="relative aspect-square size-55">
-            <Image src="/images/about/me.webp" alt="Intro Image" fill priority className="rounded-full object-cover" />
-            <div className="absolute right-5 -bottom-2 flex animate-bounce items-center gap-2 rounded-xs border-[0.5px] border-gray-400 bg-gray-300/90 px-2 py-[0.5]">
-              <CiCalendar className="size-3.5" />
-              <p className="text-xs">Indomaret Fresh Pemuda</p>
+          <div className="flex flex-col space-y-5 md:pt-8">
+            <div className="relative aspect-square size-55 self-center md:self-start">
+              <div className="relative h-55 w-55">
+                <Image src="/images/about/me.webp" alt="Intro Image" fill priority className="rounded-full object-cover" />
+
+                <div className="pointer-events-none absolute inset-0 animate-[spin_50s_linear_infinite] rounded-full outline-3 outline-offset-4 outline-black outline-dashed" />
+              </div>
             </div>
+            <p className="text-center text-xs font-light text-gray-700 italic">
+              In Indomaret Freh Pemuda, Semarang <br /> -Jun &apos;25
+            </p>
           </div>
         </div>
-        <div className="relative max-w-100 space-y-1.5 overflow-hidden rounded-[1.5px] border-[0.8px] border-gray-200 p-4">
+        <div className="relative max-w-100 space-y-1.5 self-center overflow-hidden rounded-[1.5px] border-[0.8px] border-gray-200 p-4 md:self-start">
           <blockquote className="pr-12 text-sm font-light">To obtain something, something of equal value must be given</blockquote>
           <p className="text-muted-foreground text-xs">- Equivalent Exchange</p>
           <FaQuoteRight className="absolute -top-3 -right-1 size-13 -rotate-18 text-gray-200" />
