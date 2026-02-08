@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section id="hero">
       <MaxWidthWrapper className="space-y-6 pt-30 pb-20 md:space-y-1.5">
-        <div className="flex flex-col-reverse items-start gap-13 overflow-hidden md:flex-row md:items-center md:gap-7">
+        <div className="flex flex-col-reverse items-start gap-13 overflow-hidden md:flex-row md:items-center md:gap-7 md:overflow-visible">
           <div className="flex flex-col gap-3.5">
             <h1 className="text-primary group relative h-21 w-88 self-start overflow-hidden text-3xl font-extrabold sm:self-center md:h-11 md:w-95 md:self-start">
               <div className="absolute flex translate-y-0 items-start gap-13 transition-transform duration-300 ease-in-out md:group-hover:-translate-y-11">
