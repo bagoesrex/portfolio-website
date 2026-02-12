@@ -26,7 +26,7 @@ export default function IntroSection() {
               </div>
             </div>
             <p className="text-center text-xs font-light text-gray-700 italic">
-              In Indomaret Freh Pemuda, Semarang <br /> -Jun &apos;25
+              In Indomaret Fresh Pemuda, Semarang <br /> -Jun &apos;25
             </p>
           </div>
         </div>
