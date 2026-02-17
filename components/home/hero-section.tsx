@@ -58,10 +58,10 @@ export default function HeroSection() {
           </div>
           <div className="relative h-50 min-w-60 self-center">
             <Image src="/images/home/ranpo.webp" alt="Hero Image" fill priority className="scale-110 rotate-20 object-cover" />
-            <span className="absolute bottom-2 animate-bounce [animation-delay:0s]">^w^</span>
-            <span className="absolute -bottom-5 left-19 animate-bounce [animation-delay:0.2s]">^w^</span>
-            <span className="absolute -bottom-6 left-36 animate-bounce [animation-delay:0.4s]">^w^</span>
-            <span className="absolute -bottom-2 left-50 animate-bounce [animation-delay:0.6s]">^w^</span>
+            <span className="absolute bottom-2 animate-bounce [animation-duration:0.9s]">^w^</span>
+            <span className="absolute -bottom-5 left-19 animate-bounce [animation-duration:0.8s]">^w^</span>
+            <span className="absolute -bottom-6 left-36 animate-bounce [animation-duration:0.9s]">^w^</span>
+            <span className="absolute -bottom-2 left-50 animate-bounce [animation-duration:0.8s]">^w^</span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-5 md:flex-row md:items-start">
