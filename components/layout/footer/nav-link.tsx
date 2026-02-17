@@ -17,9 +17,9 @@ export default function NavLink({ href, label }: NavLinkProps) {
     <Link
       href={href}
       className={cn(
-        "text-sm underline decoration-gray-600/20 decoration-2 transition-colors",
-        "hover:underline hover:decoration-gray-600",
-        isActive && "decoration-black",
+        "text-sm text-gray-600 underline decoration-gray-600/20 decoration-2 transition-colors",
+        "hover:text-black hover:underline hover:decoration-gray-600",
+        isActive && "text-black decoration-black",
       )}
     >
       {label}

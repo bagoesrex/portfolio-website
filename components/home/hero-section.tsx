@@ -51,7 +51,7 @@ export default function HeroSection() {
                 </div>
               </div>
             </h1>
-            <p className="font-sans leading-7.5">
+            <p className="leading-7.5 font-light">
               A tech enthusiast with a strong interest in building responsive and interactive web applications. I enjoy experimenting with new
               technologies and creating clean user interfaces.
             </p>

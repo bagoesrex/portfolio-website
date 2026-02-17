@@ -19,7 +19,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         <div className="space-y-2">
           <header className="space-y-1">
             <h2 className="text-md -mt-1 leading-snug font-medium decoration-2 group-hover:underline">{title}</h2>
-            <p className="text-muted-foreground line-clamp-2 text-sm">{excerpt}</p>
+            <p className="text-muted-foreground line-clamp-2 text-sm font-light">{excerpt}</p>
           </header>
           <footer className="text-muted-foreground flex items-center gap-1 text-xs">
             <time dateTime={date}>

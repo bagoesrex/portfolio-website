@@ -14,7 +14,7 @@ export default function IntroSection() {
         </p>
         <div className="flex flex-col gap-8 md:flex-row md:gap-8">
           <div className="space-y-4">
-            <p className="font-sans leading-7.5">
+            <p className="leading-7.5 font-light">
               I focus on building responsive and interactive web applications with clean and maintainable code. I enjoy refining user interfaces,
               improving performance, and continuously sharpening my development workflow. Outside of coding, I often find myself reading documentation
               or fixing the bugs I confidently introduced.
@@ -39,7 +39,7 @@ export default function IntroSection() {
         </div>
         <div className="space-y-2">
           <p className="font-semibold">Let&rsquo;s get in touch!</p>
-          <p className="mb-3">Feel free to drop me a message or connect with me on social media:</p>
+          <p className="mb-3 font-light">Feel free to drop me a message or connect with me on social media:</p>
           <SocialLinks />
         </div>
       </MaxWidthWrapper>

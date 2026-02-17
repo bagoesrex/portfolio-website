@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Patrick_Hand } from "next/font/google";
+import { Geist, Geist_Mono, Patrick_Hand, Merriweather } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer/footer";
@@ -21,6 +21,13 @@ const patrick = Patrick_Hand({
   display: "swap",
 });
 
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-merriweather",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Bagus Rahmawan | Tech Enthusiast",
   description: "a passionate technology enthusiast and developer.",
@@ -35,7 +42,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${patrick.variable} font-sans antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${patrick.variable} ${merriweather.variable} font-serif antialiased`}>
         <Header />
         {children}
         <Footer />

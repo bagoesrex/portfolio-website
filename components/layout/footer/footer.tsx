@@ -33,14 +33,14 @@ export default function Footer() {
               </div>
               <span className="font-mono text-[15px] font-semibold text-[#004A7C]">BagoesRex</span>
             </Link>
-            <p className="leading-6.5 text-gray-800">A tech enthusiast and web developer from Semarang</p>
+            <p className="leading-6.5 font-light text-gray-800">A tech enthusiast and web developer from Semarang</p>
             <div className="flex justify-center">
               <SocialLinks />
             </div>
           </div>
           <div className="grid grid-cols-2">
             <div className="space-y-3">
-              <p className="font-[440] text-gray-600">NAVIGATE</p>
+              <p className="font-[440]">NAVIGATE</p>
               <nav>
                 <ul className="space-y-3">
                   {NAV_ITEMS.map((item, i) => (
@@ -52,7 +52,7 @@ export default function Footer() {
               </nav>
             </div>
             <div className="space-y-3">
-              <p className="font-[440] text-gray-600">NAVIGATE</p>
+              <p className="font-[440]">NAVIGATE</p>
               <nav>
                 <ul className="space-y-3">
                   {NAV_ITEMS.map((item, i) => (
