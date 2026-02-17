@@ -7,24 +7,23 @@ export default function IntroSection() {
   return (
     <section id="intro">
       <MaxWidthWrapper className="flex flex-col gap-6 pt-30 pb-10">
+        <h1 className="text-primary text-2xl font-extrabold">About Me</h1>
+        <p className="font-patrick text-2xl tracking-wide">
+          Hey there! I&rsquo;m Bagus Rahmawan, a developer based in Semarang <br />
+          <span className="text-[18px] italic">— where ideas slowly turn into lines of code.</span>
+        </p>
         <div className="flex flex-col gap-8 md:flex-row md:gap-8">
           <div className="space-y-4">
-            <h1 className="text-primary text-2xl font-extrabold">About Me</h1>
-            <p>
-              Hey there! I&rsquo;m Bagus Rahmawan, a developer based in Semarang —{" "}
-              <span className="italic">where ideas slowly turn into lines of code.</span>
-            </p>
             <p className="font-sans leading-7.5">
               I focus on building responsive and interactive web applications with clean and maintainable code. I enjoy refining user interfaces,
               improving performance, and continuously sharpening my development workflow. Outside of coding, I often find myself reading documentation
               or fixing the bugs I confidently introduced.
             </p>
           </div>
-          <div className="flex flex-col space-y-5 md:pt-8">
+          <div className="flex flex-col space-y-5">
             <div className="relative aspect-square size-55 self-center md:self-start">
               <div className="relative h-55 w-55">
                 <Image src="/images/about/me.webp" alt="Intro Image" fill priority className="rounded-full object-cover" />
-
                 <div className="pointer-events-none absolute inset-0 animate-[spin_50s_linear_infinite] rounded-full outline-3 outline-offset-4 outline-black outline-dashed" />
               </div>
             </div>

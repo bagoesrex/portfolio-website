@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Patrick_Hand } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header/header";
 import Footer from "@/components/layout/footer/footer";
@@ -12,6 +12,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const patrick = Patrick_Hand({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-patrick-hand",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${patrick.variable} font-sans antialiased`}>
         <Header />
         {children}
         <Footer />
