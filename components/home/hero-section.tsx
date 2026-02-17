@@ -57,7 +57,13 @@ export default function HeroSection() {
             </p>
           </div>
           <div className="relative h-50 min-w-60 self-center">
-            <Image src="/images/home/ranpo.webp" alt="Hero Image" fill priority className="scale-110 rotate-20 object-cover" />
+            <Image
+              src="/images/home/ranpo.webp"
+              alt="Hero Image"
+              fill
+              priority
+              className="scale-110 rotate-20 object-cover drop-shadow-2xl md:drop-shadow-xl"
+            />
             <span className="absolute bottom-2 animate-bounce [animation-duration:0.9s]">^w^</span>
             <span className="absolute -bottom-5 left-19 animate-bounce [animation-duration:0.8s]">^w^</span>
             <span className="absolute -bottom-6 left-36 animate-bounce [animation-duration:0.9s]">^w^</span>
