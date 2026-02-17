@@ -3,6 +3,7 @@ import Image from "next/image";
 import SocialLinks from "@/components/shared/social-links";
 import MaxWidthWrapper from "../max-width-wrapper";
 import NowPlaying from "./now-playing";
+import NavLink from "./nav-link";
 
 export default function Footer() {
   const NAV_ITEMS = [
@@ -17,10 +18,6 @@ export default function Footer() {
     {
       href: "/projects",
       label: "Projects",
-    },
-    {
-      href: "/about",
-      label: "About",
     },
   ];
 
@@ -45,15 +42,10 @@ export default function Footer() {
             <div className="space-y-3">
               <p className="font-[440] text-gray-600">NAVIGATE</p>
               <nav>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {NAV_ITEMS.map((item, i) => (
                     <li key={i}>
-                      <Link
-                        href={item.href}
-                        className="under-l text-sm underline decoration-gray-600/20 decoration-2 transition-colors hover:underline hover:decoration-gray-600"
-                      >
-                        {item.label}
-                      </Link>
+                      <NavLink href={item.href} label={item.label} />
                     </li>
                   ))}
                 </ul>
@@ -62,15 +54,10 @@ export default function Footer() {
             <div className="space-y-3">
               <p className="font-[440] text-gray-600">NAVIGATE</p>
               <nav>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {NAV_ITEMS.map((item, i) => (
                     <li key={i}>
-                      <Link
-                        href={item.href}
-                        className="under-l text-sm underline decoration-gray-600/20 decoration-2 transition-colors hover:underline hover:decoration-gray-600"
-                      >
-                        {item.label}
-                      </Link>
+                      <NavLink href={item.href} label={item.label} />
                     </li>
                   ))}
                 </ul>
