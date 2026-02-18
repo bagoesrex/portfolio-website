@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import DesktopNav from "./desktop-nav";
 import MobileNav from "./mobile-nav";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Header() {
 
           <DesktopNav />
 
-          <div className="flex items-center self-stretch rounded-[3.5px] hover:bg-gray-300/37 md:hidden">
+          <div className="relative flex items-center self-stretch rounded-[3.5px] hover:bg-gray-300/37 md:hidden">
             <button className="h-full rounded-[3.5px] px-3" onClick={() => setOpen(!open)} aria-label="Toggle menu">
               <div className="flex flex-col gap-1">
                 <span className="h-0.5 w-5 bg-black" />
@@ -35,6 +36,9 @@ export default function Header() {
                 <span className="h-0.5 w-5 bg-black" />
               </div>
             </button>
+            <span className="absolute top-3.5 right-13 flex items-center gap-1 text-xs">
+              menu <BsArrowRight />
+            </span>
           </div>
         </div>
         <div className={`w-full transition-all duration-300 ease-in-out md:hidden ${open ? "mt-2 max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
