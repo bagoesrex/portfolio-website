@@ -21,7 +21,7 @@ export default function MobileNav({ onClose }: MobileNavProps) {
               href={item.href}
               onClick={onClose}
               className={cn(
-                "flex h-full items-center rounded-[3.5px] px-2.5 py-3 text-center text-[15.3px] font-[520] transition-colors",
+                "flex h-full items-center rounded-[3.5px] p-3 text-center text-[15.3px] font-[520] transition-colors",
                 "hover:bg-gray-300/37",
                 pathname == item.href && "bg-gray-300/37",
               )}
