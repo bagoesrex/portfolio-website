@@ -24,17 +24,17 @@ export default function Footer() {
   return (
     <footer className="px-3.5">
       <MaxWidthWrapper className="border-t border-gray-300 pt-5 pb-6">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
           <div className="space-y-3.5">
             <NowPlaying />
-            <Link href={"/"} className="mt-8 flex items-center gap-2 md:mt-5">
+            <Link href={"/"} className="mt-6 flex items-center gap-2 md:mt-5">
               <div className="p-0.1 bg-primary/20 overflow-hidden rounded-tr-md">
                 <Image src="/icons/logo.svg" alt="main icon" width={32} height={32} priority />
               </div>
               <span className="font-mono text-[15px] font-semibold text-[#004A7C]">BagoesRex</span>
             </Link>
             <p className="leading-6.5 font-light text-gray-800">A tech enthusiast and web developer from Semarang</p>
-            <div className="flex justify-center">
+            <div className="flex">
               <SocialLinks />
             </div>
           </div>
