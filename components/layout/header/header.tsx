@@ -41,7 +41,11 @@ export default function Header() {
             </span>
           </div>
         </div>
-        <div className={`w-full transition-all duration-300 ease-in-out md:hidden ${open ? "mt-2 max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
+        <div
+          className={`w-full transition-all duration-300 ease-in-out md:hidden ${
+            open ? "pointer-events-auto mt-2 max-h-60 opacity-100" : "pointer-events-none max-h-0 opacity-0"
+          }`}
+        >
           <MobileNav onClose={() => setOpen(false)} />
         </div>
       </div>
