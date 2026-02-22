@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header className="fixed z-50 w-full px-3.5 py-3 backdrop-blur-md">
       <div
-        className={`mx-auto ${scrolled ? "bg-primary/10 shadow-[0_0_10px_rgba(0,0,0,0.80)]" : "bg-primary/5"} shadow-primary/30 flex flex-col transition-all duration-300 ${CONTAINER.default} border-border/30 max-w-7xl items-center rounded-lg border-[1.2px] py-1.5 pr-1.5 pl-1.5`}
+        className={`mx-auto ${scrolled ? "bg-primary/10 shadow-[0_0_8px_rgba(0,0,0,0.80)]" : "bg-primary/5"} shadow-primary/30 flex flex-col transition-all duration-300 hover:shadow-[0_0_11px_rgba(0,0,0,0.80)] ${CONTAINER.default} border-border/20 hover:border-border/35 max-w-7xl items-center rounded-lg border-[1.2px] py-1.5 pr-1.5 pl-1.5`}
       >
         <div className="flex w-full justify-between">
           <Link
