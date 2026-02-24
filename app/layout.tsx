@@ -30,9 +30,17 @@ const merriweather = Merriweather({
 
 export const metadata: Metadata = {
   title: "Bagus Rahmawan | Tech Enthusiast",
-  description: "a passionate technology enthusiast and developer.",
-  keywords: ["Bagus Rahmawan", "bagoesrex", "bagoes rex", "web developer", "portfolio", "next.js", "frontend", "software engineer"],
+  description: "Official portfolio of Bagus Rahmawan (BagoesRex), web developer specializing in Next.js and modern frontend technologies.",
+  keywords: ["Bagus Rahmawan", "BagoesRex", "bagoesrex", "Web Developer", "Next.js Developer", "Frontend Developer", "Portfolio Website"],
   authors: [{ name: "Bagus Rahmawan" }],
+  openGraph: {
+    title: "Bagus Rahmawan | Tech Enthusiast",
+    description: "Official portfolio of Bagus Rahmawan (BagoesRex), web developer specializing in Next.js and modern frontend technologies.",
+    url: "https://bagoes.dev",
+    siteName: "bagoes.dev",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
