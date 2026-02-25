@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         className={cn("flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition md:items-center", HoverBg)}
       >
         <div className={cn("rounded-md p-2.5", IconBg)}>
-          <div className="relative h-11 min-w-11">
+          <div className="relative h-9.5 min-w-9.5 md:h-11 md:min-w-11">
             <Image src={coverImage} alt={`${title} Image`} fill priority className="drop-shadow-xs transition-transform group-hover:scale-110" />
           </div>
         </div>
