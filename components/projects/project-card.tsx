@@ -1,4 +1,4 @@
-import { PROJECT_STATUS_CONFIG } from "@/constants/projects";
+import { PROJECT_STATUS_CONFIG, PROJECT_VARIANT_STYLES } from "@/constants/projects";
 import { cn } from "@/lib/utils";
 import { Project } from "@/types/project";
 import Image from "next/image";
@@ -8,13 +8,16 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
-  const { title, description, status, techStack, coverImage, githubUrl } = project;
+  const { title, description, status, techStack, coverImage, githubUrl, variant } = project;
 
   const statusConfig = PROJECT_STATUS_CONFIG[status];
-
   const StatusIcon = statusConfig.icon;
   const StatusLabel = statusConfig.label;
   const StatusClassName = statusConfig.className;
+
+  const variantStyles = PROJECT_VARIANT_STYLES[variant];
+  const HoverBg = variantStyles.hoverBg;
+  const IconBg = variantStyles.iconBg;
 
   return (
     <article className="group">
@@ -22,10 +25,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition hover:bg-gray-200/40 md:items-center"
+        className={cn("flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition md:items-center", HoverBg)}
       >
-        <div className="relative h-15 min-w-15 overflow-hidden rounded-[5px]">
-          <Image src={coverImage} alt={`${title} Image`} fill priority className="object-cover transition-transform group-hover:scale-130" />
+        <div className={cn("rounded-md p-2.5", IconBg)}>
+          <div className="relative h-11 min-w-11">
+            <Image src={coverImage} alt={`${title} Image`} fill priority className="drop-shadow-xs transition-transform group-hover:scale-110" />
+          </div>
         </div>
         <div className="space-y-3">
           <header className="space-y-1">
