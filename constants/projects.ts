@@ -29,6 +29,15 @@ export const DUMMY_PROJECTS: Project[] = [
     githubUrl: "https://github.com/bagoesrex/wa-personal-bot",
     variant: "green",
   },
+  {
+    title: "Terminal Portfolio",
+    description: "A terminal-style developer portfolio website to showcase projects and skills in a unique, interactive interface.",
+    status: "completed",
+    techStack: ["Vite", "React.js", "Tailwind CSS"],
+    coverImage: "/icons/projects/terminal.webp",
+    githubUrl: "https://github.com/bagoesrex/terminal-portfolio",
+    variant: "purple",
+  },
   // {
   //   title: "AI Skin Detection App",
   //   description: "An AI-powered app for detecting facial skin conditions.",
@@ -97,5 +106,9 @@ export const PROJECT_VARIANT_STYLES: Record<
   green: {
     iconBg: "bg-[#E7FFE9]",
     hoverBg: "hover:bg-[#E7FFE9]",
+  },
+  purple: {
+    iconBg: "bg-[#FFE4FB]",
+    hoverBg: "hover:bg-[#FFE4FB]",
   },
 };

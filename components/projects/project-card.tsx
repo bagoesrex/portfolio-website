@@ -29,7 +29,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       >
         <div className={cn("rounded-md p-2.5", IconBg)}>
           <div className="relative h-9.5 min-w-9.5 md:h-11 md:min-w-11">
-            <Image src={coverImage} alt={`${title} Image`} fill priority className="drop-shadow-xs transition-transform group-hover:scale-110" />
+            <Image
+              src={coverImage}
+              alt={`${title} Image`}
+              fill
+              priority
+              className="object-contain drop-shadow-xs transition-transform group-hover:scale-110"
+            />
           </div>
         </div>
         <div className="space-y-3">
