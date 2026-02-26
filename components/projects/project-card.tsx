@@ -40,10 +40,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <div className="space-y-3">
           <header className="space-y-1">
-            <div className="flex justify-between gap-2 md:items-center md:justify-start">
+            <div className="flex items-center justify-between gap-2 md:justify-start">
               <h2 className="text-md -mt-1 line-clamp-2 leading-snug font-medium decoration-2 group-hover:underline">{title}</h2>
-              <p className={cn("flex size-fit min-w-fit items-center gap-2 px-2 py-0.75 text-xs font-light", StatusClassName)}>
-                <StatusIcon className="size-3.5" />
+              <p className={cn("flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold", StatusClassName)}>
+                <StatusIcon className="size-3" />
                 {StatusLabel}
               </p>
             </div>

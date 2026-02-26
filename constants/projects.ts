@@ -78,17 +78,17 @@ export const PROJECT_STATUS_CONFIG: Record<
   completed: {
     label: "Completed",
     icon: FaCheck,
-    className: "text-green-600 bg-green-500/10",
+    className: "text-green-600 bg-green-500/10 border-green-600",
   },
   "in-progress": {
     label: "In Progress",
     icon: FaClock,
-    className: "text-yellow-600 bg-yellow-500/10",
+    className: "text-yellow-600 bg-yellow-500/10 border-yellow-600",
   },
   archived: {
     label: "Archived",
     icon: FaArchive,
-    className: "text-muted-foreground bg-muted",
+    className: "text-muted-foreground bg-muted border-muted-foreground",
   },
 };
 
