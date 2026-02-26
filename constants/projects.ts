@@ -25,7 +25,7 @@ export const DUMMY_PROJECTS: Project[] = [
     description: "A personal WhatsApp automation bot built with Node.js for sending customized messages and managing chats via WhatsApp Web.",
     status: "completed",
     techStack: ["Node.js", "Whatsapp-web.js", "Gemini API"],
-    coverImage: "/icons/projects/whatsapp-bot.png",
+    coverImage: "/icons/projects/whatsapp-bot.webp",
     githubUrl: "https://github.com/bagoesrex/wa-personal-bot",
     variant: "green",
   },
