@@ -62,6 +62,7 @@ export default function HeroSection() {
               alt="Hero Image"
               fill
               priority
+              fetchPriority="high"
               className="scale-110 rotate-20 object-cover drop-shadow-2xl md:drop-shadow-xl"
             />
             <span className="absolute bottom-2 animate-bounce [animation-duration:0.9s]">^w^</span>
