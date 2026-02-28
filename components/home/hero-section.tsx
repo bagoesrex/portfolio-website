@@ -65,10 +65,18 @@ export default function HeroSection() {
               fetchPriority="high"
               className="scale-110 rotate-20 object-cover drop-shadow-2xl md:drop-shadow-xl"
             />
-            <span className="absolute bottom-2 animate-bounce [animation-duration:0.9s]">^w^</span>
-            <span className="absolute -bottom-5 left-19 animate-bounce [animation-duration:0.8s]">^w^</span>
-            <span className="absolute -bottom-6 left-36 animate-bounce [animation-duration:0.9s]">^w^</span>
-            <span className="absolute -bottom-2 left-50 animate-bounce [animation-duration:0.8s]">^w^</span>
+            <span className="absolute bottom-2 animate-bounce [animation-duration:0.9s]">
+              <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
+            </span>
+            <span className="absolute -bottom-5 left-19 animate-bounce [animation-duration:0.8s]">
+              <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
+            </span>
+            <span className="absolute -bottom-6 left-36 animate-bounce [animation-duration:0.9s]">
+              <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
+            </span>
+            <span className="absolute -bottom-2 left-50 animate-bounce [animation-duration:0.8s]">
+              <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
+            </span>
           </div>
         </div>
         <div className="flex flex-col items-center gap-5 md:flex-row md:items-start">
