@@ -18,6 +18,15 @@ export const DUMMY_PROJECTS: Project[] = [
     techStack: ["Kotlin", "Cloud", "Tensor Flow"],
     coverImage: "/icons/projects/skincure.svg",
     githubUrl: "https://github.com/bagoesrex/skincure",
+    variant: "skyblue",
+  },
+  {
+    title: "CatatIn",
+    description: "an AI-powered income management application for service business owners.",
+    status: "in-progress",
+    techStack: ["Next.js", "Nest.js", "Gemini API", "Tailwind CSS"],
+    coverImage: "/icons/projects/catatin.webp",
+    githubUrl: "https://github.com/bagoesrex/catatin-mvp",
     variant: "blue",
   },
   {
@@ -99,7 +108,7 @@ export const PROJECT_VARIANT_STYLES: Record<
     hoverBg: string;
   }
 > = {
-  blue: {
+  skyblue: {
     iconBg: "bg-[#EFFAFA]",
     hoverBg: "hover:bg-[#EFFAFA]",
   },
@@ -110,5 +119,9 @@ export const PROJECT_VARIANT_STYLES: Record<
   purple: {
     iconBg: "bg-[#FFE4FB]",
     hoverBg: "hover:bg-[#FFE4FB]",
+  },
+  blue: {
+    iconBg: "bg-[#EAEFF9]",
+    hoverBg: "hover:bg-[#EAEFF9]",
   },
 };
