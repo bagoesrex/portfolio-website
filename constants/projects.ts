@@ -21,13 +21,13 @@ export const DUMMY_PROJECTS: Project[] = [
     variant: "skyblue",
   },
   {
-    title: "CatatIn",
-    description: "an AI-powered income management application for service business owners.",
+    title: "Keonk Studio",
+    description: "An independent game development studio focused on creating immersive and creative experiences using Luau and Roblox Studio.",
     status: "in-progress",
-    techStack: ["Next.js", "Nest.js", "Gemini API", "Tailwind CSS"],
-    coverImage: "/icons/projects/catatin.webp",
-    githubUrl: "https://github.com/bagoesrex/catatin-mvp",
-    variant: "blue",
+    techStack: ["Luau", "Games", "Roblox Studio"],
+    coverImage: "/icons/projects/keonk-studio.svg",
+    githubUrl: "https://github.com/keonkstudio",
+    variant: "gray",
   },
   {
     title: "Whatsapp Personal Bot",
@@ -46,6 +46,15 @@ export const DUMMY_PROJECTS: Project[] = [
     coverImage: "/icons/projects/terminal.webp",
     githubUrl: "https://github.com/bagoesrex/terminal-portfolio",
     variant: "purple",
+  },
+  {
+    title: "CatatIn",
+    description: "an AI-powered income management application for service business owners.",
+    status: "in-progress",
+    techStack: ["Next.js", "Nest.js", "Gemini API", "Tailwind CSS"],
+    coverImage: "/icons/projects/catatin.webp",
+    githubUrl: "https://github.com/bagoesrex/catatin-mvp",
+    variant: "blue",
   },
   // {
   //   title: "AI Skin Detection App",
@@ -108,6 +117,10 @@ export const PROJECT_VARIANT_STYLES: Record<
     hoverBg: string;
   }
 > = {
+  gray: {
+    iconBg: "bg-[#F6F1F1]",
+    hoverBg: "hover:bg-[#F6F1F1]",
+  },
   skyblue: {
     iconBg: "bg-[#EFFAFA]",
     hoverBg: "hover:bg-[#EFFAFA]",
