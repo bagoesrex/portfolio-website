@@ -22,7 +22,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="px-3.5">
+    <footer>
       <MaxWidthWrapper className="border-t border-gray-300 pt-5 pb-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-10">
           <div className="space-y-3.5">
