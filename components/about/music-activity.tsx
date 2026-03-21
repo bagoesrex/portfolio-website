@@ -19,7 +19,23 @@ export default function MusicActivity() {
     return () => clearInterval(timer);
   }, []);
 
-  if (!data) return <p>Loading...</p>;
+  if (!data || !data.title) {
+    return (
+      <div className="flex items-center gap-4 rounded-[7px] p-3.5">
+        <div className="flex h-13 min-w-13 items-center justify-center bg-gray-200 text-xs text-gray-500">N/A</div>
+        <div className="w-full space-y-3">
+          <div className="flex justify-between">
+            <h3 className="text-sm font-[380] text-gray-700">LAST PLAYED</h3>
+            <p className="w-fit bg-gray-300 px-1 py-px text-xs">No data</p>
+          </div>
+          <div className="space-y-1">
+            <p className="text-sm text-gray-500">No recently played track</p>
+            <p className="text-xs text-gray-400">Play something on Spotify</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const { title, artist, album, albumImageUrl, playedAt, songUrl } = data;
 
