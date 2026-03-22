@@ -25,7 +25,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={cn("flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition md:items-center", HoverBg)}
+        className={cn(
+          "flex items-start gap-4 rounded-[7px] px-3 py-3.5 md:items-center",
+          "transition-all duration-300 ease-out",
+          "hover:-translate-y-0.5 hover:shadow-xs",
+          HoverBg,
+        )}
       >
         <div className={cn("rounded-md p-2.5", IconBg)}>
           <div className="relative h-9.5 min-w-9.5 md:h-11 md:min-w-11">
@@ -34,14 +39,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               alt={`${title} Image`}
               fill
               priority
-              className="object-contain drop-shadow-xs transition-transform group-hover:scale-110"
+              className="pointer-events-none object-contain drop-shadow-xs transition-transform duration-300 ease-out group-hover:scale-110"
             />
           </div>
         </div>
         <div className="space-y-3">
           <header className="space-y-1">
             <div className="flex items-center justify-between gap-2 md:justify-start">
-              <h2 className="text-md -mt-1 line-clamp-2 leading-snug font-medium decoration-2 group-hover:underline">{title}</h2>
+              <h2 className="underline decoration-transparent decoration-[1.75px] transition-all duration-200 ease-out group-hover:decoration-current">
+                {title}
+              </h2>
               <p className={cn("flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold", StatusClassName)}>
                 <StatusIcon className="size-3" />
                 {StatusLabel}
