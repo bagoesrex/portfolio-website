@@ -12,13 +12,24 @@ export default function BlogCard({ post }: BlogCardProps) {
 
   return (
     <article className="group">
-      <Link href={`/blog/${slug}`} className="flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition hover:bg-gray-200/40 md:items-center">
+      <Link
+        href={`/blog/${slug}`}
+        className="flex items-start gap-4 rounded-[7px] px-3 py-3.5 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gray-200/40 hover:shadow-xs md:items-center"
+      >
         <div className="relative h-18 min-w-28 overflow-hidden rounded-[5px]">
-          <Image src={coverImage} alt={`${title} Image`} fill priority className="object-cover transition-transform group-hover:scale-130" />
+          <Image
+            src={coverImage}
+            alt={`${title} Image`}
+            fill
+            priority
+            className="pointer-events-none object-cover transition-transform duration-300 ease-out group-hover:scale-130"
+          />
         </div>
         <div className="space-y-2">
           <header className="space-y-1">
-            <h2 className="text-md -mt-1 leading-snug font-medium decoration-2 group-hover:underline">{title}</h2>
+            <h2 className="underline decoration-transparent decoration-[1.75px] transition-all duration-200 ease-out group-hover:decoration-current">
+              {title}
+            </h2>
             <p className="text-muted-foreground line-clamp-2 text-sm font-light">{excerpt}</p>
           </header>
           <footer className="text-muted-foreground flex items-center gap-1 text-xs">
