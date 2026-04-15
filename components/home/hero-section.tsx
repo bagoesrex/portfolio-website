@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import MaxWidthWrapper from "../layout/max-width-wrapper";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import SocialLinks from "../shared/social-links";
 import { FaUser } from "react-icons/fa";
-import Cat from "../lottie/cat";
+import dynamic from "next/dynamic";
+
+const Cat = dynamic(() => import("../lottie/cat"), { ssr: false });
 
 export default function HeroSection() {
   return (
