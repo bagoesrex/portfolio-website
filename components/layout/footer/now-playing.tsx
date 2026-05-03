@@ -1,18 +1,19 @@
 "use client";
 
 import useSWR from "swr";
-import { NowPlayingSong } from "@/types/spotify";
+import { NowPlayingSong } from "@/types/lastfm";
 import { fetcher } from "@/lib/fetcher";
 import Image from "next/image";
 import { GoDot, GoDotFill } from "react-icons/go";
-import { SiSpotify } from "react-icons/si";
+import { SiLastdotfm } from "react-icons/si";
 
 export default function NowPlaying() {
-  const { data } = useSWR<NowPlayingSong>("/api/spotify/now-playing", fetcher, { refreshInterval: 1000 * 30 });
+  const { data, isLoading, error } = useSWR<NowPlayingSong>("/api/lastfm/now-playing", fetcher, { refreshInterval: 1000 * 30 });
 
-  if (!data) return <p>Loading...</p>;
+  if (isLoading) return <p className="text-xs text-gray-400">Loading...</p>;
+  if (error || !data) return null;
 
-  const { isPlaying, title, artist, album, albumImageUrl, songUrl } = data;
+  const { isPlaying, title, artist, albumImageUrl, songUrl } = data;
 
   return (
     <div className="group max-w-90">
@@ -23,16 +24,16 @@ export default function NowPlaying() {
               <Image src={albumImageUrl} alt={`${title} Image`} fill priority className="object-cover" />
             </div>
           ) : (
-            <div className="relative size-6 overflow-hidden rounded-full text-green-500">
-              <SiSpotify className="p-0.1 size-full object-cover" />
+            <div className="relative size-6 overflow-hidden rounded-full text-[#d51007]">
+              <SiLastdotfm className="p-0.1 size-full object-cover" />
             </div>
           )}
 
           <div>
             <p className={`line-clamp-1 max-w-43 text-xs leading-4 decoration-2 ${isPlaying && "group-hover:underline"}`}>
-              {isPlaying ? album : "Not Playing"}
+              {isPlaying ? title : "Not Playing"}
             </p>
-            <p className="line-clamp-1 max-w-25 text-[10px] text-gray-600">{isPlaying ? artist : "Spotify"}</p>
+            <p className="line-clamp-1 max-w-25 text-[10px] text-gray-600">{isPlaying ? artist : "Last.fm"}</p>
           </div>
         </div>
         <div className={`flex size-fit items-center gap-2 px-1 py-0.5 ${isPlaying ? "bg-green-500" : "bg-gray-500"}`}>

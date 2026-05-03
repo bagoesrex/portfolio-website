@@ -1,7 +1,7 @@
 "use client";
 
 import { fetcher } from "@/lib/fetcher";
-import { LastPlayedSong } from "@/types/spotify";
+import { LastPlayedSong } from "@/types/lastfm";
 import Image from "next/image";
 import useSWR from "swr";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 dayjs.extend(relativeTime);
 
 export default function MusicActivity() {
-  const { data } = useSWR<LastPlayedSong>("/api/spotify/last-played", fetcher);
+  const { data, isLoading } = useSWR<LastPlayedSong>("/api/lastfm/last-played", fetcher);
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function MusicActivity() {
     return () => clearInterval(timer);
   }, []);
 
-  if (!data || !data.title) {
+  if (isLoading || !data || !data.title) {
     return (
       <div className="flex items-center gap-4 rounded-[7px] p-3.5">
         <div className="flex h-13 min-w-13 items-center justify-center bg-gray-200 text-xs text-gray-500">N/A</div>
