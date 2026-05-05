@@ -5,7 +5,7 @@ import { NowPlayingSong } from "@/types/lastfm";
 import { fetcher } from "@/lib/fetcher";
 import Image from "next/image";
 import { GoDot, GoDotFill } from "react-icons/go";
-import { SiLastdotfm } from "react-icons/si";
+import { SiSpotify } from "react-icons/si";
 
 export default function NowPlaying() {
   const { data, isLoading, error } = useSWR<NowPlayingSong>("/api/lastfm/now-playing", fetcher, { refreshInterval: 1000 * 30 });
@@ -15,17 +15,26 @@ export default function NowPlaying() {
 
   const { isPlaying, title, artist, albumImageUrl, songUrl } = data;
 
+  const Wrapper = isPlaying ? "a" : "div";
+
   return (
     <div className="group max-w-90">
-      <a href={songUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-4 rounded-[7px] pl-1">
+      <Wrapper
+        {...(isPlaying && {
+          href: songUrl,
+          target: "_blank",
+          rel: "noopener noreferrer",
+        })}
+        className="flex items-center justify-between gap-4 rounded-[7px] pl-1"
+      >
         <div className="flex items-center gap-3.5">
           {isPlaying ? (
             <div className="relative size-6 animate-[spin_4s_linear_infinite] overflow-hidden rounded-full">
               <Image src={albumImageUrl} alt={`${title} Image`} fill priority className="object-cover" />
             </div>
           ) : (
-            <div className="relative size-6 overflow-hidden rounded-full text-[#d51007]">
-              <SiLastdotfm className="p-0.1 size-full object-cover" />
+            <div className="relative size-6 overflow-hidden rounded-full text-green-500">
+              <SiSpotify className="p-0.1 size-full object-cover" />
             </div>
           )}
 
@@ -33,7 +42,7 @@ export default function NowPlaying() {
             <p className={`line-clamp-1 max-w-43 text-xs leading-4 decoration-2 ${isPlaying && "group-hover:underline"}`}>
               {isPlaying ? title : "Not Playing"}
             </p>
-            <p className="line-clamp-1 max-w-25 text-[10px] text-gray-600">{isPlaying ? artist : "Last.fm"}</p>
+            <p className="line-clamp-1 max-w-25 text-[10px] text-gray-600">{isPlaying ? artist : "Spotify"}</p>
           </div>
         </div>
         <div className={`flex size-fit items-center gap-2 px-1 py-0.5 ${isPlaying ? "bg-green-500" : "bg-gray-500"}`}>
@@ -43,7 +52,7 @@ export default function NowPlaying() {
           </div>
           <span className="min-w-fit px-1 py-px text-[10px] text-white">{isPlaying ? "Now Playing" : "Not Playing"}</span>
         </div>
-      </a>
+      </Wrapper>
     </div>
   );
 }
