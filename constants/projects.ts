@@ -30,6 +30,15 @@ export const DUMMY_PROJECTS: Project[] = [
     variant: "gray",
   },
   {
+    title: "The Regret Wall",
+    description: "A web app for sharing regrets through short notes and simple browser-based drawings",
+    status: "completed",
+    techStack: ["Next.js", "Drizzle ORM", "Supabase"],
+    coverImage: "/icons/projects/the-regret-wall.webp",
+    githubUrl: "https://github.com/bagoesrex/the-regret-wall",
+    variant: "orange",
+  },
+  {
     title: "Whatsapp Personal Bot",
     description: "A personal WhatsApp automation bot built with Node.js for sending customized messages and managing chats via WhatsApp Web.",
     status: "completed",
@@ -56,15 +65,6 @@ export const DUMMY_PROJECTS: Project[] = [
     githubUrl: "https://github.com/bagoesrex/catatin-mvp",
     variant: "blue",
   },
-  // {
-  //   title: "AI Skin Detection App",
-  //   description: "An AI-powered app for detecting facial skin conditions.",
-  //   status: "in-progress",
-  //   techStack: ["Machine Learning", "TensorFlow", "Python", "Cloud"],
-  //   coverImage: "/placeholder/main.svg",
-  //   githubUrl: "https://github.com/bagoesrex/portfolio-website",
-  //   variant: "blue"
-  // },
   // {
   //   title: "Online Attendance System",
   //   description: "A location-based attendance system with an admin dashboard.",
@@ -136,5 +136,9 @@ export const PROJECT_VARIANT_STYLES: Record<
   blue: {
     iconBg: "bg-[#EAEFF9]",
     hoverBg: "hover:bg-[#EAEFF9]",
+  },
+  orange: {
+    iconBg: "bg-[#FFE4CA]",
+    hoverBg: "hover:bg-[#FFE4CA]",
   },
 };
