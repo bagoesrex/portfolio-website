@@ -69,16 +69,16 @@ export default function HeroSection() {
               fetchPriority="high"
               className="scale-110 rotate-20 object-cover drop-shadow-2xl md:drop-shadow-xl"
             />
-            <span className="absolute bottom-2 animate-bounce [animation-duration:0.9s]">
+            <span className="absolute bottom-0 animate-[float-up_2.7s_ease-in-out_infinite_-1.8s] motion-reduce:animate-none">
               <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
             </span>
-            <span className="absolute -bottom-5 left-19 animate-bounce [animation-duration:0.8s]">
+            <span className="absolute -bottom-9 left-19 animate-[float-up_2.6s_ease-in-out_infinite_-1.1s] motion-reduce:animate-none">
               <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
             </span>
-            <span className="absolute -bottom-6 left-36 animate-bounce [animation-duration:0.9s]">
+            <span className="absolute -bottom-10 left-36 animate-[float-up_2.6s_ease-in-out_infinite_-1.4s] motion-reduce:animate-none">
               <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
             </span>
-            <span className="absolute -bottom-2 left-50 animate-bounce [animation-duration:0.8s]">
+            <span className="absolute -bottom-4 left-50 animate-[float-up_2.7s_ease-in-out_infinite_-2.1s] motion-reduce:animate-none">
               <span className="text-[13px]">^</span>w<span className="text-[13px]">^</span>
             </span>
           </div>

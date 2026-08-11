@@ -1,4 +1,24 @@
 @import "tailwindcss";
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-38px) scale(1.05);
+  }
+}
 /* @import "tw-animate-css"; */
 
 @custom-variant dark (&:is(.dark *));
