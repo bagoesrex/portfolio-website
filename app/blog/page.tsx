@@ -1,6 +1,21 @@
+import type { Metadata } from "next";
 import BlogCard from "@/components/blog/blog-card";
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import { DUMMY_BLOG_POSTS } from "@/constants/blogs";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Articles and notes from Bagus Rahmawan about web development, frontend engineering, and technology.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    url: `${siteConfig.url}/blog`,
+    title: "Blog | Bagus Rahmawan",
+    description: "Articles and notes about web development, frontend engineering, and technology.",
+  },
+};
 
 export default function BlogPage() {
   return (
