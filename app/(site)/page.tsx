@@ -2,7 +2,7 @@ import AboutSection from "@/components/home/AboutSection";
 import HeroSection from "@/components/home/HeroSection";
 import ProjectsSection from "@/components/home/ProjectsSection";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main>
       <HeroSection />
