@@ -1,3 +1,3 @@
 export const LAYOUT = {
-  container: "max-w-[720px]",
+  container: "max-w-[670px]",
 } as const;

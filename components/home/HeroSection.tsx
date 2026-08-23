@@ -1,4 +1,6 @@
+import { cn } from "@/lib/utils";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
+import { LAYOUT } from "@/config/layout";
 
 export default function HeroSection() {
   return (
@@ -19,6 +21,12 @@ export default function HeroSection() {
           <div className="min-h-full min-w-40 bg-red-300"></div>
         </div>
       </MaxWidthWrapper>
+      <hr
+        className={cn(
+          "mx-auto h-0.5 w-full border-0 bg-gray-200",
+          LAYOUT.container,
+        )}
+      />
     </section>
   );
 }
