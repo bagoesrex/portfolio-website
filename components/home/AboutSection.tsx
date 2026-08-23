@@ -1,6 +1,7 @@
 import { LAYOUT } from "@/config/layout";
 import { cn } from "@/lib/utils";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -24,7 +25,16 @@ export default function AboutSection() {
             <p className="text-sm font-bold">Full Stack Developer</p>
             <p className="text-xs uppercase">current role</p>
           </div>
-          <div className="row-span-2 h-full rounded-xl bg-red-200"></div>
+          <div className="relative row-span-2 h-full overflow-hidden rounded-xl border border-gray-200">
+            <Image
+              src="/images/about/ranpo.webp"
+              alt="Ranpo"
+              fill
+              priority
+              draggable={false}
+              className="pointer-events-none mt-3 scale-x-[-1.3] scale-y-[1.3] object-cover select-none"
+            />
+          </div>
           <div className="min-h-35 rounded-xl bg-green-300 p-5">
             <p className="font-bold text-gray-100">
               Welcome to my corner on the internet :)
