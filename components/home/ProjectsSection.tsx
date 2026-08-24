@@ -2,6 +2,7 @@ import { PROJECTS } from "@/data/projects";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { LAYOUT } from "@/config/layout";
 
 export default function ProjectsSection() {
   const featuredProjects = [...PROJECTS].slice(0, 3);
@@ -65,6 +66,12 @@ export default function ProjectsSection() {
           ))}
         </div>
       </MaxWidthWrapper>
+      <hr
+        className={cn(
+          "mx-auto h-0.5 w-full border-0 bg-gray-200",
+          LAYOUT.container,
+        )}
+      />
     </section>
   );
 }
