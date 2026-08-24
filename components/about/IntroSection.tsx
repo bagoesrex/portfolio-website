@@ -13,7 +13,7 @@ export default function IntroSection() {
             ideas slowly turn into lines of code.
           </p>
         </div>
-        <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+        <div className="flex justify-between gap-8">
           <div className="min-w-0 flex-1 space-y-6.5">
             <p>
               I focus on building responsive and interactive web applications
