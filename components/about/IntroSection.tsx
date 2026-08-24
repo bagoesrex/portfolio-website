@@ -1,5 +1,6 @@
 import { SOCIAL_LINKS } from "@/config/socials";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
+import ToleToleMusicBox from "./ToleToleMusicBox";
 
 export default function IntroSection() {
   return (
@@ -12,8 +13,8 @@ export default function IntroSection() {
             ideas slowly turn into lines of code.
           </p>
         </div>
-        <div className="flex gap-3">
-          <div className="space-y-6.5">
+        <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+          <div className="min-w-0 flex-1 space-y-6.5">
             <p>
               I focus on building responsive and interactive web applications
               with clean and maintainable code. I enjoy refining user
@@ -35,7 +36,7 @@ export default function IntroSection() {
               ))}
             </div>
           </div>
-          <div className="h-50 min-w-50 bg-amber-300"></div>
+          <ToleToleMusicBox />
         </div>
       </MaxWidthWrapper>
     </section>

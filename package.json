@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "test": "node --test components/home/hero-animation.test.mts",
+    "test": "node --test components/home/hero-animation.test.mts components/about/tole-tole-animation.test.mts",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
