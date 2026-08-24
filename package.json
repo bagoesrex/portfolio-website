@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "test": "node --test components/home/hero-animation.test.mts",
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",

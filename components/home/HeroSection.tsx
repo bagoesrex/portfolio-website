@@ -1,13 +1,14 @@
 import { cn } from "@/lib/utils";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
 import { LAYOUT } from "@/config/layout";
+import RanpoSprite from "./RanpoSprite";
 
 export default function HeroSection() {
   return (
     <section id="hero">
-      <MaxWidthWrapper className="space-y-1.5 pt-35 pb-20">
-        <div className="flex justify-between gap-15">
-          <div className="space-y-5">
+      <MaxWidthWrapper className="pt-35 pb-20">
+        <div className="flex flex-col-reverse items-center gap-8 sm:flex-row sm:justify-between sm:gap-3">
+          <div className="min-w-0 flex-1 space-y-5">
             <div className="space-y-1">
               <h1 className="font-mono text-2xl font-bold">Bagus Rahmawan</h1>
               <p>Tech Enthusiast</p>
@@ -18,7 +19,9 @@ export default function HeroSection() {
               technologies and creating clean user interfaces.
             </p>
           </div>
-          <div className="min-h-full min-w-40 bg-red-300"></div>
+          <div className="bg-red-600">
+            <RanpoSprite />
+          </div>
         </div>
       </MaxWidthWrapper>
       <hr
