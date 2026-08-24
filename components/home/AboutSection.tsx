@@ -5,6 +5,29 @@ import Image from "next/image";
 import { SiSpotify } from "react-icons/si";
 import { ArrowUpRight } from "lucide-react";
 
+const TOOL_ITEMS = [
+  {
+    icon: "/icons/home/tools/typescript.svg",
+    label: "TypeScript",
+  },
+  {
+    icon: "/icons/home/tools/typescript.svg",
+    label: "TypeScript",
+  },
+  {
+    icon: "/icons/home/tools/typescript.svg",
+    label: "TypeScript",
+  },
+  {
+    icon: "/icons/home/tools/typescript.svg",
+    label: "TypeScript",
+  },
+  {
+    icon: "/icons/home/tools/typescript.svg",
+    label: "TypeScript",
+  },
+];
+
 export default function AboutSection() {
   return (
     <section id="about">
@@ -92,7 +115,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="gap flex min-h-35 flex-col gap-4.5 rounded-xl bg-yellow-200 p-4.5">
+          <div className="flex min-h-35 flex-col gap-4.5 rounded-xl bg-yellow-200 p-4.5">
             <p className="text-sm font-semibold">
               Building scalable & performant web applications
             </p>
@@ -102,7 +125,40 @@ export default function AboutSection() {
               with TypeScript.
             </p>
           </div>
-          <div className="col-span-2 min-h-35 rounded-xl bg-amber-900"></div>
+          <div className="col-span-2 flex min-h-35 flex-col gap-3.5 rounded-xl bg-mauve-600 p-4.5">
+            <p className="text-sm font-semibold text-white">
+              Constantly Learning
+            </p>
+            <p className="line-clamp-2 text-xs leading-5 text-white/78">
+              I enjoy building mobile and web applications, exploring Android
+              customization, and learning new technologies. I primarily work
+              with TypeScript.
+            </p>
+            <div className="mt-auto flex items-end justify-between">
+              <p className="text-[10.5px] text-white/78 uppercase">
+                my primary tools
+              </p>
+              <div className="mt-0.5 flex gap-1 rounded-xl border-[0.01px] border-white/31 bg-white/27 px-[4.5px] py-[3.5px]">
+                {TOOL_ITEMS.map(({ icon, label }, i) => (
+                  <div
+                    key={i}
+                    className="rounded-md border-white/45 bg-white/18 p-[5.2px]"
+                  >
+                    <div className="relative size-[12.5px] overflow-hidden">
+                      <Image
+                        src={icon}
+                        alt={`${label} image`}
+                        fill
+                        priority
+                        draggable={false}
+                        className="pointer-events-none object-cover select-none"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </MaxWidthWrapper>
       <hr
