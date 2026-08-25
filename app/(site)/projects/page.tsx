@@ -1,19 +1,21 @@
-import { PROJECT_VARIANT_STYLES, PROJECTS } from "@/data/projects";
-import MaxWidthWrapper from "../layout/MaxWidthWrapper";
+import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
+import { LAYOUT } from "@/config/layout";
+import { PROJECTS, PROJECT_VARIANT_STYLES } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { LAYOUT } from "@/config/layout";
 
-export default function ProjectsSection() {
-  const featuredProjects = [...PROJECTS].slice(0, 3);
+export default function ProjectsPage() {
+  const featuredProjects = [...PROJECTS];
 
   return (
-    <section id="projects">
-      <MaxWidthWrapper className="space-y-6 pt-10 pb-5">
-        <div>
-          <h2 className="text-[21.5px] font-[640] tracking-tighter">
-            Featured Projects
-          </h2>
+    <main>
+      <MaxWidthWrapper className="space-y-6.5 pt-35 pb-5">
+        <div className="space-y-4">
+          <h1 className="text-[28px] font-[490] tracking-[-2px]">Projects</h1>
+          <p className="">
+            Here are some of the projects I&apos;ve worked on. Each project
+            represents a unique challenge and learning experience.
+          </p>
         </div>
         <div className="space-y-5.5">
           {featuredProjects.map((project, i) => {
@@ -46,14 +48,14 @@ export default function ProjectsSection() {
                           {project.title}
                         </h3>
                         {/* <p
-                className={cn(
-                  "flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold",
-                  project.StatusClassName,
-                )}
-              >
-                <StatusIcon className="size-3" />
-                {project.StatusLabel}
-              </p> */}
+                        className={cn(
+                          "flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold",
+                          project.StatusClassName,
+                        )}
+                      >
+                        <StatusIcon className="size-3" />
+                        {project.StatusLabel}
+                      </p> */}
                         <p className="line-clamp-2 text-sm font-[380]">
                           {project.description}
                         </p>
@@ -63,12 +65,12 @@ export default function ProjectsSection() {
                       </p>
                     </header>
                     {/* <footer className="flex flex-wrap gap-2 text-xs font-light text-white">
-            {project.techStack.map((item, i) => (
-              <span key={i} className="bg-primary/50 px-1.5 py-1">
-                {item}
-              </span>
-            ))}
-          </footer> */}
+                    {project.techStack.map((item, i) => (
+                      <span key={i} className="bg-primary/50 px-1.5 py-1">
+                        {item}
+                      </span>
+                    ))}
+                  </footer> */}
                   </div>
                 </a>
               </article>
@@ -82,6 +84,6 @@ export default function ProjectsSection() {
           LAYOUT.container,
         )}
       />
-    </section>
+    </main>
   );
 }
