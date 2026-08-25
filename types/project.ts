@@ -1,10 +1,15 @@
 export type ProjectStatus = "completed" | "in-progress" | "archived";
 
+export type ProjectVariant =
+  "gray" | "skyblue" | "blue" | "green" | "purple" | "orange";
+
 export interface Project {
   title: string;
   description: string;
+  longDescription: string;
   status: ProjectStatus;
   techStack: string[];
   coverImage: string;
   githubUrl: string;
+  variant: ProjectVariant;
 }
