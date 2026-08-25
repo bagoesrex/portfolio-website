@@ -10,7 +10,9 @@ export default function HeroSection() {
         <div className="flex flex-col-reverse items-center gap-8 sm:flex-row sm:justify-between sm:gap-3">
           <div className="min-w-0 flex-1 space-y-5">
             <div className="space-y-1">
-              <h1 className="font-mono text-2xl font-bold">Bagus Rahmawan</h1>
+              <h1 className="font-architects-daughter text-2xl font-bold tracking-[3.1px]">
+                Bagus Rahmawan
+              </h1>
               <p>Tech Enthusiast</p>
             </div>
             <p>

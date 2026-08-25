@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import {
+  Architects_Daughter,
+  Geist,
+  Geist_Mono,
+  Inter,
+} from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+
+const architectsDaughter = Architects_Daughter({
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-architects-daughter",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "antialiased",
         geistSans.variable,
         geistMono.variable,
+        architectsDaughter.variable,
         "font-sans",
         inter.variable,
       )}
