@@ -7,7 +7,7 @@ export default function IntroSection() {
     <section id="intro">
       <MaxWidthWrapper className="space-y-6.5 pt-35 pb-20">
         <div className="space-y-4">
-          <h1 className="text-2xl font-bold">About Me</h1>
+          <h1 className="text-[28px] font-[490] tracking-[-2px]">About Me</h1>
           <p className="font-architects-daughter text-[18.2px] font-semibold tracking-[1.5px]">
             Hey there! I’m Bagus Rahmawan, a developer based in Semarang. where
             ideas slowly turn into lines of code.

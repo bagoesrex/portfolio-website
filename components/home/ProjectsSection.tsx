@@ -11,7 +11,9 @@ export default function ProjectsSection() {
     <section id="projects">
       <MaxWidthWrapper className="space-y-6 pt-10 pb-5">
         <div>
-          <h2 className="text-xl font-bold">Featured Projects</h2>
+          <h2 className="text-[21.5px] font-[640] tracking-tighter">
+            Featured Projects
+          </h2>
         </div>
         <div className="space-y-5">
           {featuredProjects.map((project, i) => {

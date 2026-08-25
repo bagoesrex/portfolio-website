@@ -4,6 +4,7 @@ import MaxWidthWrapper from "../layout/MaxWidthWrapper";
 import Image from "next/image";
 import { SiSpotify } from "react-icons/si";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const TOOL_ITEMS = [
   {
@@ -33,7 +34,7 @@ export default function AboutSection() {
     <section id="about">
       <MaxWidthWrapper className="space-y-5 pt-10 pb-5">
         <div className="space-y-1">
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-[21.5px] font-[640] tracking-tighter">About</h2>
           <p>
             Crafting purposeful digital experiences centered on clarity,
             performance, and real-world usefulness.
@@ -72,10 +73,22 @@ export default function AboutSection() {
               className="pointer-events-none mt-3 scale-x-[-1.3] scale-y-[1.3] object-cover select-none"
             />
           </div>
-          <div className="min-h-35 rounded-xl bg-green-300 p-4.5">
-            <p className="font-bold text-gray-100">
+          <div className="flex min-h-35 flex-col justify-between rounded-xl bg-green-400 p-4.5 text-white">
+            <p className="font-architects-daughter text-[16px] font-bold tracking-[1.3px]">
               Welcome to my corner on the internet :)
             </p>
+            <Link
+              className="group/link flex items-center gap-1.5 font-semibold"
+              href="/about"
+            >
+              <p className="text-[10.5px] group-hover/link:underline">
+                My journey
+              </p>
+              <ArrowUpRight
+                className="mt-0.5 mr-0.5 duration-200 group-hover/link:-mt-0.5 group-hover/link:ml-0.5"
+                size={9}
+              />
+            </Link>
           </div>
           <div className="group/card relative flex min-h-35 flex-col gap-2.5 overflow-hidden rounded-xl border border-gray-200 bg-white p-4.5">
             <div className="flex items-center justify-between text-green-500">
@@ -116,7 +129,7 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="flex min-h-35 flex-col gap-4.5 rounded-xl bg-yellow-200 p-4.5">
-            <p className="text-sm font-semibold">
+            <p className="text-sm leading-snug font-bold">
               Building scalable & performant web applications
             </p>
             <p className="line-clamp-2 text-xs leading-5">
@@ -124,12 +137,24 @@ export default function AboutSection() {
               customization, and learning new technologies. I primarily work
               with TypeScript.
             </p>
+            <Link
+              className="group/link flex items-center gap-1.5 font-bold"
+              href="/"
+            >
+              <p className="text-[10.5px] group-hover/link:underline">
+                Read my logs
+              </p>
+              <ArrowUpRight
+                className="mt-0.5 mr-0.5 duration-200 group-hover/link:-mt-0.5 group-hover/link:ml-0.5"
+                size={9}
+              />
+            </Link>
           </div>
           <div className="col-span-2 flex min-h-35 flex-col gap-3.5 rounded-xl bg-mauve-600 p-4.5">
             <p className="text-sm font-semibold text-white">
               Constantly Learning
             </p>
-            <p className="line-clamp-2 text-xs leading-5 text-white/78">
+            <p className="line-clamp-3 text-xs leading-5 text-white/78">
               I enjoy building mobile and web applications, exploring Android
               customization, and learning new technologies. I primarily work
               with TypeScript.

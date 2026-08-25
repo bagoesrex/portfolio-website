@@ -13,7 +13,7 @@ export default function HeroSection() {
               <h1 className="font-architects-daughter text-2xl font-bold tracking-[3.1px]">
                 Bagus Rahmawan
               </h1>
-              <p>Tech Enthusiast</p>
+              <p className="text-muted-foreground">Tech Enthusiast</p>
             </div>
             <p>
               A tech enthusiast with a strong interest in building responsive
