@@ -40,7 +40,7 @@ export default function AboutSection() {
             performance, and real-world usefulness.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-3.5">
+        <div className="grid grid-cols-2 gap-3.5 md:grid-cols-3">
           <div className="min-min-h-35 relative flex flex-col justify-between rounded-xl bg-blue-200 p-4.5">
             <div className="h-1 w-17 rounded-md bg-white/45"></div>
             <div className="size-fit self-end rounded-full bg-yellow-400 px-2 py-1">
@@ -63,14 +63,14 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="relative row-span-2 h-full overflow-hidden rounded-xl border border-gray-200">
+          <div className="relative col-span-2 h-full min-h-45 overflow-hidden rounded-xl border border-gray-200 md:col-span-1 md:row-span-2">
             <Image
               src="/images/about/ranpo.webp"
               alt="Ranpo"
               fill
               priority
               draggable={false}
-              className="pointer-events-none mt-3 scale-x-[-1.3] scale-y-[1.3] object-cover select-none"
+              className="pointer-events-none scale-x-[-1] object-cover select-none md:mt-3 md:scale-x-[-1.3] md:scale-y-[1.3]"
             />
           </div>
           <div className="flex min-h-35 flex-col justify-between rounded-xl bg-green-400 p-4.5 text-white">
@@ -128,7 +128,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="flex min-h-35 flex-col gap-4.5 rounded-xl bg-yellow-200 p-4.5">
+          <div className="col-span-2 flex min-h-35 flex-col gap-4.5 rounded-xl bg-yellow-200 p-4.5 md:col-span-1">
             <p className="text-sm leading-snug font-bold">
               Building scalable & performant web applications
             </p>
