@@ -60,11 +60,11 @@ export default function Footer() {
           </nav>
           <hr
             className={cn(
-              "mx-auto h-0.5 w-full border-0 bg-gray-200",
+              "mx-auto w-[93%] border-t-2 border-dotted border-gray-200",
               LAYOUT.container,
             )}
           />
-          <div className="-mt-3 flex items-center justify-between text-sm">
+          <div className="-mt-3 flex items-center justify-between px-3.75 text-sm">
             <p className="">
               Bagus Rahmawan <span>©</span> 2026
             </p>

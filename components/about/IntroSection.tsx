@@ -1,6 +1,8 @@
 import { SOCIAL_LINKS } from "@/config/socials";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
 import ToleToleMusicBox from "./ToleToleMusicBox";
+import { LAYOUT } from "@/config/layout";
+import { cn } from "@/lib/utils";
 
 export default function IntroSection() {
   return (
@@ -39,6 +41,12 @@ export default function IntroSection() {
           <ToleToleMusicBox />
         </div>
       </MaxWidthWrapper>
+      <hr
+        className={cn(
+          "mx-auto w-[93%] border-t-2 border-dotted border-gray-200",
+          LAYOUT.container,
+        )}
+      />
     </section>
   );
 }

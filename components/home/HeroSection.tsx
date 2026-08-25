@@ -6,7 +6,7 @@ import RanpoSprite from "./RanpoSprite";
 export default function HeroSection() {
   return (
     <section id="hero">
-      <MaxWidthWrapper className="pt-35 pb-20">
+      <MaxWidthWrapper className="pt-30 pb-10">
         <div className="flex flex-col-reverse items-center gap-8 sm:flex-row sm:justify-between sm:gap-3">
           <div className="min-w-0 flex-1 space-y-5">
             <div className="space-y-1">
@@ -21,14 +21,14 @@ export default function HeroSection() {
               technologies and creating clean user interfaces.
             </p>
           </div>
-          <div className="bg-red-600">
+          <div>
             <RanpoSprite />
           </div>
         </div>
       </MaxWidthWrapper>
       <hr
         className={cn(
-          "mx-auto h-0.5 w-full border-0 bg-gray-200",
+          "mx-auto w-[93%] border-t-2 border-dotted border-gray-200",
           LAYOUT.container,
         )}
       />

@@ -80,7 +80,7 @@ export default function ProjectsPage() {
       </MaxWidthWrapper>
       <hr
         className={cn(
-          "mx-auto h-0.5 w-full border-0 bg-gray-200",
+          "mx-auto w-[93%] border-t-2 border-dotted border-gray-200",
           LAYOUT.container,
         )}
       />
