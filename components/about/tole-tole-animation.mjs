@@ -1,6 +1,6 @@
 export const SPRITE_SHEET = "/images/about/tole-tole-sprite.webp";
 
-export const IDLE_INTERVAL_MS = 900;
+export const IDLE_INTERVAL_MS = 600;
 export const DANCE_INTERVAL_MS = 260;
 export const SPRITE_COLUMNS = 5;
 export const SPRITE_ROWS = 1;

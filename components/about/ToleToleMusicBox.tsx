@@ -147,7 +147,7 @@ export default function ToleToleMusicBox() {
 
   return (
     <div
-      className="w-52 shrink-0 text-center select-none"
+      className="w-52 shrink-0 self-center text-center select-none"
       data-active={isActive}
       data-pinned={isPinned}
       onBlurCapture={handleBlur}
@@ -176,16 +176,7 @@ export default function ToleToleMusicBox() {
         />
       </div>
 
-      <div className="relative -mt-4 h-12 rounded-md border-2 border-stone-800 bg-amber-500 shadow-sm dark:border-stone-200">
-        <div
-          aria-hidden="true"
-          className="absolute top-2 left-3 h-1 w-7 rounded-full bg-amber-200"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute top-2 right-3 h-1 w-7 rounded-full bg-amber-700"
-        />
-
+      <div className="relative -mt-4 hidden h-12 rounded-md">
         <button
           aria-label={
             isPinned
@@ -211,7 +202,11 @@ export default function ToleToleMusicBox() {
       </div>
 
       <p className="text-muted-foreground mt-2 text-xs">
-        Hover for outfits · press the paw to keep dancing
+        <span className="font-architects-daughter border-b-2 border-dotted text-[13.2px] font-bold tracking-[0.9px]">
+          Keonk Fact
+        </span>{" "}
+        <br />
+        Tole-tole is my fav cat btw
       </p>
       <p aria-live="polite" className="sr-only">
         {isPinned
