@@ -9,10 +9,10 @@ export default function ProjectsPage() {
 
   return (
     <main>
-      <MaxWidthWrapper className="space-y-6.5 pt-28 pb-5">
+      <MaxWidthWrapper className="space-y-6.5 pt-28 pb-10">
         <div className="space-y-4">
           <h1 className="text-[28px] font-[490] tracking-[-2px]">Projects</h1>
-          <p className="">
+          <p className="text-sm md:text-base">
             Here are some of the projects I&apos;ve worked on. Each project
             represents a unique challenge and learning experience.
           </p>

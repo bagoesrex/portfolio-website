@@ -41,7 +41,7 @@ import { cn } from "@/lib/utils";
 export default function Footer() {
   return (
     <footer>
-      <MaxWidthWrapper className="px-0 pt-15 pb-5">
+      <MaxWidthWrapper className="hidden px-0 pt-15 pb-5">
         <div className="space-y-7">
           <nav className="px-3.75">
             <ul className="grid grid-cols-4 gap-x-5 gap-y-2.75">

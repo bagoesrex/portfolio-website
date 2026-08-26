@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 export default function IntroSection() {
   return (
     <section id="intro">
-      <MaxWidthWrapper className="space-y-6.5 pt-28 pb-20">
+      <MaxWidthWrapper className="space-y-5.5 pt-28 pb-10 md:space-y-6.5">
         <div className="space-y-4">
           <h1 className="text-[28px] font-[490] tracking-[-2px]">About Me</h1>
-          <p className="font-architects-daughter text-[17.2px] font-semibold tracking-[1.5px] md:text-[18.2px]">
+          <p className="font-architects-daughter text-[16.8px] font-semibold tracking-[1.5px] md:text-[18.2px]">
             Hey there! I’m Bagus Rahmawan, a developer based in Semarang. where
             ideas slowly turn into lines of code.
           </p>
@@ -18,14 +18,14 @@ export default function IntroSection() {
         <div className="flex flex-col justify-between gap-8 md:flex-row">
           <div className="min-w-0 flex-1 space-y-6.5">
             <div className="space-y-3">
-              <p>
+              <p className="text-sm md:text-base">
                 Driven by a curiosity for technology and a love for building
                 things on the web, I enjoy turning ideas into simple and
                 thoughtful digital experiences.
               </p>
-              <p className="block">
+              <p className="block text-sm md:text-base">
                 I’m 21 years old, based in{" "}
-                <span className="font-architects-daughter text-[17.2px] font-bold tracking-[0.9px]">
+                <span className="font-architects-daughter text-[15.9px] font-bold tracking-[0.9px] md:text-[17.2px]">
                   Semarang, Indonesia
                 </span>
                 , with TypeScript being one of my favorite technologies.

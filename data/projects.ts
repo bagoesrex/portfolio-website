@@ -5,7 +5,7 @@ export const PROJECTS: Project[] = [
     title: "SkinCure",
     description: "AI-powered facial skin condition detector.",
     longDescription:
-      "SkinCure is an Android application built for the Bangkit 2024 capstone program.",
+      "SkinCure is an Android application that uses AI to detect facial skin conditions.",
     status: "completed",
     techStack: ["Kotlin", "Cloud", "Tensor Flow"],
     coverImage: "/icons/projects/skincure.svg",

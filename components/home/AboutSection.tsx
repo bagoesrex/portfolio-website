@@ -35,7 +35,7 @@ export default function AboutSection() {
       <MaxWidthWrapper className="space-y-5 pt-10 pb-5">
         <div className="space-y-1">
           <h2 className="text-[21.5px] font-[640] tracking-tighter">About</h2>
-          <p>
+          <p className="text-sm md:text-base">
             Crafting purposeful digital experiences centered on clarity,
             performance, and real-world usefulness.
           </p>
@@ -128,14 +128,13 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="col-span-2 flex min-h-35 flex-col gap-4.5 rounded-xl bg-yellow-200 p-4.5 md:col-span-1">
+          <div className="col-span-2 flex min-h-35 flex-col gap-3 rounded-xl bg-yellow-200 p-4.5 md:col-span-1">
             <p className="text-sm leading-snug font-bold">
-              Building scalable & performant web applications
+              Thoughts, experiments, and things I learn along the way.
             </p>
             <p className="line-clamp-2 text-xs leading-5">
-              I enjoy building mobile and web applications, exploring Android
-              customization, and learning new technologies. I primarily work
-              with TypeScript.
+              A small collection of notes about development, design, and ideas
+              worth remembering.
             </p>
             <Link
               className="group/link flex items-center gap-1.5 font-bold"
@@ -150,14 +149,14 @@ export default function AboutSection() {
               />
             </Link>
           </div>
-          <div className="col-span-2 flex min-h-35 flex-col gap-3.5 rounded-xl bg-mauve-600 p-4.5">
+          <div className="col-span-2 flex min-h-35 flex-col gap-3 rounded-xl bg-mauve-600 p-4.5">
             <p className="text-sm font-semibold text-white">
               Constantly Learning
             </p>
             <p className="line-clamp-3 text-xs leading-5 text-white/78">
-              I enjoy building mobile and web applications, exploring Android
-              customization, and learning new technologies. I primarily work
-              with TypeScript.
+              Always learning, experimenting, and finding better ways to build,
+              while sharpening my skills with TypeScript and exploring tools
+              that help me create better products.
             </p>
             <div className="mt-auto flex items-end justify-between">
               <p className="text-[10.5px] text-white/78 uppercase">

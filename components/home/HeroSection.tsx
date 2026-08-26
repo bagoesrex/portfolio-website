@@ -19,7 +19,9 @@ export default function HeroSection() {
                     @bagoesrex
                   </p>
                 </div>
-                <p className="text-muted-foreground">Tech Enthusiast</p>
+                <p className="text-muted-foreground text-sm md:text-base">
+                  Tech Enthusiast
+                </p>
               </div>
               <div className="relative h-32 w-1 md:hidden">
                 <div className="absolute top-0 -right-3.5">
@@ -27,10 +29,10 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <p>
-              A tech enthusiast with a strong interest in building responsive
-              and interactive web applications. I enjoy experimenting with new
-              technologies and creating clean user interfaces.
+            <p className="text-sm md:text-base">
+              I enjoy turning ideas into thoughtful digital experiences, with a
+              focus on clean interfaces, smooth interactions, and building
+              things that feel simple and useful.
             </p>
           </div>
           <div className="hidden md:block">

@@ -54,11 +54,11 @@ export default function ProjectsSection() {
                 <StatusIcon className="size-3" />
                 {project.StatusLabel}
               </p> */}
-                        <p className="line-clamp-2 text-sm font-[380]">
+                        <p className="line-clamp-2 text-xs font-[380] md:text-sm">
                           {project.description}
                         </p>
                       </div>
-                      <p className="text-muted-foreground line-clamp-2 text-sm font-[360]">
+                      <p className="text-muted-foreground line-clamp-2 text-xs font-[360] md:text-sm">
                         {project.longDescription}
                       </p>
                     </header>
