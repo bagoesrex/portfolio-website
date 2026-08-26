@@ -17,12 +17,20 @@ export default function IntroSection() {
         </div>
         <div className="flex justify-between gap-8">
           <div className="min-w-0 flex-1 space-y-6.5">
-            <p>
-              I focus on building responsive and interactive web applications
-              with clean and maintainable code. I enjoy refining user
-              interfaces, improving performance, and continuously sharpening my
-              development workflow.
-            </p>
+            <div className="space-y-3">
+              <p>
+                Driven by a curiosity for technology and a love for building
+                things on the web, I enjoy turning ideas into simple and
+                thoughtful digital experiences.
+              </p>
+              <p className="block">
+                I’m 21 years old, based in{" "}
+                <span className="font-architects-daughter text-[17.2px] font-bold tracking-[0.9px]">
+                  Semarang, Indonesia
+                </span>
+                , with TypeScript being one of my favorite technologies.
+              </p>
+            </div>
             <div className="flex gap-2.5">
               {SOCIAL_LINKS.map(({ label, href, icon: Icon }, i) => (
                 <a
