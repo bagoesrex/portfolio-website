@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export default function IntroSection() {
   return (
     <section id="intro">
-      <MaxWidthWrapper className="space-y-6.5 pt-35 pb-20">
+      <MaxWidthWrapper className="space-y-6.5 pt-28 pb-20">
         <div className="space-y-4">
           <h1 className="text-[28px] font-[490] tracking-[-2px]">About Me</h1>
           <p className="font-architects-daughter text-[18.2px] font-semibold tracking-[1.5px]">

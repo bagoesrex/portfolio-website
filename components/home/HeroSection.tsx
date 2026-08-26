@@ -9,10 +9,15 @@ export default function HeroSection() {
       <MaxWidthWrapper className="pt-30 pb-10">
         <div className="flex flex-col-reverse items-center gap-8 sm:flex-row sm:justify-between sm:gap-3">
           <div className="min-w-0 flex-1 space-y-5">
-            <div className="space-y-1">
-              <h1 className="font-architects-daughter text-2xl font-bold tracking-[3.1px]">
-                Bagus Rahmawan
-              </h1>
+            <div>
+              <div className="group relative h-[30.5px] overflow-hidden">
+                <h1 className="font-architects-daughter absolute top-0 text-2xl leading-none font-bold tracking-[3.1px] transition-all duration-400 group-hover:top-8">
+                  Bagus Rahmawan
+                </h1>
+                <p className="font-architects-daughter absolute top-8 text-2xl leading-none font-bold tracking-[3.3px] transition-all duration-400 group-hover:top-0">
+                  @bagoesrex
+                </p>
+              </div>
               <p className="text-muted-foreground">Tech Enthusiast</p>
             </div>
             <p>

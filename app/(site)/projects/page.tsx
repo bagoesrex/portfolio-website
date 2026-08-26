@@ -9,7 +9,7 @@ export default function ProjectsPage() {
 
   return (
     <main>
-      <MaxWidthWrapper className="space-y-6.5 pt-35 pb-5">
+      <MaxWidthWrapper className="space-y-6.5 pt-28 pb-5">
         <div className="space-y-4">
           <h1 className="text-[28px] font-[490] tracking-[-2px]">Projects</h1>
           <p className="">
