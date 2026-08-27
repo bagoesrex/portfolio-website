@@ -1,8 +1,9 @@
 import { LAYOUT } from "@/config/layout";
 import { cn } from "@/lib/utils";
+import { getTopTrack } from "@/api/lastfm";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
 import Image from "next/image";
-import { SiSpotify } from "react-icons/si";
+import { SiLastdotfm, SiSpotify } from "react-icons/si";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -29,7 +30,17 @@ const TOOL_ITEMS = [
   },
 ];
 
-export default function AboutSection() {
+async function loadRecentFavorite() {
+  try {
+    return await getTopTrack("7day");
+  } catch {
+    return null;
+  }
+}
+
+export default async function AboutSection() {
+  const recentFavorite = await loadRecentFavorite();
+
   return (
     <section id="about">
       <MaxWidthWrapper className="space-y-5 pt-10 pb-5">
@@ -93,34 +104,58 @@ export default function AboutSection() {
           <div className="group/card relative flex min-h-35 flex-col gap-2.5 overflow-hidden rounded-xl border border-gray-200 bg-white p-4.5">
             <div className="flex items-center justify-between text-green-500">
               <p className="text-xs font-semibold uppercase">recent favorite</p>
-              <SiSpotify className="text-green" size={17} />
+              <span>
+                <span className="sr-only">Spotify</span>
+                <SiSpotify aria-hidden="true" size={19} />
+              </span>
             </div>
-            <div>
-              <p className="text-[14.5px] font-semibold">Reality Club</p>
-              <p className="text-[11px]">A Sorrowful Reunion</p>
-            </div>
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group/link mt-auto flex items-center gap-1.5 font-semibold text-green-500"
-            >
-              <p className="text-[10.5px] group-hover/link:underline">
-                View Track
+            {recentFavorite ? (
+              <>
+                <div className="min-w-0 pr-8">
+                  <p className="truncate text-[14.5px] font-semibold">
+                    {recentFavorite.artist}
+                  </p>
+                  <p className="truncate text-[11px]">{recentFavorite.name}</p>
+                  <p className="mt-0.5 text-[10px] text-gray-500">
+                    {recentFavorite.playcount}{" "}
+                    {recentFavorite.playcount === 1 ? "play" : "plays"} this
+                    week
+                  </p>
+                </div>
+                <a
+                  href={recentFavorite.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`View ${recentFavorite.name} by ${recentFavorite.artist} on Last.fm`}
+                  className="group/link mt-auto flex items-center gap-1.5 font-semibold text-green-500"
+                >
+                  <span className="text-[10.5px] group-hover/link:underline">
+                    View track
+                  </span>
+                  <ArrowUpRight
+                    aria-hidden="true"
+                    className="mt-0.5 mr-0.5 duration-200 group-hover/link:-mt-0.5 group-hover/link:ml-0.5"
+                    size={9}
+                  />
+                </a>
+              </>
+            ) : (
+              <p className="max-w-36 text-xs leading-5 text-gray-500">
+                Weekly listening data is unavailable.
               </p>
-              <ArrowUpRight
-                className="mt-0.5 mr-0.5 duration-200 group-hover/link:-mt-0.5 group-hover/link:ml-0.5"
-                size={9}
-              />
-            </a>
+            )}
             <div className="absolute -right-9 -bottom-13 z-10 size-30 overflow-hidden rounded-full bg-black duration-500 group-hover/card:-right-6.5 group-hover/card:-bottom-6.5">
               <div className="flex size-full items-center justify-center">
                 <div className="relative size-14.5 overflow-hidden rounded-full">
                   <Image
-                    src="/images/about/ranpo.webp"
-                    alt="Ranpo"
+                    src={recentFavorite?.imageUrl ?? "/images/placeholder.svg"}
+                    alt={
+                      recentFavorite?.imageUrl
+                        ? `${recentFavorite.name} artwork`
+                        : ""
+                    }
                     fill
-                    priority
+                    sizes="58px"
                     draggable={false}
                     className="pointer-events-none object-cover select-none"
                   />

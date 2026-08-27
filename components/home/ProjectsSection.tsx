@@ -9,7 +9,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects">
-      <MaxWidthWrapper className="space-y-6 pt-10 pb-5">
+      <MaxWidthWrapper className="space-y-6 pt-10 pb-10">
         <div>
           <h2 className="text-[21.5px] font-[640] tracking-tighter">
             Featured Projects

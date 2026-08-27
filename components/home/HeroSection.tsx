@@ -15,7 +15,7 @@ export default function HeroSection() {
                   <h1 className="font-architects-daughter absolute top-0 text-xl leading-none font-bold tracking-[3.1px] transition-all duration-400 group-hover:top-8 md:text-2xl">
                     Bagus Rahmawan
                   </h1>
-                  <p className="font-architects-daughter absolute top-8 text-2xl leading-none font-bold tracking-[3.3px] transition-all duration-400 group-hover:top-0">
+                  <p className="font-architects-daughter absolute top-8 text-xl leading-none font-bold tracking-[3.3px] transition-all duration-400 group-hover:top-0 md:text-2xl">
                     @bagoesrex
                   </p>
                 </div>
