@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { getTopTrack } from "@/api/lastfm";
 import MaxWidthWrapper from "../layout/MaxWidthWrapper";
 import Image from "next/image";
-import { SiLastdotfm, SiSpotify } from "react-icons/si";
+import { SiSpotify } from "react-icons/si";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -84,7 +84,7 @@ export default async function AboutSection() {
               className="pointer-events-none scale-x-[-1] object-cover select-none md:mt-3 md:scale-x-[-1.3] md:scale-y-[1.3]"
             />
           </div>
-          <div className="flex min-h-35 flex-col justify-between rounded-xl bg-green-400 p-4.5 text-white">
+          <div className="flex min-h-35 flex-col justify-between rounded-xl bg-emerald-400 p-4.5 text-white">
             <p className="font-architects-daughter text-[16px] font-bold tracking-[1.3px]">
               Welcome to my corner on the internet :)
             </p>
@@ -116,7 +116,7 @@ export default async function AboutSection() {
                     {recentFavorite.artist}
                   </p>
                   <p className="truncate text-[11px]">{recentFavorite.name}</p>
-                  <p className="mt-0.5 text-[10px] text-gray-500">
+                  <p className="-mt-0.5 text-[10px] text-gray-500">
                     {recentFavorite.playcount}{" "}
                     {recentFavorite.playcount === 1 ? "play" : "plays"} this
                     week
