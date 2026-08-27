@@ -13,7 +13,7 @@ export default function Header() {
     <header className="fixed z-50 w-full px-3.5 py-5 backdrop-blur-md">
       <div
         className={cn(
-          "bg-primary/5 ${LAYOUT.container} border-gray mx-auto rounded-full border px-1 py-1",
+          "bg-primary/5 ${LAYOUT.container} border-gray/50 mx-auto w-fit rounded-full border px-1 py-1",
           LAYOUT.container,
         )}
       >
@@ -24,8 +24,8 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "block h-full rounded-full px-3 py-1.5 text-gray-500",
-                    pathname == item.href && "bg-gray-200 text-black",
+                    "block h-full rounded-full px-3 py-1.5 text-gray-800",
+                    pathname == item.href && "bg-gray-200/50 text-black",
                   )}
                 >
                   {item.label}
