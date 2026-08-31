@@ -13,20 +13,20 @@ const TOOL_ITEMS = [
     label: "TypeScript",
   },
   {
-    icon: "/icons/home/tools/typescript.svg",
-    label: "TypeScript",
+    icon: "/icons/home/tools/nextjs.svg",
+    label: "Next.js",
   },
   {
-    icon: "/icons/home/tools/typescript.svg",
-    label: "TypeScript",
+    icon: "/icons/home/tools/bun.svg",
+    label: "Bun",
   },
   {
-    icon: "/icons/home/tools/typescript.svg",
-    label: "TypeScript",
+    icon: "/icons/home/tools/codex.svg",
+    label: "Codex",
   },
   {
-    icon: "/icons/home/tools/typescript.svg",
-    label: "TypeScript",
+    icon: "/icons/home/tools/vscode.svg",
+    label: "VSCode",
   },
 ];
 
