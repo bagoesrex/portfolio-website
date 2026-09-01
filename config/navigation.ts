@@ -16,4 +16,8 @@ export const NAV_ITEMS = [
     href: "/projects",
     label: "Projects",
   },
+  {
+    href: "/uses",
+    label: "Uses",
+  },
 ] as const satisfies readonly NavigationItem[];
