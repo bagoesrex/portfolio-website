@@ -133,3 +133,18 @@
     @apply leading-relaxed tracking-tight;
   }
 }
+
+@keyframes expand-x {
+  0% {
+    transform: scaleX(0);
+    border-radius: 9999px;
+  }
+  100% {
+    transform: scaleX(1);
+    border-radius: 0px;
+  }
+}
+
+.animate-expand-x {
+  animation: expand-x 0.6s ease-out forwards;
+}

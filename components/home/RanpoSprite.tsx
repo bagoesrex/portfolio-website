@@ -53,7 +53,7 @@ export default function RanpoSprite() {
 
   return (
     <div
-      className="relative aspect-square w-32 shrink-0 cursor-default bg-size-[400%_200%] bg-no-repeat contain-[paint] md:w-54"
+      className="relative aspect-square w-32 shrink-0 cursor-default bg-size-[400%_200%] bg-no-repeat drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] contain-[paint] md:w-54"
       data-frame={activeFrame.id}
       data-state={isHovered ? "hover" : "idle"}
       onPointerEnter={() => changeAnimationState(true)}
