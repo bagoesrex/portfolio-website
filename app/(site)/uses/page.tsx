@@ -16,7 +16,7 @@ export default function UsesPage() {
             What do I use?
           </h1>
           <p className="text-sm md:text-base">
-            My current setup, tools, and favorite apps.
+            Here are the tools, software, and apps I use on a daily basis.
           </p>
         </div>
         <div className="space-y-5">
@@ -70,28 +70,32 @@ export default function UsesPage() {
           </h2>
           <div className="grid grid-cols-3 border-t border-l border-gray-300 text-center select-none md:grid-cols-5">
             {softwareTools.map((tool, i) => (
-              <div
-                key={i}
-                className="group flex min-h-25 flex-col items-center gap-2 border-r border-b border-gray-300 px-4 py-5"
-              >
-                <div className="relative size-8">
-                  <Image
-                    src={tool.icon}
-                    alt={`${tool.name} Image`}
-                    fill
-                    priority
-                    draggable={false}
-                    className={cn(
-                      "pointer-events-none scale-95 object-contain drop-shadow-[0_0_8px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
-                      tool.className,
-                    )}
-                  />
-                </div>
-                <div>
-                  <h3 className="border-b-2 border-dotted text-xs font-semibold capitalize duration-400 group-hover:border-solid group-hover:border-black md:text-sm">
-                    {tool.name}
-                  </h3>
-                </div>
+              <div key={i} className="group">
+                <a
+                  href={tool.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-25 flex-col items-center gap-2 border-r border-b border-gray-300 px-4 py-5"
+                >
+                  <div className="relative size-8">
+                    <Image
+                      src={tool.icon}
+                      alt={`${tool.name} Image`}
+                      fill
+                      priority
+                      draggable={false}
+                      className={cn(
+                        "pointer-events-none scale-95 object-contain drop-shadow-[0_0_8px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
+                        tool.className,
+                      )}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="border-b-2 border-dotted text-xs font-semibold capitalize duration-400 group-hover:border-solid group-hover:border-black md:text-sm">
+                      {tool.name}
+                    </h3>
+                  </div>
+                </a>
               </div>
             ))}
           </div>

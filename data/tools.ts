@@ -59,52 +59,52 @@ export const TOOLS: Tools = {
     {
       name: "Postman",
       icon: "/icons/uses/software/postman.svg",
-      href: "",
+      href: "https://www.postman.com",
     },
     {
       name: "Spotify",
       icon: "/icons/uses/software/spotify.svg",
-      href: "",
+      href: "https://www.spotify.com",
     },
     {
       name: "Telegram",
       icon: "/icons/uses/software/telegram.svg",
-      href: "",
+      href: "https://telegram.org",
     },
     {
       name: "Discord",
       icon: "/icons/uses/software/discord.svg",
-      href: "",
+      href: "https://discord.com",
     },
     {
       name: "Obsidian",
       icon: "/icons/uses/software/obsidian.svg",
-      href: "",
+      href: "https://obsidian.md",
     },
     {
       name: "Google Drive",
       icon: "/icons/uses/software/googledrive.svg",
-      href: "",
+      href: "https://drive.google.com",
     },
     {
       name: "Figma",
       icon: "/icons/uses/software/figma.svg",
-      href: "",
+      href: "https://www.figma.com",
     },
     {
       name: "Brave",
       icon: "/icons/uses/software/brave.svg",
-      href: "",
+      href: "https://brave.com",
     },
     {
       name: "VS Code",
       icon: "/icons/uses/software/vscode.svg",
-      href: "",
+      href: "https://code.visualstudio.com",
     },
     {
       name: "Antigravity",
       icon: "/icons/uses/software/antigravity.svg",
-      href: "",
+      href: "https://antigravity.google",
     },
   ],
   coding: [
