@@ -109,9 +109,119 @@ export const TOOLS: Tools = {
   ],
   coding: [
     {
-      name: "",
-      icon: "",
-      href: "",
+      name: "Codex",
+      icon: "/icons/uses/coding/codex.svg",
+      href: "https://openai.com/codex",
+    },
+    {
+      name: "Hermes",
+      icon: "/icons/uses/coding/hermes.svg",
+      href: "https://hermes-agent.nousresearch.com/",
+    },
+    {
+      name: "Opencode",
+      icon: "/icons/uses/coding/opencode.svg",
+      href: "https://opencode.ai",
+    },
+    {
+      name: "Next.js",
+      icon: "/icons/uses/coding/nextjs.svg",
+      href: "https://nextjs.org",
+    },
+    {
+      name: "React.js",
+      icon: "/icons/uses/coding/reactjs.svg",
+      href: "https://react.dev",
+    },
+    {
+      name: "TypeScript",
+      icon: "/icons/uses/coding/typescript.svg",
+      href: "https://www.typescriptlang.org",
+    },
+    {
+      name: "JavaScript",
+      icon: "/icons/uses/coding/javascript.svg",
+      href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    },
+    {
+      name: "TailwindCSS",
+      icon: "/icons/uses/coding/tailwindcss.svg",
+      href: "https://tailwindcss.com",
+    },
+    {
+      name: "Laravel",
+      icon: "/icons/uses/coding/laravel.svg",
+      href: "https://laravel.com",
+    },
+    {
+      name: "PHP",
+      icon: "/icons/uses/coding/php.svg",
+      href: "https://www.php.net",
+    },
+    {
+      name: "Python",
+      icon: "/icons/uses/coding/python.svg",
+      href: "https://www.python.org",
+    },
+    {
+      name: "Kotlin",
+      icon: "/icons/uses/coding/kotlin.svg",
+      href: "https://kotlinlang.org",
+    },
+    {
+      name: "MySQL",
+      icon: "/icons/uses/coding/mysql.svg",
+      href: "https://www.mysql.com",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "/icons/uses/coding/postgresql.svg",
+      href: "https://www.postgresql.org",
+    },
+    {
+      name: "SQLite",
+      icon: "/icons/uses/coding/sqlite.svg",
+      href: "https://www.sqlite.org",
+    },
+    {
+      name: "Drizzle ORM",
+      icon: "/icons/uses/coding/drizzleorm.svg",
+      href: "https://orm.drizzle.team",
+    },
+    {
+      name: "Git",
+      icon: "/icons/uses/coding/git.svg",
+      href: "https://git-scm.com",
+    },
+    {
+      name: "Github",
+      icon: "/icons/uses/coding/github.svg",
+      href: "https://github.com",
+    },
+    {
+      name: "bun",
+      icon: "/icons/uses/coding/bun.svg",
+      href: "https://bun.sh",
+    },
+    {
+      name: "npm",
+      icon: "/icons/uses/coding/npm.svg",
+      href: "https://www.npmjs.com",
+    },
+    {
+      name: "Prettier",
+      icon: "/icons/uses/coding/prettier.svg",
+      href: "https://prettier.io",
+    },
+    {
+      name: "Husky",
+      icon: "/icons/uses/coding/husky.svg",
+      href: "https://typicode.github.io/husky",
+    },
+    {
+      name: "Vercel",
+      icon: "/icons/uses/coding/vercel.svg",
+      href: "https://vercel.com",
     },
   ],
 };
