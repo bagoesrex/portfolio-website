@@ -48,29 +48,29 @@ export default function ProjectsPage() {
                           {project.title}
                         </h3>
                         {/* <p
-                        className={cn(
-                          "flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold",
-                          project.StatusClassName,
-                        )}
-                      >
-                        <StatusIcon className="size-3" />
-                        {project.StatusLabel}
-                      </p> */}
-                        <p className="line-clamp-2 text-sm font-[380]">
+                className={cn(
+                  "flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold",
+                  project.StatusClassName,
+                )}
+              >
+                <StatusIcon className="size-3" />
+                {project.StatusLabel}
+              </p> */}
+                        <p className="line-clamp-2 text-xs font-[380] md:text-sm">
                           {project.description}
                         </p>
                       </div>
-                      <p className="text-muted-foreground line-clamp-2 text-sm font-[360]">
+                      <p className="text-muted-foreground line-clamp-2 text-xs font-[360] md:text-sm">
                         {project.longDescription}
                       </p>
                     </header>
                     {/* <footer className="flex flex-wrap gap-2 text-xs font-light text-white">
-                    {project.techStack.map((item, i) => (
-                      <span key={i} className="bg-primary/50 px-1.5 py-1">
-                        {item}
-                      </span>
-                    ))}
-                  </footer> */}
+            {project.techStack.map((item, i) => (
+              <span key={i} className="bg-primary/50 px-1.5 py-1">
+                {item}
+              </span>
+            ))}
+          </footer> */}
                   </div>
                 </a>
               </article>
