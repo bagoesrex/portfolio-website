@@ -1,4 +1,5 @@
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
+import PageTransition from "@/components/layout/PageTransition";
 import { LAYOUT } from "@/config/layout";
 import { PROJECTS, PROJECT_VARIANT_STYLES } from "@/data/projects";
 import { cn } from "@/lib/utils";
@@ -8,46 +9,47 @@ export default function ProjectsPage() {
   const featuredProjects = [...PROJECTS];
 
   return (
-    <main>
-      <MaxWidthWrapper className="space-y-6.5 pt-28 pb-10">
-        <div className="space-y-4">
-          <h1 className="text-[28px] font-[490] tracking-[-2px]">Projects</h1>
-          <p className="text-sm md:text-base">
-            Here are some of the projects I&apos;ve worked on. Each project
-            represents a unique challenge and learning experience.
-          </p>
-        </div>
-        <div className="space-y-5.5">
-          {featuredProjects.map((project, i) => {
-            const variantStyles = PROJECT_VARIANT_STYLES[project.variant];
-            const IconBg = variantStyles.iconBg;
+    <PageTransition>
+      <main>
+        <MaxWidthWrapper className="space-y-6.5 pt-28 pb-10">
+          <div className="space-y-4">
+            <h1 className="text-[28px] font-[490] tracking-[-2px]">Projects</h1>
+            <p className="text-sm md:text-base">
+              Here are some of the projects I&apos;ve worked on. Each project
+              represents a unique challenge and learning experience.
+            </p>
+          </div>
+          <div className="space-y-5.5">
+            {featuredProjects.map((project, i) => {
+              const variantStyles = PROJECT_VARIANT_STYLES[project.variant];
+              const IconBg = variantStyles.iconBg;
 
-            return (
-              <article className="group" key={i}>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex gap-4"
-                >
-                  <div className={cn("size-fit rounded-md p-3", IconBg)}>
-                    <div className="relative h-9.25 min-w-9.25">
-                      <Image
-                        src={project.coverImage}
-                        alt={`${project.title} Image`}
-                        fill
-                        priority
-                        className="pointer-events-none object-contain drop-shadow-xs transition-transform duration-300 ease-out group-hover:scale-110"
-                      />
+              return (
+                <article className="group" key={i}>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-4"
+                  >
+                    <div className={cn("size-fit rounded-md p-3", IconBg)}>
+                      <div className="relative h-9.25 min-w-9.25">
+                        <Image
+                          src={project.coverImage}
+                          alt={`${project.title} Image`}
+                          fill
+                          priority
+                          className="pointer-events-none object-contain drop-shadow-xs transition-transform duration-300 ease-out group-hover:scale-110"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="space-y-3">
-                    <header className="space-y-2">
-                      <div className="-space-y-px">
-                        <h3 className="font-semibold underline decoration-transparent decoration-[1.75px] transition-all duration-200 ease-out group-hover:decoration-current">
-                          {project.title}
-                        </h3>
-                        {/* <p
+                    <div className="space-y-3">
+                      <header className="space-y-2">
+                        <div className="-space-y-px">
+                          <h3 className="font-semibold underline decoration-transparent decoration-[1.75px] transition-all duration-200 ease-out group-hover:decoration-current">
+                            {project.title}
+                          </h3>
+                          {/* <p
                 className={cn(
                   "flex min-w-fit items-center gap-2 border px-2 py-px text-[10px] font-bold",
                   project.StatusClassName,
@@ -56,34 +58,35 @@ export default function ProjectsPage() {
                 <StatusIcon className="size-3" />
                 {project.StatusLabel}
               </p> */}
-                        <p className="line-clamp-2 text-xs font-[380] md:text-sm">
-                          {project.description}
+                          <p className="line-clamp-2 text-xs font-[380] md:text-sm">
+                            {project.description}
+                          </p>
+                        </div>
+                        <p className="text-muted-foreground line-clamp-2 text-xs font-[360] md:text-sm">
+                          {project.longDescription}
                         </p>
-                      </div>
-                      <p className="text-muted-foreground line-clamp-2 text-xs font-[360] md:text-sm">
-                        {project.longDescription}
-                      </p>
-                    </header>
-                    {/* <footer className="flex flex-wrap gap-2 text-xs font-light text-white">
+                      </header>
+                      {/* <footer className="flex flex-wrap gap-2 text-xs font-light text-white">
             {project.techStack.map((item, i) => (
               <span key={i} className="bg-primary/50 px-1.5 py-1">
                 {item}
               </span>
             ))}
           </footer> */}
-                  </div>
-                </a>
-              </article>
-            );
-          })}
-        </div>
-      </MaxWidthWrapper>
-      <hr
-        className={cn(
-          "mx-auto w-[93%] border-t-2 border-dotted border-gray-200",
-          LAYOUT.container,
-        )}
-      />
-    </main>
+                    </div>
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+        </MaxWidthWrapper>
+        <hr
+          className={cn(
+            "mx-auto w-[93%] border-t-2 border-dotted border-gray-200",
+            LAYOUT.container,
+          )}
+        />
+      </main>
+    </PageTransition>
   );
 }
