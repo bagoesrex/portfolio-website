@@ -11,11 +11,18 @@ export default function HeroSection() {
           <div className="min-w-0 flex-1 space-y-5">
             <div className="flex items-center justify-between">
               <div>
-                <div className="group relative h-[30.5px] min-w-59 overflow-hidden">
-                  <h1 className="font-architects-daughter absolute top-0 text-xl leading-none font-bold tracking-[3.1px] transition-all duration-400 group-hover:top-8 md:text-2xl">
+                <div className="group relative h-[30.5px] w-fit overflow-hidden select-none">
+                  <p
+                    aria-hidden="true"
+                    className="font-architects-daughter invisible text-xl leading-none font-bold tracking-[3.3px] whitespace-nowrap md:text-2xl"
+                  >
+                    Bagus Rahmawan
+                  </p>
+
+                  <h1 className="font-architects-daughter absolute top-0 left-0 text-xl leading-none font-bold tracking-[3.1px] whitespace-nowrap transition-all duration-400 group-hover:top-8 md:text-2xl">
                     Bagus Rahmawan
                   </h1>
-                  <p className="font-architects-daughter absolute top-8 text-xl leading-none font-bold tracking-[3.3px] transition-all duration-400 group-hover:top-0 md:text-2xl">
+                  <p className="font-architects-daughter absolute top-8 left-0 text-xl leading-none font-bold tracking-[3.3px] whitespace-nowrap transition-all duration-400 group-hover:top-0 md:text-2xl">
                     @bagoesrex
                   </p>
                 </div>
