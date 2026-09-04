@@ -157,6 +157,17 @@
   animation: none;
 }
 
+::view-transition-group(*),
+::view-transition-image-pair(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  pointer-events: none;
+}
+
+::view-transition-group(root) {
+  clip-path: inset(5rem 0 0);
+}
+
 ::view-transition-old(.page-exit) {
   animation: 120ms ease-in both page-fade-out;
 }
