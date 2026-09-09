@@ -24,6 +24,17 @@ export const PROJECTS: Project[] = [
     variant: "gray",
   },
   {
+    title: "Keluargaku Analytics",
+    description: "Inventory analytics platform for pharmacy stock forecasting.",
+    longDescription:
+      "Keluargaku Analytics is a Django-based platform for a pharmacy that unifies three prediction systems on shared warehouse data.",
+    status: "in-progress",
+    techStack: ["Django", "Python", "MySQL", "Scikit-learn"],
+    coverImage: "/icons/projects/keluargaku.webp",
+    githubUrl: "https://github.com/bagoesrex/keluargaku-analytics",
+    variant: "darkgreen",
+  },
+  {
     title: "The Regret Wall",
     description: "A wall for anonymously pinning regrets.",
     longDescription:
@@ -87,6 +98,10 @@ export const PROJECT_VARIANT_STYLES: Record<
   green: {
     iconBg: "bg-[#E7FFE9]",
     hoverBg: "hover:bg-[#E7FFE9]",
+  },
+  darkgreen: {
+    iconBg: "bg-[#D6F0DA]",
+    hoverBg: "hover:bg-[#D6F0DA]",
   },
   purple: {
     iconBg: "bg-[#FFE4FB]",
