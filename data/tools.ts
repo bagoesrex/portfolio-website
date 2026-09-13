@@ -12,7 +12,7 @@ export const TOOLS: Tools = {
       name: "Lenovo 14ALC7",
       type: "laptop",
       icon: "/icons/uses/everyday/secondary-laptop.webp",
-      tags: ["Secondary", "DualBoot"],
+      tags: ["Secondary", "Dualboot"],
       className: "scale-123",
     },
     {
@@ -95,6 +95,11 @@ export const TOOLS: Tools = {
       name: "Brave",
       icon: "/icons/uses/software/brave.svg",
       href: "https://brave.com",
+    },
+    {
+      name: "Zed",
+      icon: "/icons/uses/software/zed.svg",
+      href: "https://zed.dev",
     },
     {
       name: "VS Code",
