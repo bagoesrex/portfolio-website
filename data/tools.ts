@@ -114,14 +114,24 @@ export const TOOLS: Tools = {
   ],
   coding: [
     {
-      name: "Codex",
-      icon: "/icons/uses/coding/codex.svg",
-      href: "https://openai.com/codex",
+      name: "Claude Code",
+      icon: "/icons/uses/coding/claudecode.svg",
+      href: "https://claude.com/product/claude-code",
     },
+    // {
+    //   name: "Codex",
+    //   icon: "/icons/uses/coding/codex.svg",
+    //   href: "https://openai.com/codex",
+    // },
     {
       name: "Hermes",
       icon: "/icons/uses/coding/hermes.svg",
-      href: "https://hermes-agent.nousresearch.com/",
+      href: "https://hermes-agent.nousresearch.com",
+    },
+    {
+      name: "9Router",
+      icon: "/icons/uses/coding/9router.svg",
+      href: "https://9router.com",
     },
     {
       name: "Opencode",

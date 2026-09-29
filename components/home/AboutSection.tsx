@@ -21,9 +21,13 @@ const TOOL_ITEMS = [
     label: "Bun",
   },
   {
-    icon: "/icons/home/tools/codex.svg",
-    label: "Codex",
+    icon: "/icons/home/tools/claude.svg",
+    label: "Claude",
   },
+  // {
+  //   icon: "/icons/home/tools/codex.svg",
+  //   label: "Codex",
+  // },
   {
     icon: "/icons/home/tools/vscode.svg",
     label: "VSCode",
