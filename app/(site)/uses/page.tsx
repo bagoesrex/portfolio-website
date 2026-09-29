@@ -40,7 +40,7 @@ export default function UsesPage() {
                       priority
                       draggable={false}
                       className={cn(
-                        "pointer-events-none object-contain drop-shadow-[0_0_8px_rgba(0,0,0,0.21)] select-none",
+                        "pointer-events-none object-contain drop-shadow-[0_0_5.5px_rgba(0,0,0,0.21)] select-none",
                         tool.className,
                       )}
                     />
@@ -88,7 +88,7 @@ export default function UsesPage() {
                         priority
                         draggable={false}
                         className={cn(
-                          "pointer-events-none scale-95 object-contain drop-shadow-[0_0_8px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
+                          "pointer-events-none scale-95 object-contain drop-shadow-[0_0_5.5px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
                           tool.className,
                         )}
                       />
@@ -124,7 +124,7 @@ export default function UsesPage() {
                         priority
                         draggable={false}
                         className={cn(
-                          "pointer-events-none scale-95 object-contain drop-shadow-[0_0_8px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
+                          "pointer-events-none scale-95 object-contain drop-shadow-[0_0_5.5px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
                           tool.className,
                         )}
                       />
