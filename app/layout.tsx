@@ -34,9 +34,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bagus Rahmawan",
+  metadataBase: new URL("https://bagoesrex.com"),
+  title: {
+    default: "Bagus Rahmawan — BagoesRex",
+    template: "%s | Bagus Rahmawan",
+  },
   description:
-    "Official portfolio of Bagus Rahmawan (BagoesRex), a web developer building responsive and interactive web applications with Next.js and modern frontend technologies.",
+    "Portfolio of Bagus Rahmawan (BagoesRex), a web developer building responsive and interactive web applications with Next.js and modern frontend technologies.",
+  keywords: [
+    "Bagus Rahmawan",
+    "BagoesRex",
+    "bagoesrex",
+    "web developer",
+    "frontend developer",
+    "Next.js developer",
+    "portfolio",
+  ],
+  authors: [{ name: "Bagus Rahmawan", url: "https://bagoesrex.com" }],
+  creator: "Bagus Rahmawan",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://bagoesrex.com",
+    siteName: "Bagus Rahmawan",
+    title: "Bagus Rahmawan — BagoesRex",
+    description:
+      "Portfolio of Bagus Rahmawan (BagoesRex), a web developer building responsive and interactive web applications with Next.js and modern frontend technologies.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Bagus Rahmawan — BagoesRex",
+    description:
+      "Portfolio of Bagus Rahmawan (BagoesRex), a web developer building responsive and interactive web applications.",
+    creator: "@bagoesrex",
+  },
+  alternates: {
+    canonical: "https://bagoesrex.com",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

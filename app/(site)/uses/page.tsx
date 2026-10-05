@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import PageTransition from "@/components/layout/PageTransition";
 import { LAYOUT } from "@/config/layout";
 import { TOOLS } from "@/data/tools";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Uses",
+  description:
+    "Tools, software, and apps Bagus Rahmawan (BagoesRex) uses daily for development and productivity.",
+  alternates: { canonical: "https://bagoesrex.com/uses" },
+  openGraph: { url: "https://bagoesrex.com/uses" },
+};
 
 export default function UsesPage() {
   const everydayTools = [...TOOLS.everyday];

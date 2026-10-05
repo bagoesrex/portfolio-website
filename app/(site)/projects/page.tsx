@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import MaxWidthWrapper from "@/components/layout/MaxWidthWrapper";
 import PageTransition from "@/components/layout/PageTransition";
 import { LAYOUT } from "@/config/layout";
 import { PROJECTS, PROJECT_VARIANT_STYLES } from "@/data/projects";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Projects built by Bagus Rahmawan (BagoesRex) — web apps and open source work using Next.js and modern frontend technologies.",
+  alternates: { canonical: "https://bagoesrex.com/projects" },
+  openGraph: { url: "https://bagoesrex.com/projects" },
+};
 
 export default function ProjectsPage() {
   const featuredProjects = [...PROJECTS];
