@@ -6,6 +6,7 @@ import Image from "next/image";
 import { SiSpotify } from "react-icons/si";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import MarqueeText from "./MarqueeText";
 
 const TOOL_ITEMS = [
   {
@@ -116,9 +117,10 @@ export default async function AboutSection() {
             {recentFavorite ? (
               <>
                 <div className="min-w-0 pr-8">
-                  <p className="truncate text-[14.5px] font-semibold">
-                    {recentFavorite.artist}
-                  </p>
+                  <MarqueeText
+                    text={recentFavorite.artist}
+                    className="text-[14.5px] font-semibold"
+                  />
                   <p className="truncate text-[11px]">{recentFavorite.name}</p>
                   <p className="-mt-0.5 text-[10px] text-gray-500">
                     {recentFavorite.playcount}{" "}
