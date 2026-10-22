@@ -46,7 +46,8 @@ export default function UsesPage() {
                       src={tool.icon}
                       alt={`${tool.name} Image`}
                       fill
-                      priority
+                      priority={i < 3}
+                      sizes="80px"
                       draggable={false}
                       className={cn(
                         "pointer-events-none object-contain drop-shadow-[0_0_5.5px_rgba(0,0,0,0.21)] select-none",
@@ -94,7 +95,7 @@ export default function UsesPage() {
                         src={tool.icon}
                         alt={`${tool.name} Image`}
                         fill
-                        priority
+                        sizes="32px"
                         draggable={false}
                         className={cn(
                           "pointer-events-none scale-95 object-contain drop-shadow-[0_0_5.5px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",
@@ -130,7 +131,7 @@ export default function UsesPage() {
                         src={tool.icon}
                         alt={`${tool.name} Image`}
                         fill
-                        priority
+                        sizes="32px"
                         draggable={false}
                         className={cn(
                           "pointer-events-none scale-95 object-contain drop-shadow-[0_0_5.5px_rgba(0,0,0,0.19)] duration-400 ease-out select-none group-hover:scale-103 group-hover:rotate-3",

@@ -212,7 +212,7 @@ export default async function AboutSection() {
                         src={icon}
                         alt={`${label} image`}
                         fill
-                        priority
+                        sizes="13px"
                         draggable={false}
                         className="pointer-events-none object-cover select-none"
                       />

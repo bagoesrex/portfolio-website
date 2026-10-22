@@ -47,7 +47,8 @@ export default function ProjectsPage() {
                           src={project.coverImage}
                           alt={`${project.title} Image`}
                           fill
-                          priority
+                          priority={i < 2}
+                          sizes="37px"
                           className="pointer-events-none object-contain drop-shadow-xs transition-transform duration-300 ease-out group-hover:scale-110"
                         />
                       </div>

@@ -2,8 +2,6 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 
-import { cn } from "@/lib/utils";
-
 import {
   FRAME_INTERVAL_MS,
   HOVER_FRAMES,
@@ -25,11 +23,7 @@ function getReducedMotionSnapshot() {
   return window.matchMedia(REDUCED_MOTION_QUERY).matches;
 }
 
-interface RanpoSpriteProps {
-  className?: string;
-}
-
-export default function RanpoSprite({ className }: RanpoSpriteProps = {}) {
+export default function RanpoSprite() {
   const [isHovered, setIsHovered] = useState(false);
   const [frameIndex, setFrameIndex] = useState(0);
   const prefersReducedMotion = useSyncExternalStore(
@@ -59,10 +53,7 @@ export default function RanpoSprite({ className }: RanpoSpriteProps = {}) {
 
   return (
     <div
-      className={cn(
-        "relative aspect-square w-24 shrink-0 cursor-default bg-size-[400%_200%] bg-no-repeat drop-shadow-[0_0_5.5px_rgba(0,0,0,0.2)] transition-transform duration-300 ease-out contain-[paint] hover:scale-103 hover:rotate-1 sm:w-28 md:w-54",
-        className,
-      )}
+      className="relative aspect-square w-32 shrink-0 cursor-default bg-size-[400%_200%] bg-no-repeat drop-shadow-[0_0_5.5px_rgba(0,0,0,0.2)] transition-transform duration-300 ease-out contain-[paint] hover:scale-103 hover:rotate-1 md:w-54"
       data-frame={activeFrame.id}
       data-state={isHovered ? "hover" : "idle"}
       onPointerEnter={() => changeAnimationState(true)}
