@@ -19,7 +19,7 @@ export default function Header() {
         <nav aria-label="Main Navigation">
           <ul className="flex items-center gap-1">
             {NAV_ITEMS.map((item) => {
-              const isActive = pathname === item.href;
+              const isActive = isNavItemActive(pathname, item.href);
               return (
                 <li key={item.href}>
                   <Link
@@ -42,4 +42,27 @@ export default function Header() {
       </div>
     </header>
   );
+}
+
+function normalizePathname(pathname?: string | null): string {
+  let path = pathname;
+  if (!path && typeof window !== "undefined") {
+    path = window.location.pathname;
+  }
+  const clean = path || "/";
+  return clean.length > 1 && clean.endsWith("/") ? clean.slice(0, -1) : clean;
+}
+
+function isNavItemActive(
+  pathname: string | null | undefined,
+  href: string,
+): boolean {
+  const current = normalizePathname(pathname);
+  const target = normalizePathname(href);
+
+  if (target === "/") {
+    return current === "/";
+  }
+
+  return current === target || current.startsWith(`${target}/`);
 }
