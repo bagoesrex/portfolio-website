@@ -9,7 +9,10 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="border-border/40 bg-background/70 fixed inset-x-0 top-0 z-50 flex justify-center border-b px-4 py-3 backdrop-blur-md sm:py-3.5">
+    <header
+      id="site-header"
+      className="border-border/40 bg-background/70 fixed inset-x-0 top-0 z-50 flex justify-center border-b px-4 py-3 backdrop-blur-md sm:py-3.5"
+    >
       <div
         className={cn(
           "border-border/80 bg-background/80 rounded-full border p-1 shadow-xs backdrop-blur-sm",

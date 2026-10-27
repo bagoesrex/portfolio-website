@@ -170,6 +170,14 @@
   animation: none;
 }
 
+#site-header {
+  view-transition-name: app-header;
+}
+
+::view-transition-group(app-header) {
+  z-index: 50;
+}
+
 ::view-transition-group(*),
 ::view-transition-image-pair(*),
 ::view-transition-old(*),
