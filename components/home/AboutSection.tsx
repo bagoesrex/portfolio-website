@@ -72,6 +72,7 @@ export default async function AboutSection() {
                   src="/icons/home/profile.webp"
                   alt="Ranpo"
                   fill
+                  sizes="28px"
                   priority
                   draggable={false}
                   className="pointer-events-none object-cover select-none"
@@ -84,6 +85,7 @@ export default async function AboutSection() {
               src="/images/about/ranpo.webp"
               alt="Ranpo"
               fill
+              sizes="(min-width: 768px) 220px, 100vw"
               priority
               draggable={false}
               className="pointer-events-none scale-x-[-1] object-cover select-none md:mt-3 md:scale-x-[-1.3] md:scale-y-[1.3]"

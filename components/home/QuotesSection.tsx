@@ -14,6 +14,7 @@ export default function QuotesSection() {
             width={500}
             height={500}
             draggable={false}
+            className="h-auto w-auto"
           />
         </div>
       </MaxWidthWrapper>
