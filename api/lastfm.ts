@@ -3,6 +3,7 @@ import "server-only";
 import {
   parseLastFmTopTracksResponse,
   parseLastFmTrackInfoArtworkResponse,
+  parseLastFmAlbumInfoArtworkResponse,
 } from "./lastfm-response.mts";
 import type { LastFmPeriod, LastFmTrack } from "../types/lastfm";
 
@@ -83,20 +84,41 @@ export async function getTopTrack(
     return null;
   }
 
-  try {
-    const payload = await requestLastFm(
-      {
-        method: "track.getInfo",
-        artist: track.artist,
-        track: track.name,
-        autocorrect: "1",
-      },
-      "lastfm-track-info",
-    );
-    const imageUrl = parseLastFmTrackInfoArtworkResponse(payload);
+  let imageUrl = track.imageUrl;
 
-    return imageUrl ? { ...track, imageUrl } : track;
-  } catch {
-    return track;
+  if (!imageUrl) {
+    try {
+      const payload = await requestLastFm(
+        {
+          method: "track.getInfo",
+          artist: track.artist,
+          track: track.name,
+          autocorrect: "1",
+        },
+        "lastfm-track-info",
+      );
+      imageUrl = parseLastFmTrackInfoArtworkResponse(payload);
+    } catch {
+      // Continue to next fallback
+    }
   }
+
+  if (!imageUrl) {
+    try {
+      const payload = await requestLastFm(
+        {
+          method: "album.getInfo",
+          artist: track.artist,
+          album: track.name,
+          autocorrect: "1",
+        },
+        "lastfm-album-info",
+      );
+      imageUrl = parseLastFmAlbumInfoArtworkResponse(payload);
+    } catch {
+      // Keep track without artwork if album lookup fails
+    }
+  }
+
+  return imageUrl ? { ...track, imageUrl } : track;
 }

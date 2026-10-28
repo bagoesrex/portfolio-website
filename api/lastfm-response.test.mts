@@ -4,6 +4,7 @@ import { test } from "bun:test";
 import {
   parseLastFmTopTracksResponse,
   parseLastFmTrackInfoArtworkResponse,
+  parseLastFmAlbumInfoArtworkResponse,
 } from "./lastfm-response.mts";
 
 test("maps a valid Last.fm top-tracks response", () => {
@@ -204,4 +205,39 @@ test("extracts album artwork from a Last.fm track-info response", () => {
     imageUrl,
     "https://lastfm-img.freetls.fastly.net/i/u/174s/album.png",
   );
+});
+
+test("extracts artwork from a Last.fm album-info response", () => {
+  const imageUrl = parseLastFmAlbumInfoArtworkResponse({
+    album: {
+      image: [
+        {
+          size: "large",
+          "#text":
+            "https://lastfm-img.freetls.fastly.net/i/u/174s/single-cover.jpg",
+        },
+      ],
+    },
+  });
+
+  assert.equal(
+    imageUrl,
+    "https://lastfm-img.freetls.fastly.net/i/u/174s/single-cover.jpg",
+  );
+});
+
+test("returns null for Last.fm album-info with placeholder artwork", () => {
+  const imageUrl = parseLastFmAlbumInfoArtworkResponse({
+    album: {
+      image: [
+        {
+          size: "large",
+          "#text":
+            "https://lastfm-img.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+        },
+      ],
+    },
+  });
+
+  assert.equal(imageUrl, null);
 });

@@ -185,3 +185,21 @@ export function parseLastFmTrackInfoArtworkResponse(
 
   return readTrackImage(value.track.album.image);
 }
+
+export function parseLastFmAlbumInfoArtworkResponse(
+  value: unknown,
+): string | null {
+  if (!isRecord(value)) {
+    throw new Error("Invalid Last.fm response");
+  }
+
+  if ("error" in value) {
+    throw new Error("Last.fm API error");
+  }
+
+  if (!isRecord(value.album)) {
+    throw new Error("Invalid Last.fm response");
+  }
+
+  return readTrackImage(value.album.image);
+}
