@@ -69,10 +69,10 @@ export default async function AboutSection() {
             <div className="absolute right-3 bottom-3.5">
               <div className="relative size-7 overflow-hidden rounded-full">
                 <Image
-                  src="/icons/home/profile.webp"
-                  alt="Ranpo"
+                  src="/images/about/me.webp"
+                  alt="Me"
                   fill
-                  sizes="28px"
+                  sizes="350px"
                   priority
                   draggable={false}
                   className="pointer-events-none object-cover select-none"
