@@ -1,7 +1,14 @@
 export type ProjectStatus = "completed" | "in-progress" | "archived";
 
 export type ProjectVariant =
-  "gray" | "skyblue" | "blue" | "green" | "darkgreen" | "purple" | "orange";
+  | "gray"
+  | "skyblue"
+  | "blue"
+  | "green"
+  | "darkgreen"
+  | "purple"
+  | "orange"
+  | "darkOrange";
 
 export interface Project {
   title: string;
