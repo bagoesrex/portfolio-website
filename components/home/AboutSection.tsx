@@ -163,7 +163,7 @@ export default async function AboutSection() {
                         : ""
                     }
                     fill
-                    sizes="58px"
+                    sizes="250px"
                     draggable={false}
                     className="pointer-events-none object-cover select-none"
                   />
