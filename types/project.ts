@@ -4,6 +4,7 @@ export type ProjectVariant =
   | "gray"
   | "skyblue"
   | "blue"
+  | "darkBlue"
   | "green"
   | "darkgreen"
   | "purple"

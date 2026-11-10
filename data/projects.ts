@@ -24,6 +24,23 @@ export const PROJECTS: Project[] = [
     variant: "darkOrange",
   },
   {
+    title: "Fesnuk Automation",
+    description: "Self-hosted Facebook group auto-poster with anti-detection.",
+    longDescription:
+      "Fesnuk Automation is a self-hosted system for scheduling and posting text and images to multiple Facebook Groups, using anti-detection browser automation.",
+    status: "completed",
+    techStack: [
+      "Express.js",
+      "Prisma",
+      "Playwright",
+      "React.js",
+      "Tailwind CSS",
+    ],
+    coverImage: "/icons/projects/fesnuk.svg",
+    githubUrl: "https://github.com/bagoesrex/fesnuk-automation",
+    variant: "darkBlue",
+  },
+  {
     title: "Keluargaku Analytics",
     description: "Inventory analytics platform for pharmacy stock forecasting.",
     longDescription:
@@ -121,6 +138,10 @@ export const PROJECT_VARIANT_STYLES: Record<
   blue: {
     iconBg: "bg-[#EAEFF9]",
     hoverBg: "hover:bg-[#EAEFF9]",
+  },
+  darkBlue: {
+    iconBg: "bg-[#D3DEF3]",
+    hoverBg: "hover:bg-[#D3DEF3]",
   },
   orange: {
     iconBg: "bg-[#FFE4CA]",
